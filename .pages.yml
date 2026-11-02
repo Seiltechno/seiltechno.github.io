@@ -1,0 +1,482 @@
+# 입력 화면(Pages CMS) 설정 — make_cms_config.py로 만듭니다.
+media:
+- name: images
+  label: 이미지
+  input: site/assets/img
+  output: /assets/img
+  rename: safe
+  categories:
+  - image
+- name: videos
+  label: 동영상(가볍게 줄인 mp4)
+  input: site/assets/img/videos
+  output: /assets/img/videos
+  rename: safe
+  categories:
+  - video
+- name: downloads
+  label: 자료실 파일
+  input: site/assets/downloads
+  output: /assets/downloads
+  rename: safe
+  categories:
+  - document
+  - compressed
+  - spreadsheet
+content:
+- name: products
+  label: 제품
+  type: collection
+  path: site/_products
+  format: yaml-frontmatter
+  filename: '{file_id}.md'
+  exclude:
+  - hybrid-mi.md
+  - aims-aitcd.md
+  - aims-aitwm.md
+  - desktop-3d-scanner.md
+  view:
+    fields:
+    - title
+    - category
+    - subcategory
+    - order
+    primary: title
+    sort:
+    - category
+    - order
+    - title
+    default:
+      sort: order
+      order: asc
+  fields:
+  - name: file_id
+    label: 파일 이름(영문)
+    type: string
+    description: '처음 만들 때만 사용. 영문 소문자·숫자·하이픈 (예: hikrobot-sc2000). 홈페이지 주소가 됩니다.'
+  - name: title
+    label: 제품명
+    type: string
+    required: true
+  - name: subtitle
+    label: 한 줄 설명
+    type: string
+  - name: category
+    label: 카테고리
+    type: select
+    required: true
+    options:
+      values:
+      - 현미경
+      - 측정 시스템
+      - AI 검사·측정
+      - 머신비전
+      - 3D·특수 센싱
+  - name: subcategory
+    label: 소분류
+    type: select
+    required: true
+    options:
+      values:
+      - 실체 현미경(무접안)
+      - 디지털 현미경
+      - 3D 디지털 현미경
+      - 고배율·자동화 디지털 현미경
+      - 측정 현미경
+      - 고배율 비접촉 측정기
+      - 비디오 측정기(VMM)
+      - 하이브리드 검사·측정
+      - 기상 AI분석
+      - 기상 검사/측정 비전
+      - 머신비전 Customized
+      - Smart Camera
+      - Software
+      - Optical Component
+      - 3D 스캐닝
+      - 표면 형상 측정
+      - 원샷 측정
+      - 3D 레이저 측정
+      - 이벤트 카메라
+    description: 고른 카테고리 안의 소분류를 선택하세요.
+  - name: brand
+    label: 브랜드(제조사)
+    type: string
+    description: 표기하지 않으려면 비워 두세요.
+  - name: order
+    label: 표시 순서
+    type: number
+    description: '작은 숫자가 앞에 나옵니다. (예: 머신비전 401~)'
+  - name: posted
+    label: 등록일(게시판형 카테고리)
+    type: date
+    options:
+      format: yyyy-MM-dd
+  - name: published
+    label: 홈페이지에 공개
+    type: boolean
+    default: true
+  - name: badge
+    label: '배지(예: NEW)'
+    type: string
+  - name: image
+    label: 대표 사진
+    type: image
+    options:
+      media: images
+    required: true
+  - name: image_fit
+    label: 대표 사진 채우기
+    type: select
+    options:
+      values:
+      - ''
+      - cover
+    description: 사진을 칸에 꽉 채우려면 cover
+  - name: gallery
+    label: 추가 사진
+    type: image
+    options:
+      media: images
+      multiple: true
+  - name: summary
+    label: 요약(2~3문장)
+    type: text
+    required: true
+  - name: tags
+    label: 핵심 키워드(3개)
+    type: string
+    list: true
+  - name: highlights
+    label: 주요 특징
+    type: object
+    list: true
+    fields:
+    - name: title
+      label: 제목
+      type: string
+    - name: text
+      label: 설명
+      type: text
+  - name: specs
+    label: 사양
+    type: object
+    list: true
+    fields:
+    - name: label
+      label: 항목
+      type: string
+    - name: value
+      label: 내용
+      type: string
+  - name: applications
+    label: 적용 분야
+    type: string
+    list: true
+  - name: models
+    label: 모델 구성
+    type: object
+    list: true
+    fields:
+    - name: name
+      label: 모델명
+      type: string
+    - name: text
+      label: 설명
+      type: text
+  - name: process
+    label: 작동 과정
+    type: object
+    list: true
+    fields:
+    - name: img
+      label: 사진
+      type: image
+      options:
+        media: images
+    - name: step
+      label: '단계(예: STEP 01)'
+      type: string
+    - name: title
+      label: 제목
+      type: string
+    - name: text
+      label: 설명
+      type: text
+  - name: samples_title
+    label: 갤러리 제목
+    type: string
+  - name: samples_tab
+    label: 갤러리 탭 이름
+    type: string
+  - name: samples_desc
+    label: 갤러리 설명
+    type: string
+  - name: samples
+    label: 갤러리 사진
+    type: object
+    list: true
+    fields:
+    - name: full
+      label: 사진
+      type: image
+      options:
+        media: images
+    - name: thumb
+      label: 작은 사진(없으면 같은 사진)
+      type: image
+      options:
+        media: images
+    - name: cap
+      label: 설명
+      type: string
+    - name: tag
+      label: 분류
+      type: string
+  - name: videos_title
+    label: 영상 구역 제목
+    type: string
+  - name: videos_tab
+    label: 영상 탭 이름
+    type: string
+  - name: videos_desc
+    label: 영상 구역 설명
+    type: string
+  - name: videos
+    label: 영상
+    type: object
+    list: true
+    fields:
+    - name: src
+      label: 영상 파일(mp4)
+      type: file
+      options:
+        media: videos
+    - name: poster
+      label: 미리보기 사진
+      type: image
+      options:
+        media: images
+    - name: title
+      label: 제목
+      type: string
+    - name: desc
+      label: 설명
+      type: text
+    - name: cap
+      label: 한 줄 설명(제목 대신)
+      type: string
+  - name: stats
+    label: 실측 검증 숫자
+    type: object
+    fields:
+    - name: title
+      label: 제목
+      type: string
+    - name: sub
+      label: 설명
+      type: text
+    - name: items
+      label: 숫자 칸
+      type: object
+      list: true
+      fields:
+      - name: num
+        label: 숫자
+        type: string
+      - name: unit
+        label: 단위
+        type: string
+      - name: label
+        label: 설명
+        type: string
+    - name: note
+      label: 주석
+      type: text
+  - name: partner
+    label: 협력사 상자
+    type: object
+    fields:
+    - name: name
+      label: 회사명
+      type: string
+    - name: desc
+      label: 설명
+      type: string
+    - name: url
+      label: 홈페이지 주소
+      type: string
+    - name: logo
+      label: 로고
+      type: image
+      options:
+        media: images
+  - name: series
+    label: 시리즈명
+    type: string
+  - name: formerly
+    label: 이전 모델명
+    type: string
+  - name: gallery_note
+    label: 사진 아래 안내
+    type: string
+  - name: body
+    label: 제품 소개(본문)
+    type: rich-text
+    options:
+      format: markdown
+      media: images
+- name: cases
+  label: 적용사례
+  type: collection
+  path: site/_cases
+  format: yaml-frontmatter
+  filename: '{file_id}.md'
+  view:
+    fields:
+    - title
+    - type
+    - maker
+    - date
+    primary: title
+    sort:
+    - date
+    - title
+    default:
+      sort: date
+      order: desc
+  fields:
+  - name: file_id
+    label: 파일 이름(영문)
+    type: string
+    description: '처음 만들 때만 사용. 예: seil-2026-pcb-flatness'
+  - name: title
+    label: 제목
+    type: string
+    required: true
+  - name: title_en
+    label: 원문 제목(영문, 선택)
+    type: string
+  - name: type
+    label: 유형
+    type: select
+    required: true
+    options:
+      values:
+      - name: case
+        label: 고객 사례
+      - name: appnote
+        label: 애플리케이션 노트
+      - name: article
+        label: 기술 칼럼
+  - name: maker
+    label: 출처·제조사
+    type: string
+    description: 세일테크노 사례는 '세일테크노'라고 적으면 '★ 세일테크노 사례'로 분류됩니다.
+  - name: date
+    label: 게시 연월
+    type: string
+    description: '예: 2026-11'
+  - name: author
+    label: 글쓴이
+    type: string
+  - name: customer
+    label: 고객(공개 동의 없으면 '○○ 제조사 (비공개)')
+    type: string
+  - name: country
+    label: 국가
+    type: string
+  - name: industry
+    label: 산업
+    type: select
+    options:
+      values:
+      - 전자·PCB
+      - 의료기기
+      - 항공·방산
+      - 자동차
+      - 플라스틱·사출
+      - 정밀가공·금속
+      - 연구·바이오
+      - 식품·농업
+      - 보석·소재
+      - 일반 품질관리
+  - name: products
+    label: 관련 제품명
+    type: string
+    list: true
+  - name: image
+    label: 대표 사진
+    type: image
+    options:
+      media: images
+  - name: original_url
+    label: 원문 링크(선택)
+    type: string
+  - name: pdf
+    label: 원문 PDF 링크(선택)
+    type: string
+  - name: excerpt
+    label: 목록에 보이는 한 줄 요약(70자 이내)
+    type: text
+    required: true
+  - name: draft
+    label: 작성 중(공개 안 함)
+    type: boolean
+    default: false
+  - name: body
+    label: 본문
+    type: rich-text
+    options:
+      format: markdown
+      media: images
+- name: downloads
+  label: 자료실
+  type: file
+  path: site/_data/downloads.yml
+  format: yaml
+  list: true
+  fields:
+  - name: title
+    label: 자료 이름
+    type: string
+    required: true
+  - name: kind
+    label: 종류
+    type: select
+    required: true
+    options:
+      values:
+      - name: brochures
+        label: 브로셔
+      - name: datasheets
+        label: 데이터시트
+      - name: manuals
+        label: 사용설명서
+      - name: software
+        label: 소프트웨어
+      - name: technical
+        label: 기술자료
+  - name: file
+    label: 파일 올리기 (25MB 이하)
+    type: file
+    options:
+      media: downloads
+  - name: url
+    label: 또는 링크 (큰 파일은 구글 드라이브 공유 링크)
+    type: string
+  - name: product
+    label: '관련 제품 파일 이름(예: mantis)'
+    type: string
+  - name: lang
+    label: 언어
+    type: select
+    options:
+      values:
+      - 한국어
+      - 영어
+      - 기타
+  - name: date
+    label: 등록일
+    type: date
+    options:
+      format: yyyy-MM-dd

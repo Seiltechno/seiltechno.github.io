@@ -1,0 +1,394 @@
+@@ ve-bench-magnifier-qc
+type: article
+title: 품질관리용 벤치 확대경에 기본 기능 이상이 필요한 순간
+title_en: Beyond The Basics: When A Bench Magnifier Needs To Do More Than The Basics For Quality Control
+date: 2026-02
+author: Mike Phillpot
+industry: 일반 품질관리
+products: Vision LUXO, OPTA, Mantis, Lynx EVO
+image_src: https://www.visioneng.com/wp-content/uploads/2026/02/Vision-Luxo-Magnifiers-3-in-a-row-IMG_8206-500x361-1.jpg
+pdf: https://www.visioneng.com/wp-content/uploads/2026/02/ART-Bench-Magnifiers-Do-More-LUXO-2026.pdf
+url: https://www.visioneng.com/resources/articles/when-a-bench-magnifier-needs-to-do-more-than-the-basics-for-quality-control/
+excerpt: 품질관리 검사에서 벤치 확대경에 요구되는 조건과 고급형 제품의 역할을 설명합니다.
+==
+벤치 확대경은 작업대 위에서 두 손을 자유롭게 쓰면서 작은 부품을 확대해 볼 수 있게 해 주는 도구입니다. 일반 조립이나 취미 작업에서는 기본 광학 성능과 흰색 LED 조명만으로 충분한 경우가 많습니다. 하지만 품질관리 단계에서는 합격·불합격 판단, 기록의 추적성, 규정 준수가 걸려 있어 요구 조건이 훨씬 까다로워집니다.
+
+품질관리 현장의 확대경에는 몇 가지 능력이 더 필요합니다. 첫째, 목적에 맞게 조명을 바꿀 수 있어야 합니다. 백색광으로 형상과 마감을 보고, 자외선으로 잔류물이나 코팅 상태를 살피는 식입니다. 둘째, 작업 거리와 시야를 유지하면서 필요한 세부를 볼 수 있는 배율을 골라야 합니다. 셋째, 장시간 반복 검사에서 흔들림 없이 위치를 유지하고 한 손으로 조정할 수 있는 균형 장치가 중요합니다. 넷째, 먼지가 쌓이기 어려운 밀폐형 구조와 피로를 줄이는 인체공학 설계도 고려해야 합니다.
+
+글은 이러한 요구를 충족하는 제품으로 Vision LUXO를 소개하며, OPTA·Mantis·Lynx EVO 같은 고급 검사 시스템과 ClearView 같은 기본형 확대경 사이에 위치시킵니다. 검사 단계마다 확대경의 역할을 정하고 검사 조건을 고정한 채 반복하는 방식이 품질관리의 일관성을 높인다는 것이 핵심입니다.
+
+결국 품질관리용 확대경의 가치는 기능의 개수보다, 검사 단계에 맞는 도구를 골라 조건을 고정하고 결과를 비교할 수 있게 만드는 데 있습니다.
+@@ ve-bench-magnifier-affordable
+type: article
+title: 일상 작업용 벤치 확대경, 합리적으로 고르는 법
+title_en: Everyday Essentials: Choosing An Affordable Bench Magnifier
+date: 2026-02
+author: Mike Phillpot
+industry: 일반 품질관리
+products: ClearView HEPTA, ClearView DUO
+image_src: https://www.visioneng.com/wp-content/uploads/2026/02/ClearView-Range-2-500x375-1.jpg
+pdf: https://www.visioneng.com/wp-content/uploads/2026/02/ART-Bench-Magnifiers-ClearView-2026.pdf
+url: https://www.visioneng.com/resources/articles/choosing-an-affordable-bench-magnifier/
+excerpt: 매일 쓰는 벤치 확대경을 고를 때 꼭 확인해야 할 기본기를 정리했습니다.
+==
+벤치 확대경은 작업대에서 손을 쓰지 않고도 작은 부품을 자세히 볼 수 있게 해 주는 고정 배율 도구로, 전자·제조·보석 세공·실험실 등 여러 분야에서 일상적인 근접 검사와 조립에 쓰입니다. 이 글은 전문 검사 장비가 아닌, 매일 쓸 합리적인 가격대의 제품을 고를 때 무엇을 봐야 하는지 다룹니다.
+
+기본기는 네 가지입니다. 첫째, 가운데뿐 아니라 사용 영역 전체에서 왜곡이 적은 유리 렌즈가 좋습니다. 둘째, 배율은 최대치보다 작업에 필요한 선명도와 시야를 주는 수준이 중요합니다. 셋째, LED 조명은 고르고 부드럽게 비추어 눈부심과 반사를 줄이고 밝기를 조절할 수 있어야 합니다. 넷째, 암은 스프링 밸런스로 부드럽게 움직이고 원하는 위치에 머물러야 합니다.
+
+확대경의 가치는 사양표의 숫자보다 실제 사용의 편리함에서 나옵니다. 선명한 상이 주는 확신, 작업을 방해하지 않는 적정 배율, 반복 작업에서 일정한 시야, 자세와 피로를 고려한 편안함, 간단한 조작이 그 요소입니다.
+
+예시로 든 ClearView 제품군에서 HEPTA는 넓은 시야가 필요한 소형 부품 조립이나 빠른 육안 확인에, DUO는 두 개의 교체 렌즈로 넓게 보기와 확대해 보기를 오가야 하는 작업에 어울립니다.
+@@ ve-4k-uhd-manufacturing
+type: article
+title: 제조 현장에서 4K 초고화질 영상이 주는 네 가지 이점
+title_en: 4 key benefits of 4K Ultra High Definition imaging in manufacturing
+date: 2025-07
+author: Nanthaluck Sukawattano
+industry: 일반 품질관리
+products: EVO Cam HALO
+image_src: https://www.visioneng.com/wp-content/uploads/2025/07/Web-550-x-400-px.png
+pdf: https://www.visioneng.com/wp-content/uploads/2025/07/ART_Benefits_4k_Imaging_Manufacturing_2025.pdf
+url: https://www.visioneng.com/resources/articles/4-key-benefits-of-4k-ultra-high-definition-imaging-in-manufacturing/
+excerpt: 4K 영상이 검사 정확도, 불량 검출, 작업자 편의, 자료 공유에 주는 이점을 소개합니다.
+==
+4K UHD 영상은 제조 현장에서 점점 기본처럼 쓰이며, 정밀도와 품질관리, 작업자 편의를 함께 높이는 기술입니다. 4K 해상도는 HD(1080p)의 네 배 화소를 가지므로 같은 배율에서도 훨씬 세밀하게 검사할 수 있습니다. 전자, 정밀 공학, 플라스틱, 첨단 제조 분야에서 이런 표현력이 특히 중요합니다.
+
+이점은 네 가지입니다. 첫째, 더 선명한 영상으로 HD에서는 놓칠 수 있는 미세 결함이나 표시를 찾아냅니다. 둘째, 미세 균열, 오염, 불량 납땜, 조립 오류를 더 안정적으로 발견해 불량과 낭비를 줄입니다. 셋째, 접안렌즈 대신 모니터로 보기 때문에 자연스러운 자세를 유지할 수 있어 피로와 근골격계 부담이 줄어듭니다. 넷째, 여러 사람이 같은 화면을 보며 빠르게 의견을 나누고, 고해상도 이미지를 기록·교육·규정 준수 문서로 저장할 수 있습니다.
+
+4K 영상은 단순한 화질 개선을 넘어 정확도를 높이고 오류를 줄이며 협업이 쉬운 작업 방식으로 이어집니다. 생산 공정을 더 정밀하고 효율적으로 만드는 현실적인 한 걸음이라는 것이 글의 결론입니다.
+@@ ve-pcb-measurement
+type: article
+title: 품질관리와 검사에서 정확한 PCB 측정이 중요한 이유
+title_en: Why accurate PCB measurement is critical for quality control and inspection
+date: 2025-07
+author: Nanthaluck Sukawattano
+industry: 전자·PCB
+products: Lynx EVO, Swift PRO, Edge Series, LVC Series, TVM Series, Mantis
+image_src: https://www.visioneng.com/wp-content/uploads/2025/07/LVC-550x400px.png
+pdf: https://www.visioneng.com/wp-content/uploads/2025/07/ART_PCB_Measurement_Critical_in_Quality_Control_2025.pdf
+url: https://www.visioneng.com/resources/articles/why-accurate-pcb-measurement-is-critical-for-quality-control-and-inspection/
+excerpt: 비접촉 광학 측정으로 PCB 치수와 납땜 상태를 검사하는 방법과 공정 전략을 살펴봅니다.
+==
+PCB는 오늘날 전자 제품의 핵심 부품이며, 치수와 구멍 위치, 회로 배선을 정확히 측정하는 일은 제품 신뢰성과 규격 준수에 직결됩니다. 이 원리는 소비자 제품, 통신, 항공, 의료기기 등 여러 분야에 공통으로 적용됩니다.
+
+정확한 측정은 제품 수명과 신뢰성을 높이고, IPC-6012나 ISO 9001 같은 규격을 충족하게 하며, 결함을 조기에 발견해 재작업과 자재 낭비를 줄여 줍니다. AOI, AXI, ICT, CMM 같은 기존 검사 기술과 함께, 글은 고정밀 광학 측정 시스템에 주목합니다. 비접촉 방식이라 기판과 민감한 부품을 손상시키지 않고, 3축으로 빠르고 반복성 있게 측정할 수 있습니다. 도체 패턴, 드릴 구멍 위치와 실크스크린, 납땜 높이와 부품 정렬, 코팅 두께 등 공정 전반에 활용할 수 있습니다.
+
+다만 장비만으로는 충분하지 않습니다. 통계적 공정 관리(SPC), 측정 기록을 통한 추적성 확보, 라인 내 자동 검사, 현미경을 활용한 재작업, 작업자 교육을 함께 운영해야 합니다. 이 흐름의 예로 Lynx EVO, Swift PRO와 Edge, LVC, TVM 시리즈, Mantis PIXO가 용도별로 소개됩니다.
+@@ ve-focus-stacking
+type: article
+title: EVO Cam II 포커스 스태킹의 다섯 가지 이점
+title_en: 5 benefits of focus stacking with EVO Cam II digital microscope
+date: 2025-07
+author: Nanthaluck Sukawattano
+industry: 일반 품질관리
+products: EVO Cam II
+image_src: https://www.visioneng.com/wp-content/uploads/2025/07/EVO-CAM-II-Web.png
+pdf: https://www.visioneng.com/wp-content/uploads/2025/07/ART_Benefits_Focus_Stacking_EVO_Cam_II_2025.pdf
+url: https://www.visioneng.com/resources/articles/5-benefits-of-focus-stacking-with-evo-cam-ii-digital-microscope/
+excerpt: 초점이 다른 여러 장을 합쳐 요철이 큰 시료도 전체를 선명하게 검사·기록합니다.
+==
+EVO Cam II 디지털 현미경의 핵심 기능인 포커스 스태킹은 초점 깊이를 달리한 여러 장의 이미지를 합쳐 전 영역이 선명한 한 장의 이미지를 만드는 기술입니다. 표면이 울퉁불퉁하거나 높낮이 차이가 큰 시료를 볼 때 특히 유용합니다.
+
+이점은 다섯 가지입니다. 첫째, 한 번의 촬영으로는 담기 어려운 깊은 초점 범위를 확보해 시료 전체를 선명하게 봅니다. 둘째, 미세 균열, 오염, 불량 납땜, 조립 오류를 더 쉽게 찾아내 검사 정확도를 높입니다. 셋째, 여러 장을 자동으로 촬영하고 합치므로 수동 초점 조정이 필요 없어 검사가 빨라집니다. 넷째, 전체가 선명한 이미지는 검사 기록과 보고서에 그대로 활용할 수 있어 상태를 정확히 전달하는 데 도움이 됩니다. 다섯째, 연구와 산업 현장 모두에서 정밀 검사·분석·개발 업무에 두루 쓸 수 있습니다.
+
+포커스 스태킹은 피사계 심도를 넓히고 검사 정확도를 높이며 작업 흐름을 빠르게 만드는 기능으로, 품질 보증과 분석 업무에서 가치 있는 도구입니다.
+@@ ve-calibration-verification
+type: article
+title: 비디오 측정기의 교정과 검증, 무엇이 다른가
+title_en: Calibration versus verification: what it means for video measuring systems
+date: 2025-07
+author: Colin Robinson
+industry: 일반 품질관리
+products:
+image_src: https://www.visioneng.com/wp-content/uploads/2025/07/Vision-Engineering-Calibration-vs-Verification-web-600x400px.jpg
+pdf: https://www.visioneng.com/wp-content/uploads/2025/07/ART_Calibration_vs_verification_2025_EN.pdf
+url: https://www.visioneng.com/articles/calibration-versus-verification-what-it-means-for-video-measuring-systems/
+excerpt: 교정과 검증은 다른 작업이며, 방법을 잘못 고르면 비용이 더 커질 수 있습니다.
+==
+비디오 측정기를 외부 업체에 맡겨 점검할 때 흔히 생기는 문제가 있습니다. 교정 업체가 장비 제조사의 사양이나 필요한 점검 항목을 충분히 확인하지 않은 채 성적서를 발행하는 경우입니다. ISO 17025 인증 업체라도 해당 장비가 인증 범위에 포함되는지 직접 확인해야 합니다.
+
+검증(verification)과 교정(calibration)은 다릅니다. 검증은 장비가 요구 정확도, 보통 제조사 사양 안에 있는지 확인하는 작업으로, 유리자와 스텝 게이지 같은 도구로 사용자가 직접 할 수 있습니다. 교정은 기계를 조정하고 소프트웨어로 오차를 보정해 출하 수준의 정확도로 되돌리는 작업으로, 숙련 기술자와 고가 장비가 필요하며 평균 약 5시간이 걸립니다.
+
+측정 오차는 무작위 오차와 계통 오차로 나눠 봐야 합니다. 무작위 오차는 진동, 느슨한 카메라나 렌즈, 오염된 엔코더 같은 기계적 원인을 먼저 없애야 하고, 계통 오차는 주로 온도 변화나 구동부 저항에서 생겨 소프트웨어 보정으로 비교적 쉽게 조정됩니다.
+
+Vision Engineering은 사내에서 정기적으로 검증하고 결과를 기록하도록 권장합니다. 외부 교정 횟수를 줄여 장기적으로 비용을 아끼고, ISO 심사에서 장비 신뢰성을 보여 주는 데도 도움이 됩니다.
+@@ ve-plastic-medical-qc
+type: article
+title: 의료기기 플라스틱 부품의 품질관리
+title_en: Quality control of plastic components in medical device manufacturing
+date: 2025-07
+author: Francesca Scarpetta
+industry: 의료기기
+products: Mantis, Lynx EVO, EVO Cam II, DRV-Z1, Swift PRO, LVC Series
+image_src: https://www.visioneng.com/wp-content/uploads/2025/07/Catetere-in-plastica-Web-600x400-px.jpg.webp
+pdf: https://www.visioneng.com/wp-content/uploads/2025/07/ART_QC_Plastics_Medical_2025.pdf
+url: https://www.visioneng.com/articles/quality-control-of-plastic-components-in-medical-device-manufacturing/
+excerpt: 의료기기용 플라스틱 부품의 미세 결함과 치수를 광학 검사로 확인하는 방법입니다.
+==
+주사기나 일회용 기구처럼 의료기기의 플라스틱 부품은 환자와 직접 닿는 경우가 많아, 치수 공차와 표면 품질, ISO 13485·FDA 요구사항을 모두 충족해야 합니다. 균열, 이물, 기공, 오염 같은 미세 결함은 맨눈으로 찾기 어렵다는 것이 핵심 과제입니다.
+
+Luer 피팅과 역류 방지 밸브는 ±10 μm 이하의 공차가, 주사기 몸체나 폴리카보네이트 플랜지는 ±2 μm 수준의 측정 정확도가 요구될 수 있습니다. 주입 장치는 미세 기포나 표면 결함이 유량과 환자 안전에 영향을 줄 수 있으며, 검사 장비가 ISO Class 7~8 클린룸이나 층류 후드 안에서 작동해야 하는 경우도 있습니다.
+
+따라서 고해상도 육안 검사, 정밀 치수 측정, 배치 단위 이력 관리가 함께 이뤄져야 하고, 대량 생산 현장에서는 신뢰성·반복성·효율을 갖춘 검사 체계가 중요합니다.
+
+글은 접안렌즈 없는 Mantis와 Lynx EVO가 작업자 피로를 줄이고, EVO Cam II와 DRV-Z1이 실시간 이미지 공유로 팀·사이트 간 검토를 돕고, Swift PRO와 LVC가 비접촉으로 정확하고 반복 가능한 치수 점검을 지원한다고 정리합니다.
+@@ ve-eyepiece-less-7-reasons
+type: article
+title: 접안렌즈 없는 실체현미경으로 바꿔야 할 7가지 이유
+title_en: 7 Reasons to switch to eyepiece-less stereo microscopes
+date: 2025-05
+author: Nili Walp
+industry: 일반 품질관리
+products: Mantis, Lynx EVO
+image_src: https://www.visioneng.com/wp-content/uploads/2022/05/7-reasons-post-image.webp
+pdf: https://www.visioneng.com/wp-content/uploads/2025/05/7-Reasons-To-Switch-To-Eyepiece-Less-Stereo-Microscopes-V2_2025.pdf
+url: https://www.visioneng.com/resources/articles/7-reasons-to-switch-to-eyepiece-less-stereo-microscopes/
+excerpt: 자세, 눈의 피로, 오염 위험, 장기 비용 측면에서 무접안 현미경의 이점을 정리합니다.
+==
+기존 쌍안 실체현미경은 출사동(exit pupil)이 좁아 눈을 접안렌즈에 정확히 맞춰야 상이 선명하게 보입니다. 접안렌즈 없는 장비는 출사동을 최대 35mm까지 넓혀, 머리를 조금 움직여도 상이 쉽게 흐려지지 않습니다.
+
+먼저 자세와 편안함입니다. 고정된 머리 위치에서 벗어나 목과 허리 부담을 줄일 수 있습니다. 안경이나 보호 고글을 쓴 작업자도 시야가 좁아지거나 정렬이 어려운 문제가 덜합니다.
+
+눈의 피로와 두통도 줄어듭니다. 좁은 광속 때문에 동공이 수축과 확장을 되풀이하던 것과 달리, 직접 관찰에 가까운 조건을 제공해 초점을 다시 맞추는 부담이 적습니다. 장비에서 조금 떨어져 앉을 수 있어 긴 작업에도 편안합니다.
+
+또한 접안렌즈에 얼굴이 닿지 않아 여러 사람이 함께 쓰는 환경에서 교차 오염 위험을 줄이고, 층류 캐비닛 안에서도 쓰기 좋습니다. 장기적으로는 불량·재작업과 작업자 건강 문제로 인한 지연을 줄여 전체 비용 면에서도 유리합니다.
+@@ ve-ergonomics
+type: article
+title: 현미경 사용자를 위한 인체공학의 중요성
+title_en: Ergonomics Matter for Microscope Users
+date: 2025-01
+author: Mike Phillpot
+industry: 일반 품질관리
+products: Mantis, Lynx EVO
+image_src: https://www.visioneng.com/wp-content/uploads/2025/01/ergonomics-matter-article-feature-550x400-1.png
+pdf: https://www.visioneng.com/wp-content/uploads/2025/01/ART_Ergonomics_matter_for_microscope_users_2024.pdf
+url: https://www.visioneng.com/articles/ergonomics-matter-for-microscope-users/
+excerpt: 현미경 작업의 자세와 작업대 구성이 건강·생산성·검사 정확도에 미치는 영향입니다.
+==
+현미경 작업자는 오랜 시간 미세한 부분을 들여다보기 때문에 자세와 장비 배치가 건강과 생산성에 직접 영향을 줍니다. 올바른 자세와 잘 설계된 작업대는 불편함을 줄이고 효율과 정확도를 높이며, 근골격계 질환과 그에 따른 결근·생산성 손실 비용도 줄여 줍니다.
+
+잘못된 자세가 이어지면 허리 통증, 목 긴장, 어깨 결림 같은 근골격계 질환(MSD)으로 이어질 수 있습니다. 글은 영국 HSE 자료를 인용해 제조와 연구 분야의 업무상 부상에서 MSD가 큰 비중을 차지한다고 소개하며, 정밀 산업에서는 피로로 인한 실수가 품질과 고객 만족에도 영향을 준다고 지적합니다.
+
+기본 작업대 구성으로는 발이 바닥에 편히 닿고 무릎이 약 90도가 되도록 의자를 맞추고, 현미경이나 모니터를 눈높이에 두어 고개를 숙이지 않게 하며, 반사와 그림자를 줄이도록 조명을 배치할 것을 권합니다.
+
+기존 현미경은 몸을 앞으로 숙이게 해 부담을 주기 쉽고, 디지털 현미경은 모니터를 눈높이에 둘 수 있어 유리합니다. Mantis와 Lynx EVO처럼 접안렌즈를 없앤 시스템은 머리와 목을 중립 자세로 유지하게 해 줍니다.
+@@ ve-reproducibility
+type: article
+title: 비접촉 측정 시스템에서 재현성이 중요한 이유
+title_en: The Critical Role of Reproducibility in Non-Contact Measurement Systems
+date: 2024-06
+author: Zoe Jackson
+industry: 일반 품질관리
+products:
+image_src: https://www.visioneng.com/wp-content/uploads/2024/06/VE-LVC-400-550x400-1.png
+pdf: https://www.visioneng.com/wp-content/uploads/Articles/Reproducibility_in_Measurement_2024_EN.pdf
+url: https://www.visioneng.com/articles/reproducibility-in-measurement/
+excerpt: 반복 측정해도 같은 결과를 얻는 재현성이 품질과 데이터 신뢰의 핵심인 이유입니다.
+==
+재현성(reproducibility)은 같은 측정을 반복했을 때 일관된 결과를 얻는 능력입니다. 측정 결과를 신뢰하기 위한 기본 조건이며, 비접촉 측정 시스템에서는 품질관리, 데이터 무결성, 장비 간 호환성, 표준 준수, 비용 절감을 위해 꼭 필요합니다.
+
+측정 시점이나 작업자가 달라도 같은 결과가 나와야 측정 시스템의 정확도와 반복성이 뒷받침됩니다. 제조 현장에서는 결함과 편차를 찾아내기 위해, 연구개발에서는 시료의 차이와 측정 방법의 차이를 구분하기 위해 재현 가능한 측정이 필요합니다.
+
+광학 측정 현미경은 미세한 치수를 높은 정밀도로 재기 때문에 정확도와 함께 재현성이 확보되어야 합니다. 정기 교정은 정확도를 유지하고 측정 결과를 국가·국제 표준까지 추적할 수 있게 합니다. 자동 CNC 측정 시스템에서도 재현성은 안정적인 검사와 처리량, 운영 비용에 직결됩니다.
+
+ISO 17025처럼 측정 추적성을 요구하는 표준을 고려하면, 재현성은 측정 데이터를 믿고 의사결정을 내리는 기반이라고 할 수 있습니다.
+@@ ve-digital-microscope-settings
+type: article
+title: 디지털 현미경 설정 이해하기
+title_en: Understanding your digital microscope settings
+date: 2023-09
+author: Sarah Eagles
+industry: 일반 품질관리
+products: EVO Cam II
+image_src: https://www.visioneng.com/wp-content/uploads/2023/09/Digital-Microscope-Exposure-settings-500x440px-copy-400x291-1.webp
+pdf: https://www.visioneng.com/wp-content/uploads/2023/09/Image-Quality-Setting-Digital-Microscope-FINAL-UK.pdf
+url: https://www.visioneng.com/resources/articles/understanding-your-digital-microscope-settings/
+excerpt: 노출, 배율, 화이트 밸런스, 노이즈 저감 설정 요령과 프리셋 활용법을 소개합니다.
+==
+디지털 현미경으로 선명하고 정확한 화면을 얻으려면 설정을 이해하는 것이 중요합니다. 설정이 제각각이면 검사 속도와 정확도가 떨어지고, 작업자마다 결과 이미지가 달라지는 문제가 생깁니다.
+
+글은 노출, 배율, 화이트 밸런스, 노이즈 저감의 네 가지를 중심으로 설명합니다. 조리개를 열면 선명도는 좋아지지만 초점 깊이가 얕아지고, 조이면 깊이는 늘지만 선명도가 조금 떨어집니다. 움직이는 시료는 셔터를 빠르게, 미세한 세부가 있는 부품은 느리게 설정하는 것이 좋습니다. 게인을 올리면 어두운 대상을 볼 수 있지만 노이즈가 늘어납니다.
+
+배율은 대물렌즈와 줌 위치의 조합으로 정해지며, 같은 조건이라도 화면 크기에 따라 표시 배율이 달라집니다. 완성된 설정은 프리셋으로 저장하고 관리자 잠금(supervisor settings lock)으로 보호하면 임의 변경을 막을 수 있습니다. 이 프리셋을 여러 장비와 사업장에 공유하면 같은 검사 기준을 유지할 수 있습니다.
+
+일관된 설정은 검사 팀의 신뢰도를 높이고 고객에게 품질관리 체계에 대한 믿음을 줍니다. 기능 설명은 EVO Cam II 기준입니다.
+@@ ve-mantis-qna
+type: article
+title: Mantis, 고객들이 가장 많이 묻는 질문
+title_en: Mantis – A review of the latest customer questions
+date: 2023-06
+author: Sarah Eagles
+industry: 전자·PCB
+products: Mantis
+image_src: https://www.visioneng.com/wp-content/uploads/2023/06/Mantis-Ask-the-Expert-550x400px-English-copy.jpg
+pdf: https://www.visioneng.com/wp-content/uploads/2023/07/Ask-the-Expert-Mantis.pdf
+url: https://www.visioneng.com/resources/articles/mantis-a-review-of-the-latest-customer-questions/
+excerpt: 기종별 차이, 조명 활용, 다중 작업자 환경 등 Mantis에 대한 질문을 정리했습니다.
+==
+Mantis는 접안렌즈가 없는 실체현미경입니다. 이 글은 제품 매니저 Stephen Sanderson이 3세대 Mantis 출시 후 고객들에게 받은 질문을 Q&A로 정리한 것입니다. 쌍안 현미경을 쓰던 사용자가 가장 먼저 궁금해하는 것은 바꿔야 할 이유와 기종별 차이입니다.
+
+먼저 건강 측면입니다. 글에서 인용한 연구에 따르면 현미경을 정기적으로 쓰는 사용자의 95%가 시각 문제를, 85%가 목·근골격계 통증을 호소합니다. Mantis는 똑바로 앉은 자세로 볼 수 있어 목 부담을 줄이고, 머리를 조금 움직여도 상이 유지되며 주변 빛이 더 들어와 눈의 피로도 덜합니다.
+
+기종은 세 가지입니다. PIXO는 5MP 카메라와 ViCapture 캡처·주석 소프트웨어를 갖췄고, ERGO는 디지털 기능을 뺀 광학 전용 모델이며, IOTA는 기록이 필요 없는 기본 작업용으로 배율은 x3~x8입니다.
+
+활용 예로는 고가의 마이크로 PCB 납땜에서 긴 작업 거리를 살리는 구성, 금속 반사면이나 나사산 검사에서 다섯 방향 조명을 조합하는 방법을 소개합니다. 여러 작업자가 함께 쓸 때도 동공 간 거리와 높이 조절만으로 쉽게 맞출 수 있고, 안경을 쓴 채 사용할 수 있으며 교차 오염 위험도 줄어듭니다.
+@@ ve-tvm-qna
+type: article
+title: TVM 측정 시스템, 고객 질문 5선
+title_en: TVM – A review of the top 5 customer questions
+date: 2022-07
+author: Sarah Eagles
+industry: 정밀가공·금속
+products: TVM Series
+image_src: https://www.visioneng.com/wp-content/uploads/2022/07/TVM-rapid-measurement-system-Ask-the-Expert-Featured-image-550x400px.jpg
+pdf: https://www.visioneng.com/wp-content/uploads/2022/07/Ask-the-Expert-TVM-Digital-Microscope-Final.pdf
+url: https://www.visioneng.com/resources/articles/tvm-a-review-of-the-top-5-customer-questions/
+excerpt: 정밀 부품의 여러 치수를 몇 초 만에 재는 TVM에 대한 자주 묻는 질문입니다.
+==
+정밀 프레스 부품처럼 작은 형상이 여러 개 있고 각각 공차 안에 있어야 하는 현장에서는 측정 시간이 큰 고민입니다. 이 글은 TVM 시리즈 비디오 측정 시스템에 대해 고객들이 자주 묻는 다섯 가지 질문을 정리한 인터뷰입니다.
+
+핵심은 플랫 필드 텔레센트릭 광학계와 조명이 넓은 시야와 깊은 피사계 심도를 제공해, 부품의 여러 형상을 몇 초 만에 정확히 잴 수 있다는 점입니다. 시야보다 큰 부품에는 전동 스테이지를 선택할 수 있습니다. '놓고 측정하기(place and measure)' 방식이라 숙련되지 않은 작업자도 몇 시간 교육으로 측정을 시작할 수 있습니다.
+
+기존 투영기(쉐도우그래프)를 대체하려면 TVM을 디지털 오버레이 비교용으로 쓰거나 완전한 비디오 측정기로 쓸 수 있습니다. 텔레센트릭 렌즈와 하부 조명은 회전체 부품의 벽면 영향을 줄여 평면·회전 부품 모두를 빠르게 측정하게 하며, 일괄 측정으로 처리량을 크게 높입니다.
+
+큰 HD 모니터에 왜곡 없는 영상이 나타나 표면 손상 검사에도 쓸 수 있습니다. 결과는 자동 저장되고 네트워크 공유, Excel 내보내기, 지정 양식 보고서 출력이 가능하며, 공차를 벗어난 항목은 결과 표에서 강조됩니다.
+@@ ve-vecam-story
+type: article
+title: VE Cam 제품 개발 이야기
+title_en: VE Cam – The story behind the product
+date: 2022-03
+author: Sarah Eagles
+industry: 일반 품질관리
+products: VE Cam
+image_src: https://www.visioneng.com/wp-content/uploads/2022/03/VE-Cam-Ask-the-Expert-550x400px-copy.jpg
+pdf: https://www.visioneng.com/wp-content/uploads/Articles/Ask-the-Expert-VE-Cam-UK-Final.pdf
+url: https://www.visioneng.com/resources/articles/ve-cam-the-story-behind-the-product/
+excerpt: 기능은 충실하고 가격은 합리적인 통합형 디지털 현미경 VE Cam의 개발 배경입니다.
+==
+Vision Engineering의 디지털 검사 제품은 성능이 좋지만 가격이 부담스럽다는 의견이 있었습니다. 팬데믹으로 예산 압박이 커지면서, 회사는 기능이 풍부하면서도 가격이 합리적인 VE Cam을 개발했습니다. 이 글은 설계·개발 책임자 Graham Mercer와의 인터뷰입니다.
+
+첫 목표는 조명과 액세서리까지 포함한 통합 시스템으로 사용하기 쉽게 만드는 것이었습니다. 고가의 광학 부품 대신 디지털 기술로 원가를 낮추면서도 영상 품질을 유지했고, 터치스크린이나 마우스로 조작하는 화면과 Wi-Fi를 통한 이미지 저장·화면 공유 기능을 넣었습니다.
+
+작업 공간도 중요하게 다뤘습니다. 설치 면적이 작고 모니터를 위에 올릴 수 있어 책상 공간을 덜 차지하며, PC 없이 동작합니다. 최소한의 교육으로 쓸 수 있고, 용도에 맞게 사용자가 설정을 프로그래밍할 수 있습니다.
+
+다양한 스탠드와 조명 옵션으로 여러 환경에 맞출 수 있고, 양손으로 시료를 다뤄야 하는 작업자를 위한 풋페달 옵션도 있습니다. 확대창으로 특정 부위를 키워 보고, 캡처나 Wi-Fi 화면 공유로 동료와 바로 논의할 수 있습니다.
+@@ ve-3d-stereo-reporting
+type: article
+title: 3D 입체 검사와 디지털 기록, 둘 다 잡는 방법
+title_en: 3D stereo inspection without compromising reporting
+date: 2022-01
+author: Sarah Eagles
+industry: 전자·PCB
+products: Lynx EVO, Swift PRO, DRV Stereo CAM
+image_src: https://www.visioneng.com/wp-content/uploads/2022/01/3D-Digital-Stereo-System-Viewer-500x400px-copy.webp
+pdf: https://www.visioneng.com/wp-content/uploads/Articles/3D-Stereo-Inspection-with-Digital-Reporting-small-file.pdf
+url: https://www.visioneng.com/resources/articles/3d-stereo-inspection-without-compromising-reporting/
+excerpt: 2D 디지털과 3D 광학 현미경의 차이, 그리고 입체 검사와 기록을 함께 얻는 방법입니다.
+==
+현미경은 연구소부터 제조 현장까지 널리 쓰이지만, 모든 검사·미세 조립 작업에 맞는 표준 현미경은 없습니다. 이 글은 2D 디지털 현미경과 3D 광학 실체현미경의 차이를 짚고, 어떤 경우 3D 광학 방식이 나은지 설명합니다.
+
+광학 실체현미경은 양안 시차에서 오는 입체감 덕분에 볼록·오목 형상을 즉시 구분하게 해 주어 표면 불량을 빨리 찾는 데 유리합니다. PCB의 돌출 부품이나 표면 마감이 중요한 의료 부품에서 특히 중요합니다. 접안렌즈 없는 방식은 작업자가 조금 뒤로 앉아 주변 시야를 넓히고 편한 자세를 유지하게 해, 장시간 작업의 정확도와 생산성에 도움이 됩니다.
+
+디지털 방식은 자동 초점과 넓은 시야를 제공하고 영상 저장·공유가 쉽습니다. 측정이 필요할 때는 금속이나 투명 폴리머처럼 명암 대비가 낮은 소재에서 광학 측정 현미경이 미세한 가장자리를 더 정확히 잡아냅니다. 기록이 필요하면 2D 카메라 추가, 소프트웨어 측정, 3D 디지털 입체 이미지 저장 중에서 고를 수 있습니다.
+
+이 장점을 함께 얻는 제품으로 Lynx EVO(무접안 실체현미경), Swift PRO(광학+비디오 측정), DRV Stereo CAM(3D 디지털 입체 현미경)이 소개됩니다.
+@@ ve-offline-inspection
+type: article
+title: 오프라인 검사 시스템이 여전히 중요한 이유
+title_en: Off-line inspection systems
+date: 2020-09
+author: Jason Naraine
+industry: 전자·PCB
+products: Lynx EVO, Mantis, Swift PRO, EVO Cam II, TVM Series, LVC Series
+image_src: https://www.visioneng.com/wp-content/uploads/2020/09/Swift-PRO-Duo-with-operator-800x600px.jpg
+pdf:
+url: https://www.visioneng.com/resources/articles/off-line-inspection-systems/
+excerpt: 인라인 검사만으로는 부족한 이유와, 근본 원인을 찾는 오프라인 검사의 역할입니다.
+==
+생산 시간을 줄이는 것은 제조업체의 중요한 목표지만, 품질을 지키려면 비용과 생산 규모, 제품의 최종 용도도 함께 고려해야 합니다. 인라인 검사 공정도 라인에서 무작위로 뽑은 샘플을 오프라인에서 다시 검사해야 하므로, 오프라인 검사는 여전히 중요한 역할을 합니다.
+
+특히 공정 검사와 고장 분석에서 가치가 큽니다. ACI Technologies의 Mike Prestoy는 자동 검사기가 기준을 벗어난 부품을 찾아내도 근본 원인까지 알려주지는 못하지만, 좋은 검사 장비는 원인을 찾아낼 수 있다고 말합니다. 불량의 원인을 알아야 바로잡을 수 있다는 것이 핵심입니다.
+
+광학 시스템인 Lynx EVO, Mantis, Swift PRO는 사용하기 쉽고 불량 탐지와 재작업에 강합니다. 고배율·고해상도의 EVO Cam II는 공정 전후와 공정 중 발견한 결함을 식별하고 기록하는 데 적합합니다. TVM이나 팔레트 측정이 가능한 LVC 자동 3축 시스템처럼 빠르게 부품을 측정하는 장비는 생산 흐름을 지키는 데 도움을 줍니다.
+
+결국 검사 공정을 잘 이해하고 인라인·오프라인 방식의 장단점을 비교해 두 방식을 함께 운영하는 것이 바람직합니다. 시간뿐 아니라 비용과 정확도의 균형을 함께 봐야 합니다.
+@@ ve-deltron-qna
+type: article
+title: Deltron 현장형 CMM, 자주 묻는 질문
+title_en: Deltron – The answers to your most common questions
+date: 2021-09
+author: Sarah Eagles
+industry: 정밀가공·금속
+products: Deltron
+image_src: https://www.visioneng.com/wp-content/uploads/2021/09/Deltron-Ask-the-Expert-550x400px-copy.jpg
+pdf: https://www.visioneng.com/wp-content/uploads/2021/09/Ask-the-Expert-Deltron-FINAL-UK.pdf
+url: https://www.visioneng.com/resources/articles/deltron-the-answers-to-your-most-common-questions/
+excerpt: 현장형 CMM의 온도 보정, 설치 면적, 프로그래밍 방식을 Q&A로 정리했습니다.
+==
+공장 현장에 측정기를 두려는 고객들이 자주 묻는 질문에 Vision Engineering의 측정 그룹 매니저 Güven Türemen이 답한 글입니다. 기존 브리지형 CMM을 현장에 두기 어려운 이유, 온도 변화에 따른 정확도, 측정 프로그램 작성, 설치 공간 문제를 다룹니다.
+
+현장형 CMM은 공기 베어링 대신 견고한 기계식 베어링을 써서 오염된 환경에서도 고장에 강합니다. 작업 공간에 접근하기 쉬운 구조라 자동화 셀이나 자동 이송 환경에도 적합합니다. 온도는 내장 센서 5개가 기계와 주변 온도를 계속 확인해 보정하므로, 온도가 달라도 20°C에서 잰 것과 같은 결과를 얻을 수 있습니다.
+
+측정 프로그램은 ViTouch3D 소프트웨어로 기계 앞에서도, 사무실 PC에서도 CAD 모델을 바탕으로 만들 수 있고, CAD 비교 모듈로 품질 담당자가 현장에 있지 않아도 업무를 진행할 수 있습니다.
+
+Deltron은 델타 메커니즘으로 프로브를 움직여 브리지형·캔틸레버형보다 설치 면적이 작습니다. Deltron 520은 무게 211kg, 면적 1㎡ 미만이면서 지름 520mm·높이 300mm의 측정 범위를 갖췄으며, 프레임 변형과 백래시도 줄여 줍니다.
+@@ ve-drv-stereo-cam-qna
+type: article
+title: DRV Stereo CAM, 자주 묻는 질문 5가지
+title_en: DRV Stereo CAM – Your top 5 questions answered
+date: 2021-08
+author: Jason Naraine
+industry: 일반 품질관리
+products: DRV Stereo CAM, Lynx EVO
+image_src: https://www.visioneng.com/wp-content/uploads/2021/08/DRV-Stereo-CAM-Ask-the-Expert-550x400px-copy.jpg
+pdf: https://www.visioneng.com/wp-content/uploads/2021/08/DRV-Stereo-CAM-Ask-the-expert-FAQ.pdf
+url: https://www.visioneng.com/resources/articles/drv-stereo-cam-your-top-5-questions-answered/
+excerpt: Lynx EVO 연동, 3D 이미지 실시간 공유, 2D 저장 방식 등 주요 질문을 다룹니다.
+==
+DRV Stereo CAM 출시 후 전 세계 고객들이 자주 묻는 질문에 제품 매니저 Stephen Sanderson이 답한 글입니다. 기존 Lynx EVO 사용자의 활용법, 3D 이미지 실시간 공유, 품질팀과의 이미지 공유, 2D 이미지 활용, 층류 후드 안 배치 등 다섯 가지를 다룹니다.
+
+Lynx EVO 사용자는 Stereo CAM 모듈을 추가해도 360° 회전 뷰어를 계속 쓸 수 있습니다. 다만 관찰 배율은 Lynx EVO 단독일 때보다 높아집니다. 시료를 건드리지 않고 경사 뷰어로 여러 방향에서 살펴볼 수 있습니다.
+
+3D 이미지 공유는 한 DRV 뷰어의 출력을 다른 뷰어의 입력에 연결하는 방식으로, 인터넷·무선·케이블 어느 방법이든 떨어진 동료가 같은 화면을 실시간으로 볼 수 있습니다. 대화 중 3D 이미지를 캡처해 결정을 기록할 수도 있습니다.
+
+캡처 이미지는 특수 형식이 아닌 PNG로 저장되어 바로 2D 시스템이나 PC·태블릿·휴대폰에서 쓸 수 있습니다. Stereo CAM 부분과 뷰어는 분리할 수 있어, 층류 후드 안에는 카메라만 두고 뷰어는 밖에 놓은 채 HDMI로 연결해 3D 화면으로 볼 수 있습니다.
+@@ ve-moulding-qc-medical
+type: article
+title: 의료기기 사출 부품을 위한 품질관리 프로토콜
+title_en: Molding a quality management protocol fit for medical devices
+date: 2020-09
+author: Sarah Eagles
+industry: 의료기기
+products: Mantis, Lynx EVO, EVO Cam II, Swift PRO Duo, TVM Series, LVC Series
+image_src: https://www.visioneng.com/wp-content/uploads/2020/09/Plastic-medical-catheters-550x400px.jpg
+pdf: https://www.visioneng.com/wp-content/uploads/2020/09/Moulding-Quality-Control.pdf
+url: https://www.visioneng.com/resources/articles/moulding-a-quality-management-protocol-fit-for-medical-devices/
+excerpt: Class III 의료기기 플라스틱 부품의 검사량, 배율, 측정 방식을 정하는 기준입니다.
+==
+의료기기용 플라스틱 부품은 생체 적합성이 좋고 가볍고 튼튼하며 생산 효율도 높습니다. 이런 부품이 Class III 의료기기에 들어간다면 품질관리가 매우 중요합니다. 품질관리는 고객 사양과 ISO 13485, FDA 규정 같은 표준을 충족하는지 확인하는 과정입니다.
+
+먼저 검사 물량을 정해야 합니다. 배치 샘플 검사로 충분한지, 전수 검사가 필요한지에 따라 작업량과 장비 선택이 달라지며, 안전에 중요한 Class III 부품은 보통 100% 검사가 필요합니다. 플라스틱 부품은 잔류 응력, 뒤틀림, 싱크 마크, 미성형(쇼트 샷), 성형 잔여물, 색상과 표면 마감도 점검해야 합니다.
+
+육안 검사는 합의된 배율에서 반복 가능하게 해야 합니다. 예컨대 초기 점검은 8배, 문제가 의심되면 15배로 확인하도록 정할 수 있어 가변 배율 현미경이 필요합니다. Mantis는 2x~20x, Lynx EVO는 대물렌즈에 따라 2.7x~240x를 제공하며, 원통·다면체 형상은 360° 뷰어가 있는 Lynx EVO나 EVO Cam II가 적합합니다.
+
+측정 단계에서는 광학·디지털을 전환하는 Swift PRO Duo가 정확도와 효율을 함께 얻게 해 주고, X·Y만 잰다면 TVM 같은 2D 시스템이 빠르며, X·Y·Z를 함께 재려면 터치 프로브를 갖춘 LVC처럼 비접촉·접촉 측정을 한 루틴에서 쓰는 장비가 좋습니다.
+@@ ve-visual-accuracy-myths
+type: article
+title: 시각 정확도에 대한 오해와 통념
+title_en: Misconceptions and Myths About Visual Accuracy
+date: 2020-05
+author: Vision Engineering
+industry: 일반 품질관리
+products: DRV-Z1
+image_src: https://www.visioneng.com/wp-content/uploads/2020/05/visual_accuracy_398x250.jpg
+pdf: https://www.visioneng.com/wp-content/uploads/2020/05/Misconceptions-and-Myths-about-Visual-Accuracy-1.pdf
+url: https://www.visioneng.com/resources/articles/misconceptions-and-myths-about-visual-accuracy/
+excerpt: 카메라와 눈이 늘 진실을 보여주지는 않는 이유와, 3D 관찰이 정확도를 높이는 원리입니다.
+==
+시각 정확도란 눈에 들어온 것을 올바르게 해석하는 능력입니다. 그런데 눈에 보인 정보는 뇌에서 다시 해석되기 때문에, 시각과 관련된 여러 오해가 생깁니다.
+
+'카메라는 거짓말을 하지 않는다'는 말이 있지만, 카메라도 특정 순간·특정 시점에서 본 일부만 담습니다. 프레임 밖이나 색, 밝기, 그림자 때문에 실제가 가려질 수 있습니다. '보는 것이 믿는 것'도 '보는 것은 해석하는 것'에 가깝습니다. 한쪽 눈으로 비스듬히 본 동전은 타원이지만 익숙함 때문에 원으로 인식하는 것이 그 예입니다.
+
+2D 화면은 한 시점만 보여주므로 3D 대상을 온전히 전달하기 어렵습니다. 펜로즈 삼각형 같은 착시가 대표적이며, 변색을 그림자로, 왜곡을 원근감으로 착각하거나 돌출과 함몰을 구분하지 못하는 경우도 생깁니다.
+
+해결책은 3D 관찰입니다. 두 눈이 조금 다른 시점을 결합하므로 깊이, 질감, 형상을 더 명확히 인식할 수 있습니다. 그림자와 요철을 구분하기 쉬워 나사산 같은 내부 형상 검사나 납땜·재작업의 속도와 정확도가 높아지며, 글은 그 예로 DRV-Z1 디지털 3D 입체 뷰어를 소개합니다.

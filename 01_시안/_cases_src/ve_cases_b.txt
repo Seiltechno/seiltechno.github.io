@@ -1,0 +1,210 @@
+@@ ve-cs-defense-as9100-mantis
+type: case
+title: 방산 공급업체, Mantis로 AS9100 검사와 부적합 보고 간소화
+title_en: Defense Supplier Streamlines AS9100 Inspection with Mantis
+date: 2025-09
+customer: 저궤도 위성통신 시스템 제조사 (비공개)
+country:
+industry: 항공·방산
+products: Mantis PIXO
+image_src: https://www.visioneng.com/wp-content/uploads/2023/08/PCB-inspection-using-Mantis-on-Verso-stand-768x572px.jpg
+pdf: https://www.visioneng.com/wp-content/uploads/2025/09/CS_Defence_Mantis_2025.pdf
+url: https://www.visioneng.com/resources/case-studies/defense-supplier-streamlines-as9100-inspection-with-mantis/
+excerpt: SD카드를 거치던 부적합 보고 이미지 작업을 없애고 여러 사용자가 바로 검사합니다.
+==
+고객은 저궤도 항공우주 통신 시스템을 만드는 기업입니다. AS9100 품질 요건을 충족하는 검사 체계가 필요했고, 월 생산량이 소수의 고가 조립품이라 결함을 일찍 찾고 기록을 정확히 남기는 일이 특히 중요했습니다.
+
+기존 쌍안 현미경은 조작이 느리고 자세가 불편했으며, 사용자마다 검사 결과가 달라지는 문제가 있었습니다. 부적합 보고서(NMR)에 넣을 이미지는 별도 카메라와 SD 카드를 거치는 여러 단계를 밟아야 해 문서 작업 부담이 컸습니다.
+
+회사는 공용 검사 공간에 Mantis PIXO를 시험 도입했습니다. 이미지를 PC로 바로 저장할 수 있어 SD 카드 작업이 사라졌고, 설정을 크게 바꾸지 않고도 여러 사용자가 번갈아 검사할 수 있었습니다. 0201 저항과 배선 경로, 2.3mm 카운터보어 안쪽의 버까지 확인할 수 있었고, 좁은 작업대에 맞는 작은 설치 면적도 장점이었습니다.
+
+사용자들은 화면이 더 선명하고 편하며 보고 작업이 빨라졌다고 평가했습니다. 이 시스템은 AS9100 품질 목표에 부합하며, 특히 NMR 작성에 드는 시간과 오류를 줄이는 데 도움이 되었습니다.
+@@ ve-cs-cologne-forensic
+type: case
+title: 쾰른 대학교 법의학연구소, 35년 미제 사건의 단서를 찾다
+title_en: University of Cologne's Forensic Breakthrough with Lynx EVO
+date: 2025-07
+customer: 쾰른 대학교 법의학연구소
+country: 독일
+industry: 연구·바이오
+products: Lynx EVO
+image_src: https://www.visioneng.com/wp-content/uploads/2025/07/2.jpg
+pdf: https://www.visioneng.com/wp-content/uploads/2025/07/CS_Uni_Cologne_Forensics_2025.pdf
+url: https://www.visioneng.com/resources-uk/case-studies/university-of-colognes-forensic-breakthrough-with-lynx-evo/
+excerpt: 접착테이프 증거물에서 미세 피부 조각을 찾아 DNA를 확보하는 데 Lynx EVO가 쓰였습니다.
+==
+고객은 독일 쾰른 대학교 법의학연구소입니다. 1988년 쾰른 카니발 기간에 일어난 살인 사건의 핵심 증거는, 미세한 섬유와 피부 입자가 붙어 있을 것으로 보이는 접착테이프였습니다.
+
+당시 기술로는 이런 작은 조각에서 쓸 만한 DNA를 얻을 해상도가 부족해 사건은 35년간 미제로 남았습니다. 이후 쾰른 경찰의 미제사건 전담팀이 연구소와 함께 수사를 재개하며 현대적인 법의학용 현미경 장비를 찾았습니다.
+
+연구진은 Lynx EVO로 원본 증거를 다시 살폈습니다. 고해상도 영상과 접안렌즈 없는 인체공학 설계 덕분에, 법의학 보조 인력이 여러 달에 걸쳐 테이프를 꼼꼼히 훑으며 피부 조각을 찾아 회수할 수 있었습니다.
+
+정밀한 광학으로 미세한 피부 조각을 식별했고, 장시간 관찰에도 불편이 적었습니다. 이를 통해 DNA를 추출해 용의자를 특정했고 30년 넘은 사건을 해결했습니다. 이 사건은 독일 공영방송 ZDF에서도 소개되었습니다.
+@@ ve-cs-aviation-lynx
+type: case
+title: 항공 엔진 점검의 정확도와 보고 속도를 높인 Lynx EVO
+title_en: Improving aviation inspection accuracy with Lynx EVO
+date: 2025-07
+customer: 상업 항공 분야 기업 (비공개)
+country:
+industry: 항공·방산
+products: Lynx EVO
+image_src: https://www.visioneng.com/wp-content/uploads/2025/07/Lynx-EVO-website-600x400-px.jpg.webp
+pdf: https://www.visioneng.com/wp-content/uploads/2025/07/CS_Aviation_Lynx_EVO_2024.pdf
+url: https://www.visioneng.com/case-studies/improving-aviation-inspection-accuracy-with-lynx-evo/
+excerpt: 엔진 이물 검사에서 1mm 스크래치까지 찾아내고 교대 팀 간 보고를 빠르게 했습니다.
+==
+고객은 상업 항공 분야의 기업입니다. 정시 운항과 지연 최소화가 중요한 만큼 엔진 상태 점검의 정확성은 일정 신뢰성에 직접 영향을 줍니다. 규제 요구와 검사 속도·보고에 대한 기대가 커지면서 더 발전된 검사 솔루션이 필요해졌습니다.
+
+요구 사항은 정밀 측정, 상세한 육안 검사, 빠르고 추적 가능한 보고였습니다. 기존 장비에도 만족하고 있었지만, 비교 검토 과정에서 제품 성능과 그동안 경험한 서비스를 바탕으로 Lynx EVO가 최종 선택되었습니다.
+
+Lynx EVO 두 대를 설치한 뒤 기술자들은 영상이 더 선명하고 검사가 빨라졌다고 말합니다. 모든 엔진 이물 감지 장치(MCD)는 Lynx EVO로 먼저 검사한 뒤 XRF 분광 분석으로 문제 부품을 특정하는데, 예컨대 볼 베어링의 1mm 스크래치까지 찾아낼 수 있습니다. 이후 다시 Lynx EVO로 결과를 검토·기록해 보고합니다.
+
+검사 정보를 수집·해석·공유하는 과정이 빨라졌고 교대 팀 간 인수인계도 수월해졌습니다. 장시간 검사의 피로를 줄이는 인체공학 설계와 함께, 고객은 도입 후 검사 시간이 크게 줄었다고 평가합니다.
+@@ ve-cs-gase-mantis
+type: case
+title: 해저 통신 부품의 정밀 검사 역량을 높인 GASE Engineering
+title_en: Gase Engineering's approach to precision in critical inspections
+date: 2025-02
+customer: GASE Engineering Limited
+country: 영국
+industry: 정밀가공·금속
+products: Mantis PIXO
+image_src: https://www.visioneng.com/wp-content/uploads/2025/02/gase-featured-image-comp-400x300-1.png
+pdf: https://www.visioneng.com/wp-content/uploads/2025/02/Case_Study_GASE_Mantis_Pixo_2025.pdf
+url: https://www.visioneng.com/resources/case-studies/gase-engineerings-approach-to-precision-inspections/
+excerpt: 수리가 불가능한 해저 부품을 15배 입체 관찰과 정전기 안전 작업으로 검사합니다.
+==
+GASE Engineering은 가공, 검사, 제작 서비스를 제공하는 영국의 정밀 제조 기업으로, 항공우주·방산·해양·통신·원자력 분야에서 50년 이상의 경험을 쌓았습니다. 이번 사례는 해저 통신망에 쓰이는 부품을 요구하는 대형 통신 고객에서 시작되었습니다.
+
+해저에 설치되는 부품은 수리가 거의 불가능해 정밀도와 신뢰성이 필수입니다. 광섬유에 민감하므로 표면이 매끄럽고 손상이 없어야 했고, 작은 결함과 이물을 찾기 위해 최소 10배 배율이 필요했으며, 정전기 방전(ESD)으로부터 전자 부품을 보호해야 했습니다.
+
+여러 대안을 검토한 끝에 GASE는 고객사도 사용하며 추천한 Mantis PIXO를 선택했습니다. 고해상도 광학으로 금속 개재물이나 스크래치 같은 미세 결함을 찾아내고, 요구치를 넘는 15배 배율을 제공하며, 정전기 안전 작업 흐름을 지원합니다. 접안렌즈 없는 설계로 장시간 작업의 피로도 적습니다.
+
+고객사와 같은 장비를 쓰니 협의가 단순해지고 검사 기준도 일관되게 맞출 수 있었습니다. 도입 직후부터 개선 효과가 나타나 여러 사업장으로 확대 적용되었습니다.
+@@ ve-cs-specac-deltron
+type: case
+title: 분광 액세서리 제조사 Specac, 수기 측정을 프로그램 측정으로
+title_en: Specac streamlined operations with Deltron CMM
+date: 2025-02
+customer: Specac
+country: 영국
+industry: 정밀가공·금속
+products: Deltron, Swift PRO
+image_src: https://www.visioneng.com/wp-content/uploads/2025/02/IMG_4457-specac-600x420-1.jpg
+pdf: https://www.visioneng.com/wp-content/uploads/2025/02/Case_Study_Specac_Deltron_2024.pdf
+url: https://www.visioneng.com/case-studies/specac-streamlined-operations-with-deltron-cmm/
+excerpt: 수동 게이지와 엑셀 입력을 프로그램 측정 루틴으로 바꿔 효율과 추적성을 높였습니다.
+==
+Specac은 런던에 본사를 둔 실험실 분광 분석용 액세서리 제조사입니다. 매출의 90%가 수출이며, 영국과 미국에 80여 명의 직원을 두고 ISO 9001·14001 인증을 보유하고 있습니다.
+
+부품이 복잡해지고 공차가 엄격해지면서 측정 정밀도 요구도 커졌습니다. 수년간 수동 게이지와 스프레드시트 입력에 의존했지만 효율과 정확성에 한계가 드러났고, 고객이 요구하는 추적성과 상세 보고서를 만드는 데 점점 더 오래 걸렸습니다. 작고 복잡한 부품일수록 어려움이 컸습니다.
+
+회사는 필요한 기능을 합리적인 가격에 갖춘 Deltron CMM을 도입했습니다. 이미 다른 측정에는 Swift PRO를 쓰고 있어 Deltron이 이를 보완하는 역할을 합니다. Vision Engineering의 현장 교육과 지원을 받아 부품별 맞춤 측정 프로그램을 만들었습니다.
+
+프로그램 측정 루틴 덕분에 재설정 없이 특정 항목만 점검할 수 있게 되었고, 배치 측정을 백그라운드로 돌리며 다른 품질 업무를 병행할 수 있게 되었습니다. 생산이 늘어도 정확도를 유지하면서 추적 가능한 문서를 더 쉽게 만들 수 있습니다.
+@@ ve-cs-risbridger-edge
+type: case
+title: 100년 역사의 Risbridger, Swift PRO Edge로 측정 현대화
+title_en: Risbridger use Swift Pro Edge to improve precision
+date: 2024-12
+customer: Risbridger Ltd
+country: 영국
+industry: 항공·방산
+products: Swift PRO Edge
+image_src: https://www.visioneng.com/wp-content/uploads/2024/12/risbridger-featured-image-400x300-1.png
+pdf: https://www.visioneng.com/wp-content/uploads/2024/12/Case_Study_Risbridger_Edge_2024_EN-2.pdf
+url: https://www.visioneng.com/case-studies/risbridger-improve-precision/
+excerpt: 게이지·캘리퍼스 수작업 측정을 자동 광학 측정과 DXF 비교로 바꿨습니다.
+==
+Risbridger는 100여 년간 항공기 정비와 석유화학 산업용 특수 엔지니어링 제품을 설계해 온 영국 제조사입니다. 안전이 최우선인 분야인 만큼 높은 기준을 적용해 왔고, 생산 공정 개선과 사업 확장에 꾸준히 투자하고 있습니다.
+
+점점 복잡해지는 부품 수요에 대응하려면 측정 체계를 현대화해야 했습니다. 게이지와 캘리퍼스는 오랫동안 충분했지만 작업자에 따라 값이 흔들리고, 검사에 시간이 많이 걸리며, 보고서와 추적성 요구를 충족하기 어려웠습니다. 작고 정교한 부품일수록 문제가 두드러졌습니다.
+
+회사는 벤치형 광학 측정 시스템 Swift PRO Edge를 도입했습니다. 6.5배 인덱스 줌으로 다양한 크기의 부품을 정밀하게 재고, 자동 검사로 측정 시간을 줄였으며, 직관적인 화면 덕분에 교육을 많이 받지 않은 직원도 쉽게 다룹니다. M3 소프트웨어로 측정 프로그램을 만들고 DXF 도면을 불러와 투영기처럼 비교할 수 있으며, 품질 증빙 문서도 출력합니다.
+
+도입 후 정밀도와 신뢰성, 측정 역량이 함께 높아졌습니다. 늘어나는 수요에 대응하면서도 오랜 품질 전통을 지킬 수 있게 되었고, 사업 확장에 대한 자신감도 얻었습니다.
+@@ ve-cs-sonuus-mantis
+type: case
+title: 오디오 기기 개발사 Sonuus, Mantis로 시제품 납땜을 편하게
+title_en: Precision work transformed into pleasure at Sonuus
+date: 2024-06
+customer: Sonuus Limited
+country: 영국
+industry: 전자·PCB
+products: Mantis
+image_src: https://www.visioneng.com/wp-content/uploads/2024/06/Sonuus_Mantis_Image-scaled.jpg
+pdf: https://www.visioneng.com/wp-content/uploads/2024/06/Case_Study_Sonuus_Mantis_2024.pdf
+url: https://www.visioneng.com/case-studies/precision-work-sonuus/
+excerpt: 미세 피치 MCU 납땜 문제를 넓은 입체 시야와 그림자 없는 조명으로 해결했습니다.
+==
+Sonuus는 악기와 프로 오디오 분야의 신기술을 개발하는 영국 기업입니다. 자체 브랜드 제품의 시제품 개발과 시험을 직접 맡고, 외부 고객을 위한 하드웨어·소프트웨어 설계와 특허 라이선스 사업도 합니다.
+
+공동창업자 James Clark에 따르면 기존 장비마다 한계가 있었습니다. 머리에 쓰는 확대경은 부품에 너무 가까이 다가가야 해 자세가 나빠지고 납 연기에 노출되기 쉬웠고, 쌍안 현미경은 작업 영역이 좁고 초점을 계속 맞춰야 해 피로가 컸습니다. USB 현미경은 입체감이 없어 깊이 판단이 어렵고 금속 반사 때문에 조명 배치가 까다로웠습니다.
+
+예전에 Mantis를 검토했지만 크기와 비용 때문에 미뤘던 그는, 작업 공간과 예산에 맞는 최신 모델이 나오고 미세 피치 MCU 납땜 문제가 생긴 시점에 도입을 결정했습니다. 실제 시연으로 기능을 확인한 것이 도움이 되었습니다. Mantis는 편한 자세, 넓은 입체 작업 영역, 반사와 그림자를 없애는 조명을 제공하고 부품을 돌려 여러 각도에서 보게 해 줍니다.
+
+도입 후 USB 현미경은 더 이상 쓰지 않게 되었습니다. 기판 점검과 수정이 효율적으로 이뤄지고 시제품 검사의 신뢰도도 높아졌으며, 베이스 두 개로 연구실과 작업장 양쪽에서 사용하고 있습니다.
+@@ ve-cs-pentagon-lvc
+type: case
+title: 사출성형 업체 Pentagon Plastics, 품질관리를 자동화하다
+title_en: Pentagon Plastics' shift to enhanced measurement capabilities
+date: 2024-04
+customer: Pentagon Plastics Group plc
+country: 영국
+industry: 플라스틱·사출
+products: LVC Series, Deltron
+image_src: https://www.visioneng.com/wp-content/uploads/2024/04/pentplasttraining.jpg
+pdf: https://www.visioneng.com/wp-content/uploads/2024/04/CS_Pentagon_Metrology_2024.pdf
+url: https://www.visioneng.com/case-studies/pentagon-enhance-measurement-capabilities/
+excerpt: 늘어나는 고객 품질 보고 요구에 자동 영상 측정기와 CNC 좌표측정기로 대응했습니다.
+==
+Pentagon Plastics는 영국 웨스트서식스의 사출성형·금형 제조업체로, 50년 넘는 경험을 바탕으로 설계 지원부터 금형 제작, 성형, 후가공까지 턴키 서비스를 제공합니다. ISO 9001:2015 체계 아래 여러 산업에 맞춤형 기술 성형품을 공급합니다.
+
+회사는 성형품과 금형 제작 전반의 품질관리를 자동화해야 했습니다. 수작업 측정에 크게 의존해 왔지만 고객의 품질 보고 요구가 급증하면서 한계에 부딪혔습니다. 금형 제작 여러 단계에서 기술자가 자기 작업을 정확하고 반복성 있게 잴 수 있는 간단한 장비, 프로브 측정까지 가능한 장비, 기존 공장 배치에 들어갈 크기가 모두 필요했습니다.
+
+회사는 완전 자동 영상 측정기 LVC 400 시리즈와 CNC 좌표측정기 Deltron을 도입했습니다. 문의에서 발주까지 시간이 걸렸지만 Vision Engineering 팀이 단계마다 요구에 맞는 해법을 찾도록 지원했고, 설치 후에는 두 장비에 대한 교육과 신속한 사후 지원이 이어졌습니다.
+
+이 솔루션으로 품질관리 역량을 높이고 공정을 간소화했으며, 늘어나는 고객 요구에도 대응할 수 있게 되었습니다.
+@@ ve-cs-schneider
+type: case
+title: Schneider Electric, PCB 리워크와 불량 원인 추적을 개선
+title_en: Enhancing Efficiency and Quality at Schneider Electric
+date: 2024-03
+customer: Schneider Electric (영국 플리머스 사업장)
+country: 영국
+industry: 전자·PCB
+products: Mantis, EVO Cam II
+image_src: https://www.visioneng.com/wp-content/uploads/2024/03/1604-vision-663-copy.png
+pdf: https://www.visioneng.com/wp-content/uploads/2024/03/Case-Study-Schneider-Electric-2024.pdf
+url: https://www.visioneng.com/resources/case-studies/enhancing-efficiency-and-quality-at-schneider-electric/
+excerpt: 0201 부품 리워크는 Mantis로, 불량 기판 이미지 기록은 EVO Cam II로 처리합니다.
+==
+Schneider Electric은 디지털 자동화와 에너지 관리 분야의 프랑스 다국적 기업으로, 전 세계 약 16만 5천 명이 일합니다. 온도조절 밸브부터 난방·온수 제어용 전자 타이머까지 난방 제품을 생산하며, 인터넷 연결형 스마트 난방 시스템으로 혁신을 이어가고 있습니다. 회사는 10년 넘게 Vision Engineering 장비를 써 왔습니다.
+
+기존 난방 제어 장치에 스마트 디지털 부품을 넣으면서 일관성과 신뢰성 문제가 새로 생겼고, 외부 공급업체 부품 관리의 복잡성도 더해졌습니다.
+
+영국 플리머스 사업장의 PCB 리워크 구역에서는 Mantis가 핵심 역할을 합니다. 생산 중 불량 판정된 기판을 점검하는 데 쓰이며, 0201 규격처럼 아주 작은 부품을 고배율로 보면서 검사와 납땜을 동시에 할 수 있습니다. 함께 설치한 EVO Cam II로 문제 기판의 이미지를 남겨, 불량이 PCB 제조 단계에서 생겼는지 조립 단계에서 생겼는지 가려내는 데 활용합니다.
+
+수년간의 지속적 개선으로 불량 건수는 무시할 만한 수준까지 줄었습니다. 회사는 Vision Engineering을 지속적 개선을 함께하는 신뢰할 수 있는 파트너로 평가합니다.
+@@ ve-cs-igbmc-stemcell
+type: case
+title: 클린벤치 안에서 줄기세포를 관찰·조작하는 IGBMC 연구소
+title_en: Elevating Stem Cell Research with Lynx EVO
+date: 2024-03
+customer: IGBMC (스트라스부르 대학교)
+country: 프랑스
+industry: 연구·바이오
+products: Lynx EVO, Makrolite 4K
+image_src: https://www.visioneng.com/wp-content/uploads/2024/03/Lynx-over-shoulder-laminar-flow-550x400-1.webp
+pdf: https://www.visioneng.com/wp-content/uploads/2025/03/Elevating-Stem-Cell-Research-2024_V2_web.pdf
+url: https://www.visioneng.com/case-studies/elevating-stem-cell-inspection-lynx-evo/
+excerpt: 무접안 입체 현미경으로 무균 환경을 지키면서 iPSC 채취 작업을 선명하게 봅니다.
+==
+IGBMC(유전·분자·세포생물학 연구소)는 스트라스부르 대학교에 있는 유럽의 주요 연구기관으로, 프랑스 국립과학연구센터(CNRS)와 함께 연구합니다. 이곳의 PluriCell East 부서는 유도만능줄기세포(iPSC)로 여러 질환을 모델링하고 치료 후보 물질의 효과와 독성을 시험합니다.
+
+줄기세포 연구에서는 오염을 막고 무균 상태를 유지하는 것이 무엇보다 중요합니다. 일반 쌍안 실체현미경은 눈과 장비 사이가 가까워 클린벤치 안에서 쓰기 어려웠고, 정교한 세포 조작에 필요한 기능도 부족했습니다.
+
+연구진은 접안렌즈 없는 Lynx EVO를 사용합니다. 눈과 장비 사이 거리를 넉넉히 확보할 수 있어 유리 스크린을 내린 채 무균 환경을 지키며 작업할 수 있습니다. 밝고 대비 높은 3D 입체 영상을 제공하고, 여러 사용자가 설정을 다시 맞추지 않고 함께 볼 수 있습니다. 카메라와 ViCapture 소프트웨어로 관찰 내용을 기록하고 측정·주석을 더할 수 있으며, 같은 연구소의 다른 팀은 Makrolite 4K와 함께 망막 오가노이드 연구에 활용할 계획입니다.
+
+Lynx EVO는 줄기세포 채취 과정을 선명하게 보여 주고 기록과 협업을 간소화합니다. 이 장점은 체외수정(IVF)이나 미세주입처럼 청정 환경이 필요한 다른 세포 응용 분야에도 적용할 수 있습니다.

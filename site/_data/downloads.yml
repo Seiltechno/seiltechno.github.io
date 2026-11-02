@@ -1,0 +1,71 @@
+# 자료실 목록 — 입력 화면(Pages CMS)의 '자료실'에서 추가·수정하면 됩니다.
+# file: 올린 파일 / url: 큰 파일은 구글 드라이브 등의 공유 링크(파일 대신)
+# kind: brochures(브로셔) datasheets(데이터시트) manuals(사용설명서) software(소프트웨어) technical(기술자료)
+# product: 관련 제품 파일 이름(예: mantis) — 적으면 그 제품 페이지의 '브로셔 PDF' 버튼과 연결
+# ※ 보안자료·가격표는 올리지 않습니다.
+
+- file: brochures/mantis-brochure-ko.pdf
+  title: Mantis 무접안 실체현미경 브로셔
+  product: mantis
+  lang: 한국어
+  date: 2026-11-02
+- file: brochures/lynx-evo-brochure-ko.pdf
+  title: Lynx EVO 무접안 실체현미경 브로셔
+  product: lynx-evo
+  lang: 한국어
+  date: 2026-11-02
+- file: brochures/evocam-aura-brochure-ko.pdf
+  title: EVO Cam AURA 디지털 현미경 브로셔
+  product: evocam-aura-4k
+  lang: 한국어
+  date: 2026-11-02
+- file: datasheets/evocam-aura-datasheet-ko.pdf
+  title: EVO Cam AURA 데이터시트
+  product: evocam-aura-4k
+  lang: 한국어
+  date: 2026-11-02
+- file: brochures/drv-z1-brochure-ko.pdf
+  title: DRV-Z1 3D 디지털 입체 뷰어 브로셔
+  product: drv-z1
+  lang: 한국어
+  date: 2026-11-02
+- file: brochures/drv-stereo-cam-brochure-ko.pdf
+  title: DRV Stereo CAM 브로셔
+  product: drv-stereo-cam
+  lang: 한국어
+  date: 2026-11-02
+- file: brochures/opta-brochure-ko.pdf
+  title: OPTA 디지털 현미경 브로셔
+  product: opta
+  lang: 한국어
+  date: 2026-11-02
+- file: brochures/deep-vision-brochure-ko.pdf
+  title: Deep Vision 3D 초심도 디지털 현미경 브로셔
+  product: hikvision-di-am1165
+  lang: 한국어
+  date: 2026-11-02
+- file: datasheets/deep-vision-di-am1165-datasheet-en.pdf
+  title: Deep Vision DI-AM1165 데이터시트
+  product: hikvision-di-am1165
+  lang: 영어
+  date: 2026-11-02
+- file: brochures/desktop-3d-scanner-brochure-ko.pdf
+  title: DESKTOP 3D 스캐너 브로셔
+  product: desktop-3d-scanner
+  lang: 한국어
+  date: 2026-11-02
+- file: manuals/mantis-user-guide-ko.pdf
+  title: Mantis 3세대 사용설명서
+  product: mantis
+  lang: 한국어
+  date: 2026-11-02
+- file: manuals/lynx-evo-user-guide-en.pdf
+  title: Lynx EVO 사용설명서
+  product: lynx-evo
+  lang: 영어
+  date: 2026-11-02
+- file: software/vicapture-user-guide-en.pdf
+  title: ViCapture 이미지 캡처 소프트웨어 사용설명서
+  product: mantis
+  lang: 영어
+  date: 2026-11-02

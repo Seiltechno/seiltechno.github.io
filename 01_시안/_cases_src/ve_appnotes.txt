@@ -1,0 +1,100 @@
+@@ ve-an-as9100
+type: appnote
+title: AS9100 인증 대응을 위한 검사 시스템 활용
+title_en: Achieving AS9100 Compliance With Vision Engineering Inspection Systems
+date: 2025-07-11
+author: Mike Phillpot
+industry: 항공·방산
+products: Lynx EVO, Mantis, EVO Cam HALO, Swift PRO, LVC Series, TVM Series, Deltron
+image_src: https://www.visioneng.com/wp-content/uploads/2025/07/evocam_halo_069_style_ringlight_-blurred_man_squarePCB_72dpi-e1753300119506.jpg
+pdf: https://www.visioneng.com/wp-content/uploads/2025/10/AN_Achieving_AS9100_Compliance_EN_edit.pdf
+url: https://www.visioneng.com/resources/application-notes/achieving-as9100-compliance-with-vision-engineering-inspection-systems/
+excerpt: 항공·방산 품질 인증 AS9100 요건에 맞춘 검사·측정 장비 활용 방안입니다.
+==
+항공우주·방위 산업에서는 AS9100 인증이 공급 조건으로 자주 요구됩니다. 이 노트는 제조사들이 겪는 대표적 어려움으로 미세 결함과 이물(FOD) 확인, 측정 기록의 추적성 확보, 장시간 검사로 인한 작업자 피로와 오류를 꼽습니다.
+
+해법은 입체 시각을 제공하는 고해상도 검사 장비와 측정 시스템입니다. 이미지를 바로 캡처해 부적합 보고서(NCR)에 첨부하고, 프로그램된 측정 루틴과 자동 보고서로 작업자나 교대 조가 바뀌어도 결과의 일관성을 유지합니다.
+
+접안렌즈 없는 설계는 기존 현미경에서 생기는 목·눈의 피로와 반복성 근골격 부담을 줄여 줍니다. 최초 제품 검사(FAI), 공정 중 품질관리, 최종 검사, FOD 관리 프로그램 등 단계별 활용 예시도 함께 제시됩니다.
+
+용도별 추천 장비로 Lynx EVO, Mantis PIXO, EVO Cam 시리즈, Swift PRO, LVC, TVM, Deltron을 표로 정리하고 있어, 인증 준비 단계에서 장비 구성을 검토할 때 참고하기 좋습니다.
+@@ ve-an-lean-manufacturing
+type: appnote
+title: 린(Lean) 제조와 무접안 현미경
+title_en: Enhancing Lean Manufacturing Adaptation
+date: 2024-01-23
+author: Zoe Jackson
+industry: 일반 품질관리
+products: Mantis, Lynx EVO
+image_src: https://www.visioneng.com/wp-content/uploads/2024/01/lean-manufacturing-550x400-1.jpg
+pdf: https://www.visioneng.com/download/eyepiece-less-microscopes-enhancing-lean-manufacturing-adaptation-english/
+url: https://www.visioneng.com/resources/application-notes/enhancing-lean-manufacturing-adaptation-note/
+excerpt: 린 제조를 도입할 때 미세 검사 공정이 효율에 미치는 영향과 개선 방법입니다.
+==
+린 제조는 낭비를 줄이고 효율과 가치를 최대화하는 방법론입니다. 지속적인 개선, 직원 참여, 품질 높은 제품을 꾸준히 전달하는 것이 핵심이며, 이를 뒷받침하는 기술의 역할이 커지고 있습니다.
+
+이 노트는 린 제조를 도입할 때 고려할 점을 짚고, 미세 부품을 확인하는 검사 공정이 생산 흐름에 어떤 영향을 주는지 살펴봅니다. 검사 도구를 어떻게 고르고 쓰느냐가 공정 효율을 좌우한다는 관점입니다.
+
+특히 접안렌즈 없는(eyepiece-less) 현미경이 린 공정에 잘 맞는다고 강조합니다. 작업자가 편한 자세로 오래 일할 수 있고, 여러 사람이 함께 보며 판단을 빠르게 내릴 수 있어 대기와 재확인 같은 낭비를 줄일 수 있기 때문입니다.
+
+정리하면 린 제조 도입 시 고려 사항, 미세 검사가 공정에 미치는 영향, 무접안 현미경이 효율과 생산성을 높이는 이유의 세 가지가 핵심입니다. 세부 내용은 원문 PDF에서 확인할 수 있습니다.
+@@ ve-an-lab-grown-diamond
+type: appnote
+title: 랩그로운(실험실 배양) 다이아몬드 제조와 검사
+title_en: Manufacturing Lab-Grown Diamonds
+date: 2024-01-12
+author: Zoe Jackson
+industry: 보석·소재
+products: Lynx EVO, Mantis, EVO Cam II
+image_src: https://www.visioneng.com/wp-content/uploads/2024/01/lab-grown-diamond-550x400-1.jpg
+pdf: https://www.visioneng.com/wp-content/uploads/2024/02/Lab-grown-diamonds-application-note.pdf
+url: https://www.visioneng.com/resources/application/lab-grown-diamond-manufacture/
+excerpt: HPHT·CVD 방식 랩그로운 다이아몬드의 개재물·색상·투명도 검사 포인트입니다.
+==
+천연 다이아몬드는 가격이 높고 수요가 꾸준히 늘어, 고품질 랩그로운 다이아몬드에 대한 관심도 커지고 있습니다. 랩그로운 다이아몬드는 천연과 물리적·화학적·광학적 성질이 같기 때문에, 생산 과정에서 정밀하고 반복 가능한 품질관리가 중요합니다.
+
+주요 제조 방식은 고압·고온(HPHT)과 화학기상증착(CVD) 두 가지입니다. HPHT는 금속 촉매를 써서 금속 개재물이 생길 수 있고, CVD는 개재물이 상대적으로 적지만 특유의 미세한 점이나 변형 무늬가 나타납니다. 보석용은 투명도와 색상이 가치를 크게 좌우하므로 이런 특징을 정확히 파악해야 합니다.
+
+광학·디지털 검사 시스템으로 색조, 점 형태의 개재물, 원치 않는 변형 무늬를 확인하면 성장 공정을 최적화할 수 있습니다.
+
+장비별로는 Lynx EVO가 3D 입체감과 선명한 고해상도 영상을, Mantis가 여러 방향에서 관찰할 수 있는 광학과 인체공학 설계를, EVO Cam II가 고배율과 디지털 프리셋을 통한 색상·투명도 관찰을 제공합니다.
+@@ ve-an-coronary-stent
+type: appnote
+title: 관상동맥 스텐트 검사
+title_en: Coronary stent inspection
+date: 2023-09-28
+author: Sarah Eagles
+industry: 의료기기
+products: Swift PRO Duo
+image_src: https://www.visioneng.com/wp-content/uploads/2023/09/coronary-stent-550x400-1.jpg
+pdf: https://www.visioneng.com/wp-content/uploads/2023/09/Coronary-Stent-Inspection-Application-Note.pdf
+url: https://www.visioneng.com/resources/application/coronary-stent-inspection/
+excerpt: 코발트-크롬 베어메탈 스텐트의 치수·외관 전수 검사 절차를 소개합니다.
+==
+체내에 이식하는 의료기기 제조사는 안전성과 효과를 확보하기 위해 많은 시간과 비용을 들입니다. 이 노트는 코발트-크롬 소재 베어메탈 스텐트(BMS)를 대상으로 품질관리 검사 요건을 정리합니다.
+
+스텐트는 전수 검사가 필요합니다. 치수나 소재 결함은 스텐트 이탈이나 재협착을, 표면의 작은 흠은 혈관 손상이나 혈전을 일으킬 수 있기 때문입니다. 검사는 설계 치수와 맞는지 확인하는 치수 검사와, 버(burr)·균열·찢김·부품 누락을 찾는 외관 검사로 나뉩니다.
+
+기존에는 측정 현미경으로 치수를 쟀지만, 처리량을 높이면서 정확도를 유지하려는 고객들이 Swift PRO Duo로 전환하고 있습니다. 광학 헤드로 곡면 모서리에 초점을 맞추기 쉽고, 사분면 LED 조명으로 반사가 강한 금속 표면의 명암 대비를 높여 측정 오차를 줄입니다.
+
+검사 결과는 M3 소프트웨어로 개별 일련번호와 함께, 필요한 이미지까지 저장되어 추적성을 확보합니다. 도입 고객들은 검사 정확도와 속도가 개선되어 100% 검사에 따른 비용 부담이 줄었다고 전합니다.
+@@ ve-an-electronics-qc
+type: appnote
+title: 엄격한 전장 부품 품질관리로 신뢰를 지키다
+title_en: Stringent Electronics Quality Control Maintains Reputations
+date: 2022-08-19
+author: Sarah Eagles
+industry: 자동차
+products: EVO Cam II
+image_src: https://www.visioneng.com/wp-content/uploads/2022/08/Automotive-Electronics-550x400px.jpg
+pdf: https://www.visioneng.com/wp-content/uploads/2022/08/ESCU-Case-Study-UK-FINAL-1.pdf
+url: https://www.visioneng.com/resources/application/stringent_electronics_quality_control_maintains_reputations/
+excerpt: 조향 제어 장치(ESCU)의 PCB·와이어 하네스 전수 검사를 디지털 현미경으로 개선했습니다.
+==
+자동차 제조사는 신뢰를 지키기 위해 부품 공급업체에 엄격한 품질관리를 요구합니다. 특히 전자 부품은 작은 결함도 큰 고장으로 이어질 수 있고, 부품이 작아 원인을 찾는 데도 오래 걸립니다.
+
+이 사례는 고급 오토바이 제조사에 ESCU(전동 조향 제어 장치)를 공급하는 글로벌 전자 제조사입니다. 이 회사는 모든 PCB와 와이어 하네스 접합부를 100% 육안 검사한 뒤에만 출하하며, 피복 탈피 상태, 커넥터 손상, 접합부 고정 상태를 꼼꼼히 확인합니다.
+
+기존 벤치 확대경으로는 세부를 명확히 구분하기 어려워 불필요한 불량 판정이 많았고, 이미지를 남기기 어려워 보고에도 시간이 걸렸습니다. 품질 책임자는 더 높은 배율과 이미지 캡처 기능을 갖춘 장비를 비교한 끝에 EVO Cam II를 선택했습니다.
+
+도입 후 연결부와 납땜 접합부를 선명하게 확인할 수 있어 검사 속도와 정확도가 높아졌고, 불량률과 검사 시간이 줄었습니다. 버튼 한 번으로 이미지를 저장해 공유·기록할 수 있으며, 주석과 화면 측정 기능으로 향후 기준 변경에도 대응할 수 있습니다.

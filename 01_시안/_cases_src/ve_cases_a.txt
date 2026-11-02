@@ -1,0 +1,210 @@
+@@ ve-cs-medical-tip
+type: case
+title: 보호 커버를 씌운 채 의료기기 팁 100% 전수 검사
+title_en: 100% Medical device tip inspection with EVO Cam II digital inspection microscope
+date: 2026-08
+customer: 의료기기 제조사 (비공개)
+country:
+industry: 의료기기
+products: EVO Cam II
+image_src: https://www.visioneng.com/wp-content/uploads/2026/08/medical-tips-700x467-1.jpg
+pdf: https://www.visioneng.com/wp-content/uploads/2026/08/CS-Medical-Tip-Inspection-EVOCam-II-2026.pdf
+url: https://www.visioneng.com/resources/case-studies/medical-device-tip-inspection-with-evo-cam-ii-digital-inspection-microscope/
+excerpt: 편광·IR 필터 구성으로 커버를 벗기지 않고 팁 변형을 전수 검사했습니다.
+==
+이 사례의 고객은 의료기기 제조사입니다. 출하 전 모든 기기의 팁이 휘거나 변형되지 않았는지 확인해야 했는데, 팁에 보호 커버가 씌워져 있어 검사가 쉽지 않았습니다.
+
+과제는 커버를 벗기지 않은 상태에서 팁을 선명하게 보는 것이었습니다. 미세한 변형을 안정적으로 찾아내야 했고, 검사 지점마다 보는 조건이 같아야 했으며, 100% 검사가 가능하도록 취급 단계도 최소화해야 했습니다.
+
+이를 위해 EVO Cam II에 편광 필터를 적용하고 IR 필터를 조정했습니다. 편광 필터는 커버 표면의 반사를 줄여 대비를 높였고, IR 필터 조정으로 팁의 가시성이 좋아졌습니다. 그 결과 공정을 바꾸지 않고 커버를 씌운 채 검사할 수 있었으며, 검사 중 이미지를 캡처해 기록과 검토에도 활용하게 되었습니다.
+
+첫 도입 이후 고객은 추가 주문을 넣어 여러 검사 지점으로 설비를 확대했습니다. 생산 현장에서 반복 가능한 표준 검사 방식으로 자리 잡은 사례입니다.
+@@ ve-cs-aerospace-honeycomb
+type: case
+title: 항공 엔진 허니콤 링의 접합 상태 전수 검사
+title_en: Checking bond integrity in aerospace honeycomb with EVO Cam II
+date: 2026-08
+customer: MJ Sections
+country: 영국
+industry: 항공·방산
+products: EVO Cam II
+image_src: https://www.visioneng.com/wp-content/uploads/2026/08/MJSections_EVOCamII_1-668x476-1.jpg
+pdf: https://www.visioneng.com/wp-content/uploads/2026/08/CS_MJSections_EVOCamII_Aerospace_2025.pdf
+url: https://www.visioneng.com/resources/case-studies/checking-bond-integrity-in-aerospace-honeycomb-with-evo-cam-ii/
+excerpt: 셀이 수천 개인 허니콤 링을 넓은 시야와 자동 초점으로 빠르게 전수 검사합니다.
+==
+MJ Sections는 1979년 설립된 항공 부품 공급업체입니다. 두 명이 운영하던 작업장에서 시작해 판금, 정밀 가공, EDM, 진공 열처리, 치공구 설계까지 역량을 넓혀 왔으며, 주요 항공 고객사의 승인을 받아 복잡한 프로젝트를 수행하고 있습니다.
+
+과제는 새 프로젝트로 도입된 허니콤 링의 접합 검사 방법을 만드는 것이었습니다. 허니콤 링은 터빈 엔진에서 가스 밀봉을 담당하므로 모든 접합부가 온전해야 하고, 사양상 모든 셀을 100% 육안 검사해야 했습니다. 링 하나에 셀이 수천 개라 작업 부담이 컸습니다.
+
+기존 현미경은 배율이 너무 높아 셀 전체를 맥락 속에서 보기 어렵고 작업 거리가 짧아 큰 링을 올리기 힘들었으며, 광섬유 방식은 너무 느렸습니다. 회사는 전시회에서 본 EVO Cam II를 도입했습니다. 이중 암 붐으로 큰 링 위에 카메라를 쉽게 배치하고 자체 제작한 조명 지그와 함께 사용해, 넓은 시야와 자동 초점으로 정확하고 빠르게 검사할 수 있게 되었습니다.
+
+그 결과 허니콤 링 검사를 위한 새 표준작업절차(SOP)를 수립해 상시 사용하고 있습니다. 작업자는 접합되지 않은 셀을 빠르게 찾아내고, 필요하면 고배율 장비나 비파괴 검사로 넘깁니다.
+@@ ve-cs-dynament-halo
+type: case
+title: 가스 센서 제조사, 미세 용접부 검사를 사내로 가져오다
+title_en: How Dynament uses EVO Cam HALO digital imaging to optimise a critical process
+date: 2026-08
+customer: Dynament Limited
+country: 영국
+industry: 전자·PCB
+products: EVO Cam HALO
+image_src: https://www.visioneng.com/wp-content/uploads/2026/08/Overview-edit-700x561-1.jpg
+pdf: https://www.visioneng.com/wp-content/uploads/2026/08/CS-Hermetic-weld-inspection-Dynament-HALO-2026.pdf
+url: https://www.visioneng.com/resources/case-studies/dynament-uses-evo-cam-halo-digital-imaging-to-optimise-critical-process/
+excerpt: 외부 단면 분석에 의존하던 기밀 용접 검사를 사내 디지털 검사로 대체했습니다.
+==
+Dynament는 탄화수소, 이산화탄소, 냉매 등을 감지하는 비분산 적외선(NDIR) 가스 센서를 설계·제조하는 회사입니다. 40년 이상의 경험을 바탕으로 산업 안전, 환경 감시, 공조용 소형 센서를 만들고 있습니다.
+
+과제는 소형 부품의 기밀 용접부를 파괴하지 않고 신뢰성 있게 검사하는 것이었습니다. 회사는 직경 4~7.5mm의 초전형 검출기 어셈블리를 자체 생산하며, 용접부는 수분을 막는 밀봉 역할을 합니다. 기존에는 시료를 외부 실험실에 보내 단면 분석을 했지만, 시간과 비용이 많이 들고 시료도 돌려받을 수 없었습니다.
+
+회사는 EVO Cam HALO를 도입했습니다. 3D 프린팅 지그로 부품을 일정 높이에 두고 회전시키면 초점을 다시 맞추지 않고 용접부 둘레 전체를 볼 수 있습니다. 여기에 0점(인장 시험 실패)부터 5점(기준 품질)까지의 점수 체계를 만들어 용접 품질을 일관되게 평가했고, 전문 교육 없이도 쓸 수 있어 더 많은 팀원이 검사에 참여하게 되었습니다.
+
+그 결과 외부 단면 분석은 꼭 필요한 시료로만 줄었고, 분석 비용과 대기·해석 시간이 모두 감소했습니다. 회사는 이 최적화로 몇 주의 엔지니어링 시간을 절약한 것으로 봅니다.
+@@ ve-cs-aero-defence-pcb
+type: case
+title: 항공·방산 PCB의 안전 검사와 재작업 환경 개선
+title_en: Safety-Critical PCB Inspection in Aerospace and Defence Electronics with EVO Cam II
+date: 2026-03
+customer: 항공·방산 전자 제조사 (비공개)
+country:
+industry: 항공·방산
+products: EVO Cam II
+image_src: https://www.visioneng.com/wp-content/uploads/2026/03/AB-Vision-129-700x525-1.jpg.webp
+pdf: https://www.visioneng.com/wp-content/uploads/2026/03/CS-Safety-critical-PCB-inspection-aerospace-defence-EVO-CamII-2026.pdf
+url: https://www.visioneng.com/resources/case-studies/safety-critical-pcb-inspection-in-aerospace-and-defence-electronics-with-evo-cam-ii/
+excerpt: 긴 작업 거리 렌즈와 디지털 기록으로 대물렌즈 손상과 추적성 문제를 해결했습니다.
+==
+이 고객사는 항공·방산 프로그램에 쓰이는 안전 중요(safety-critical) PCB 어셈블리를 생산합니다. 기판은 양면 고사양이라 취급과 재작업이 까다롭고, 숙련 작업자가 최대 25배율에서 오랜 시간 수동으로 검사·재작업합니다.
+
+가장 큰 문제는 기존 실체현미경의 짧은 작업 거리였습니다. 인두, 핀셋, 프로브가 대물렌즈에 자주 닿았고 플럭스 연기와 튐으로 광학계가 오염되어, 렌즈 손상에 따른 설비 정지와 비용이 반복되었습니다. 시야가 좁아 기판을 자주 다시 놓아야 했고, 촬영 기능이 없어 검사 기록은 메모와 주관적 판단에 의존했습니다.
+
+고객은 긴 작업 거리 렌즈 옵션을 갖춘 EVO Cam II를 도입했습니다. 공구 접근이 안전해졌고, 고해상도 영상으로 솔더 조인트와 부품을 최대 25배까지 자세히 볼 수 있게 되었습니다. 내장 카메라로 추적성과 방산 계약 문서용 이미지를 작업 흐름을 끊지 않고 남길 수 있으며, 조절식 스탠드로 여러 작업자·교대 근무 환경에도 맞출 수 있었습니다.
+
+그 결과 재작업 시 공구 여유가 개선되고 대물렌즈 손상과 오염이 줄었습니다. 화면 기반 관찰로 작업자 편의가 높아졌고, 디지털 기록으로 검사 기준과 추적성도 명확해졌습니다.
+@@ ve-cs-mp-filtri
+type: case
+title: 하루 넘던 광학 부품 검사를 1시간으로 줄인 MP Filtri
+title_en: How MP Filtri Cut Optical Inspection From Over A Day To One Hour With Swift Pro Duo
+date: 2026-02
+customer: MP Filtri
+country: 영국 (본사 이탈리아)
+industry: 정밀가공·금속
+products: Swift PRO Duo
+image_src: https://www.visioneng.com/wp-content/uploads/2026/02/Swift-PRO-Duo-User-Image-1024x988-1.jpg.webp
+pdf: https://www.visioneng.com/wp-content/uploads/2026/02/CS_MPFiltri_Swift_Pro_Duo_2025.pdf
+url: https://www.visioneng.com/resources/case-studies/how-mp-filtri-cut-optical-inspection-from-over-a-day-to-one-hour-with-swift-pro-duo/
+excerpt: 빛의 점으로만 보이던 미세 슬롯을 측정 가능하게 만들어 50개 배치 검사를 1시간에 끝냅니다.
+==
+MP Filtri는 오염 제어와 유압 필터링 솔루션을 만드는 글로벌 제조사로, 이탈리아에 본사를 두고 유럽·영국·아시아·북미에서 건설, 농업, 산업 기계 분야를 지원합니다. 영국 법인은 유압 필터와 오염 모니터링 장비, 전문 서비스를 제공합니다.
+
+새 프로젝트로 도입한 광학 부품이 측정상의 난제를 낳았습니다. 부품이 매우 작고, 코팅에 가공된 슬롯이 육안으로는 빛의 점처럼 보여 직사각형 형상을 알아볼 수 없었습니다. 여러 현미경을 시험했지만 에지 인식, 배율, 선명도, 대비가 모두 부족했습니다.
+
+회사는 Swift PRO Duo를 선택했습니다. 정밀한 배율과 선명한 영상 덕분에 빛의 점이던 부분이 측정 가능한 직사각형으로 드러났습니다. 일상 작업은 비디오 모드로, 대비가 낮은 형상은 광학 모드로 측정합니다. 50개 부품 배치를 정확하고 일관되게 검사할 수 있게 되었고, 검사 시간은 하루 이상에서 약 1시간으로 줄었습니다.
+
+이 회사의 측정 담당자는 8년 넘게 Swift 장비를 쓰면서 정기 정비와 연간 교정만으로 안정적으로 운영해 왔다고 말합니다. 더 저렴한 대안도 있었지만 신뢰성, 유연성, 긴 수명을 고려하면 투자 가치가 충분하다고 판단했습니다.
+@@ ve-cs-prism-mantis
+type: case
+title: 영국 EMS 기업, Mantis PIXO로 PCB 검사·리워크 품질 개선
+title_en: Enhancing Electronics Inspection and Rework with Mantis PIXO
+date: 2026-01
+customer: Prism Electronics
+country: 영국
+industry: 전자·PCB
+products: Mantis PIXO
+image_src: https://www.visioneng.com/wp-content/uploads/2026/01/Prism-electronics-front.jpg.webp
+pdf: https://www.visioneng.com/wp-content/uploads/2026/01/CS_Prism_Electronics_Mantis_Pixo_2025.pdf
+url: https://www.visioneng.com/resources/case-studies/enhancing-electronics-inspection-and-rework-with-mantis-pixo/
+excerpt: 작아지는 부품의 납땜·리워크를 무접안 입체 시야와 내장 카메라 기록으로 해결했습니다.
+==
+Prism Electronics는 PCB 조립과 시험을 30년 넘게 해 온 영국의 전자제품 위탁생산(EMS) 기업입니다. 경영진 인수(MBO) 이후 생산과 검사 기술에 집중 투자하고 있습니다.
+
+검사팀은 쌍안 확대경과 수동 공구를 써 왔습니다. 품질 확인에는 충분했지만 장시간 사용이 불편했고, 부품이 점점 작아지면서 세밀한 납땜과 리워크가 어려워졌습니다. 작업자 편안함, 시야의 선명도, 공정 이력 관리를 개선하면서 생산 흐름을 끊지 않고 검사 이미지를 남길 방법이 필요했습니다.
+
+회사는 Mantis PIXO 두 대를 일반 조립 구역과 SMT 부서에 한 대씩 설치해 검사와 정밀 리워크에 쓰고 있습니다. 접안렌즈 없는 설계로 자연스러운 자세를 유지할 수 있고, 선명한 3D 시야와 넉넉한 작업 거리가 선택 이유였습니다. 내장 카메라로 조립 문서와 8D 품질 조사용 이미지를 쉽게 남길 수 있다는 점도 도움이 되었습니다.
+
+Mantis PIXO는 표준 검사·리워크 공정의 일부가 되었습니다. 작업자들은 시야와 편안함이 좋아져 더 오래 정밀하게 작업할 수 있다고 말하며, 품질 관리자 Paul Young은 리워크와 검사 수준이 뚜렷하게 개선되었다고 평가합니다.
+@@ ve-cs-cancer-research-4k
+type: case
+title: 암 연구소, 4K 디지털 현미경으로 줄기세포 배양을 매일 관찰
+title_en: Why 4K Digital Microscopes are Essential for Monitoring in Cancer Research
+date: 2025-10
+customer: NEURO-DOL 연구소 (UMR Inserm UCA 1107)
+country: 프랑스
+industry: 연구·바이오
+products: Makrolite 4K, EVO Cam HALO
+image_src: https://www.visioneng.com/wp-content/uploads/2025/10/Photo10-Jerome-Busserolles-et-Anouck-Calvet-600x450-1.jpg
+pdf: https://www.visioneng.com/wp-content/uploads/2025/10/CS_UMR_iPSC_4K_Makrolite_2025.pdf
+url: https://www.visioneng.com/resources/case-studies/why-4k-digital-microscopes-are-essential-for-monitoring-in-cancer-research/
+excerpt: 생물안전작업대 안에서 iPSC 콜로니를 염색 없이 4K로 실시간 관찰·기록했습니다.
+==
+프랑스 클레르몽페랑의 NEURO-DOL 연구소(UMR Inserm UCA 1107)는 여러 질환에서 통증의 기전을 연구합니다. 그중 '암과 통증' 프로그램은 항암치료로 인한 말초신경병증(CIPN)을 다루며, 인간 유도만능줄기세포(iPSC)를 감각 뉴런으로 분화시켜 실험합니다.
+
+과제는 2등급 생물안전작업대 안에서 민감한 세포 배양을 빠르고 정밀하게, 최소한의 교란으로 관찰하는 것이었습니다. iPSC 콜로니는 품질 유지와 분화 추적을 위해 매일 확인해야 하지만, 작업대 안은 공간이 좁고 기존 방식은 배양을 흐트러뜨리거나 미묘한 형태 변화를 놓칠 위험이 있었습니다.
+
+연구팀은 작업대 안에 Makrolite 4K 디지털 현미경을 설치했습니다. 세포를 염색하거나 직접 다루지 않고도 콜로니의 형태와 상태, 진행 과정을 고해상도로 확인할 수 있었고, 분화가 시작된 뒤에도 매일의 점검을 효율적으로 진행해 이상 변화를 일찍 발견할 수 있었습니다. (Makrolite 4K의 후속 제품으로 현재 EVO Cam HALO가 소개되고 있습니다.)
+
+연구팀은 iPSC 유래 뉴런의 발달을 추적하는 능력이 크게 향상되었다고 밝힙니다. 더 빠른 판단, 명확한 실험 기록, 신뢰할 수 있는 배양 모니터링을 확보해 이 시스템이 중개 연구의 핵심 도구가 되었습니다.
+@@ ve-cs-seed-swift
+type: case
+title: 농업 연구소, Swift PRO Duo로 종자 형태를 정밀 측정
+title_en: Precision Seed Measurement with Swift PRO Duo Measuring Microscope
+date: 2025-10
+customer: 농업 연구기관
+country: 중국
+industry: 식품·농업
+products: Swift PRO Duo
+image_src: https://www.visioneng.com/wp-content/uploads/2025/10/AB-V19-500-swift-pro-due-600x450-1.jpg
+pdf: https://www.visioneng.com/wp-content/uploads/2025/10/CS_Seeds_Measurement_Swift_PRO_Duo_2025.pdf
+url: https://www.visioneng.com/resources/case-studies/precision-seed-measurement-with-swift-pro-duo-measuring-microscope/
+excerpt: 캘리퍼스와 현미경을 오가던 종자 측정을 비접촉 측정 한 대로 통합했습니다.
+==
+중국의 한 농업 연구팀은 개량 작물 품종을 개발합니다. 종자의 크기, 모양, 표면 질감 같은 물리적 특성을 분석해 성장 잠재력과 생존력, 환경 스트레스 저항성이 좋은 계통을 가려내는 것이 주요 업무입니다.
+
+연구팀은 그동안 캘리퍼스와 쌍안 실체현미경을 함께 써 왔습니다. 도구를 번갈아 써야 했고 미세한 형태 차이를 비교하기 어려웠으며, 배치별 측정값을 기록·검토하는 데 시간이 많이 걸리고 장시간 검사는 사용자에게 부담이 되었습니다.
+
+연구팀은 검사와 측정을 하나로 통합한 Swift PRO Duo를 도입했습니다. 비접촉 측정이라 반복 취급에 따른 시료 손상 위험이 줄었고, 인체공학적 광학 뷰어, 고해상도 카메라, 통합 소프트웨어를 갖춰 작은 시료를 검사하고 반복 측정하기에 적합했습니다.
+
+그 결과 검사 시간이 줄고 측정 재현성이 높아졌습니다. 데이터 기록이 일관되어 배치별 검토가 쉬워졌고, 긴 작업 시간에도 사용자가 편안하게 집중할 수 있게 되었습니다.
+@@ ve-cs-marelli-edge
+type: case
+title: 자동차 리어램프 플라스틱 부품을 라인 옆에서 검사
+title_en: Swift PRO Edge Calibrated for Automotive Lighting Inspection
+date: 2025-10
+customer: Marelli (기술 파트너 DOGA Maroc)
+country: 모로코 (탕헤르)
+industry: 자동차
+products: Swift PRO Edge
+image_src: https://www.visioneng.com/wp-content/uploads/2025/10/marelli-product-portfolio-lighting-full-led-rear-lamps-cover-600x337-1.jpg
+pdf: https://www.visioneng.com/wp-content/uploads/2025/10/CS_Marelli_Automotive_EDGE_2025.pdf
+url: https://www.visioneng.com/resources/cates-studies/swift-pro-edge-calibrated-for-automotive-lighting-inspection/
+excerpt: 웰드라인·싱크마크 같은 외관 결함과 치수를 생산라인 가까이에서 빠르게 확인합니다.
+==
+Marelli는 이탈리아의 1차 협력사(Tier 1) 자동차 부품 기업으로, 리어램프 어셈블리용 플라스틱 부품 생산라인을 운영합니다. 현지 파트너 DOGA Maroc과 함께 Vision Engineering이 Swift PRO Edge의 현장 교정과 지원을 맡았고, 장비는 북아프리카 자동차 산업 거점인 모로코 탕헤르 오토모티브 시티의 한 사업장에 설치되었습니다.
+
+차량 조명용 플라스틱 부품은 엄격한 외관·치수 기준을 충족해야 합니다. 웰드 라인, 싱크 마크, 이물, 표면 불균일, 버(플래시) 같은 작은 결함도 성능과 품질 인식에 영향을 줍니다. 따라서 정확하고 반복 가능한 결과를 내면서도 작업자가 쉽고 빠르게 쓸 수 있는 장비가 필요했습니다.
+
+Swift PRO Edge는 마이크론 수준의 측정 정밀도, 고화질 영상의 실시간 피드백, 곡면·불규칙 표면 분석 능력, 화면 기반 관찰로 인체공학과 일관성을 높이는 디지털 설계 덕분에 선택되었습니다. 설치와 교정은 DOGA Maroc과 함께 진행되어 생산 공정에 원활하게 투입되었습니다.
+
+현재 이 시스템은 전용 조명 라인에서 매일 사용되며, 규격 준수와 결함 조기 발견, 외관 기준 유지에 기여하고 있습니다. 설치 면적이 작아 생산 현장 가까이 둘 수 있어 검사가 빨라지고 공정 대응도 즉각적으로 이뤄집니다.
+@@ ve-cs-gbows-lynx
+type: case
+title: 야생종 종자은행, Lynx EVO로 보존 시료를 선별
+title_en: Seed Conservation at Germplasm Bank of Wild Species with Lynx EVO Stereo Microscope
+date: 2025-09
+customer: 야생종 종자은행(GBOWS), 중국과학원 쿤밍식물연구소
+country: 중국
+industry: 연구·바이오
+products: Lynx EVO
+image_src: https://www.visioneng.com/wp-content/uploads/2025/09/iStock-1536334840-600x400-1.jpg.webp
+pdf: https://www.visioneng.com/wp-content/uploads/2025/09/CS_Seed_Inspection_GBOWS_Lynx_EVO.pdf
+url: https://www.visioneng.com/resources/case-studies/seed-conservation-germplasm-bank-of-wild-species-lynx-evo-stereo-microscope/
+excerpt: 수천 점의 종자 시료를 눈의 피로 없이 함께 보며 평가할 수 있게 되었습니다.
+==
+야생종 종자은행(GBOWS)은 중국 최대 규모의 자생·야생 식물 종자 보존 시설로, 쿤밍식물연구소 안에 있습니다. 희귀종과 멸종위기종을 포함한 전국의 종자를 현장 연구자들과 함께 수집·보존하며, 생물다양성 보호와 생태 복원, 식물 적응력 연구를 지원합니다.
+
+연구자들은 현장에서 채집한 수천 점의 종자를 검사·평가해야 했습니다. 기존 현미경은 눈의 피로를 유발했고 여러 사람이 함께 평가하기 어려웠으며, 형태 연구와 보존 가치 판단을 위해서는 왜곡 없이 선명한 이미지가 필요했습니다.
+
+연구팀은 주요 검사 스테이션에 Lynx EVO를 도입했습니다. 접안렌즈 없는 광학계로 자연스러운 자세에서 고해상도 3D 입체 영상을 볼 수 있고, 같은 시료를 여러 사람이 함께 볼 수 있어 협업과 교육에도 도움이 되었습니다. 복잡한 종자 구조를 선명하고 대비 높게 보여 주어 형태 분석을 뒷받침합니다.
+
+연구자들은 작업 편안함과 협업이 개선되었다고 말합니다. Lynx EVO는 보존용 고품질 종자를 안정적으로 선별하는 데 쓰이며, 중국 자생 식물 다양성의 지속적인 보존에 기여하고 있습니다.
