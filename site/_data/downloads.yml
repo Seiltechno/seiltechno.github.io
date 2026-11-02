@@ -69,3 +69,10 @@
   product: mantis
   lang: 영어
   date: 2026-11-02
+
+- url: https://github.com/jihoslove-ho/VISION-MANAGER/releases/latest
+  kind: software
+  title: VISION-MANAGER 현미경용 비전 검사 소프트웨어
+  lang: Windows 설치 파일 · 약 74MB
+  date: 2026-11-02
+  
