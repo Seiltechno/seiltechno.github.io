@@ -326,6 +326,7 @@ def build_detail(d, items):
     extra_h = (f"<style>{BOARD_CSS}</style>" if (d.get("viewer3d") or d.get("videos")) else "") + stats_section(d, root) + viewer3d_section(d, root) + videos_section(d, root)
     compare_h = compare_section(d, root)
     apps = "".join(f"<span>{e(a)}</span>" for a in d.get("applications", []))
+    csh = product_cases_section(d, root)
     rel = [x for x in items if x["subcategory"] == d["subcategory"] and x["slug"] != d["slug"]][:3]
     relh = ""
     if rel: relh = '<section class="sec"><h2>함께 보면 좋은 제품</h2><div class="grid">' + "".join(card(x, root) for x in rel) + "</div></section>"
@@ -333,11 +334,11 @@ def build_detail(d, items):
 <div class="dinfo"><div class="crumb">홈 › 제품소개 › {e(d['category'])} › {e(d['subcategory'])}</div><div style="display:flex;gap:8px;align-items:center;margin:12px 0 8px;flex-wrap:wrap"><a href="{cat_link(d['category'], root)}#{SUB_INFO[d['subcategory']]['id']}" style="background:var(--navy);color:#fff;font-size:13px;font-weight:700;padding:5px 12px;border-radius:6px">{e(d['subcategory'])}</a>{f'<span style="color:var(--blue);font-weight:700;font-size:13px">#{e(d["brand"])}</span>' if d.get("brand") else ""}</div>
 <h1>{e(d['title'])}</h1><div class="st">{e(d['subtitle'])}</div>{former}<p class="sm">{e(d['summary'])}</p>
 <div class="keyspec">{ks}</div>{partner_box(d, root)}<div class="actions"><a class="btn btn-primary" href="#">견적 문의</a><a class="btn btn-ghost" href="#">데모 신청</a><a class="btn btn-ghost" href="#">브로셔 PDF</a></div></div></div></section>
-<div class="wrap"><div class="tabs"><a class="on" href="#f">주요 특징</a>{'<a href="#p">작동 과정</a>' if d.get('process') else ''}{'<a href="#v3s">3D 모델</a>' if d.get('viewer3d') else ''}{'<a href="#st">실측 검증</a>' if d.get('stats') else ''}{f'<a href="#vid">{e(d.get("videos_tab","스캔 영상"))}</a>' if d.get('videos') else ''}{f'<a href="#g">{e(d.get("samples_tab","샘플 갤러리"))}</a>' if d.get('samples') else ''}{'<a href="#c">제품 비교</a>' if d.get('compare') else ''}<a href="#s">사양</a><a href="#a">적용 분야</a></div>
+<div class="wrap"><div class="tabs"><a class="on" href="#f">주요 특징</a>{'<a href="#p">작동 과정</a>' if d.get('process') else ''}{'<a href="#v3s">3D 모델</a>' if d.get('viewer3d') else ''}{'<a href="#st">실측 검증</a>' if d.get('stats') else ''}{f'<a href="#vid">{e(d.get("videos_tab","스캔 영상"))}</a>' if d.get('videos') else ''}{f'<a href="#g">{e(d.get("samples_tab","샘플 갤러리"))}</a>' if d.get('samples') else ''}{'<a href="#c">제품 비교</a>' if d.get('compare') else ''}<a href="#s">사양</a><a href="#a">적용 분야</a>{'<a href="#cs">적용 사례</a>' if csh else ''}</div>
 <section class="sec" id="f"><h2>주요 특징</h2><div class="hl">{hl}</div></section>
 {process_h}{extra_h}{samples_h}<section class="sec body"><h2>제품 소개</h2>{md(d['body'])}</section>{compare_h}{models}
 <section class="sec" id="s"><h2>주요 사양</h2><table>{rows}</table><p class="small">※ 사양은 제조사 사정에 따라 예고 없이 변경될 수 있습니다. 상세 사양은 브로셔를 참고하거나 문의해 주세요.</p></section>
-<section class="sec" id="a"><h2>적용 분야</h2><div class="apps">{apps}</div></section>{relh}</div>"""
+<section class="sec" id="a"><h2>적용 분야</h2><div class="apps">{apps}</div></section>{csh}{relh}</div>"""
     os.makedirs(os.path.join(HERE, "상세"), exist_ok=True)
     open(os.path.join(HERE, "상세", d["slug"] + ".html"), "w", encoding="utf-8").write(page(f"{d['title']} | 세일테크노", inner, root))
 
@@ -484,7 +485,7 @@ def build_about():
         ("현미경", "접안렌즈 없는 실체 현미경, 4K·3D 디지털 현미경"),
         ("측정 시스템", "측정 현미경, 고배율 측정기, 비디오 측정기(VMM)"),
         ("AI 검사·측정", "하이브리드 검사·측정, 기상 AI분석, 기상 검사/측정 비전"),
-        ("머신비전", "산업용 카메라, 렌즈·조명, 코드리더, 비전 SW"),
+        ("머신비전", "스마트 카메라, 맞춤형 비전 시스템, 비전 SW, 광학 부품"),
         ("3D·특수 센싱", "3D 프로파일러, 이벤트 카메라")]):
         inner = f'<span class="no">{i+1:02d}</span><h4>{c}</h4><p>{ds}</p>'
         if c in CATCFG:
@@ -832,7 +833,7 @@ def build_main(items):
     cat_meta = [("현미경", "mantis.jpg", "접안렌즈 없는 실체 현미경부터 4K·3D 디지털 현미경까지", True),
                 ("측정 시스템", "hawk.jpg", "측정 현미경, 고배율 측정기, 비디오 측정기(VMM)", True),
                 ("AI 검사·측정", "hybrid/hero.jpg", "하이브리드 검사·측정, 기상 AI분석, 기상 검사/측정 비전", False),
-                ("머신비전", None, "산업용 카메라, 렌즈·조명, 코드리더, 비전 SW", False),
+                ("머신비전", "smartcam/sc3000-main.jpg", "스마트 카메라, 맞춤형 비전 시스템, 비전 SW, 광학 부품", False),
                 ("3D·특수 센싱", "desktop3d/main.jpg", "3D 스캐너, 백색광 간섭계 등 장비별 소개", False)]
     cats = ""
     for i, (c, im, ds, big) in enumerate(cat_meta):
@@ -977,6 +978,7 @@ exec(open(os.path.join(HERE, "board_build.py"), encoding="utf-8").read())
 exec(open(os.path.join(HERE, "support_build.py"), encoding="utf-8").read())
 exec(open(os.path.join(HERE, "cases_build.py"), encoding="utf-8").read())
 items = load()
+_CASES_ALL = [c for c in load_cases() if not (os.environ.get("PUBLISH") and c.get("draft"))]
 build_about()
 build_main(items)
 for c in CATCFG: build_list(items, c)

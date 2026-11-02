@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 # 적용사례 게시판 (build_preview.py 안에서 실행됩니다)
+import re
 TYPES = [("case", "고객 사례", "Case Study"), ("appnote", "애플리케이션 노트", "Application Note"), ("article", "기술 칼럼", "Article")]
 TLABEL = {k: v for k, v, _ in TYPES}
 PMAP = [("mantis", "mantis"), ("lynx evo", "lynx-evo"), ("swift pro edge", "edge-series"), ("edge series", "edge-series"),
@@ -9,7 +10,7 @@ def prod_slug(name):
     n = name.lower()
     for k, s in PMAP:
         if n.startswith(k): return s
-    return None
+    return n.strip() if re.fullmatch(r"[a-z0-9-]+", n.strip()) else None  # 제품 파일 이름(예: hikrobot-sc3000)을 그대로 적은 경우
 
 def load_cases():
     out = []
@@ -148,7 +149,7 @@ def build_cases(items):
     tabs = f'<button class="on" data-v="all" aria-pressed="true">전체<b>{len(pub)}</b></button>' + "".join(
         f'<button data-v="{k}" aria-pressed="false">{v}<b>{sum(1 for d in pub if d["type"]==k)}</b></button>' for k, v, _ in TYPES) + \
         f'<button class="seil" data-v="seil" aria-pressed="false">★ 세일테크노 사례<b>{nseil}</b></button>'
-    inds = [i for i in ["전자·PCB", "의료기기", "항공·방산", "자동차", "플라스틱·사출", "정밀가공·금속", "연구·바이오", "식품·농업", "보석·소재", "일반 품질관리"] if any(d.get("industry") == i for d in pub)]
+    inds = [i for i in ["전자·PCB", "2차전지", "의료기기", "제약", "물류", "항공·방산", "자동차", "플라스틱·사출", "정밀가공·금속", "연구·바이오", "식품·농업", "보석·소재", "일반 품질관리"] if any(d.get("industry") == i for d in pub)]
     makers = sorted({d.get("maker", "") for d in pub if d.get("maker")}, key=lambda m: (m != "세일테크노", m))
     chips = lambda arr: '<button class="on" data-v="all" aria-pressed="true">전체</button>' + "".join(f'<button data-v="{e(x)}" aria-pressed="false">{e(x)}</button>' for x in arr)
     grid = "".join(case_card(d, "", i >= 12) for i, d in enumerate(pub))
@@ -182,6 +183,8 @@ def build_cases(items):
             s = prod_slug(p)
             if s and s in pidx: prods += f'<a href="{root}상세/{s}.html">{e(pidx[s]["title"])}<span>→</span></a>'
             else: prods += f'<span>{e(p)}</span>'
+        for s in d.get("related_products") or []:
+            if s in pidx: prods += f'<a href="{root}상세/{s}.html"><small style="display:block;font-size:11px;color:var(--sub);font-weight:600">현재 대응 모델</small>{e(pidx[s]["title"])}<span>→</span></a>'
         info = [("유형", "세일테크노 사례" if d["seil"] else TLABEL[d["type"]]), ("출처", d.get("maker")), ("고객", d.get("customer")), ("국가", d.get("country")),
                 ("산업", d.get("industry")), ("게시", cdate(d)), ("글쓴이", d.get("author"))]
         dl_ = "".join(f"<dt>{k}</dt><dd>{e(v)}</dd>" for k, v in info if v)
@@ -206,3 +209,17 @@ def build_cases(items):
 <section class="cd-rel"><h2>함께 보면 좋은 사례</h2><div class="cs-grid">{''.join(case_card(x, root) for x in rel)}</div></section></div>"""
         open(os.path.join(HERE, "상세", "cases", d["slug"] + ".html"), "w", encoding="utf-8").write(page(f"{d['title']} | 적용사례 | 세일테크노", inner, root, active="cases"))
     print("적용사례:", len(pub), "건")
+
+
+def case_rel_slugs(c):
+    """사례가 연결되는 제품 파일 이름들: products(적용 제품) + related_products(관련 제품)"""
+    out = [prod_slug(p) for p in (c.get("products") or [])] + list(c.get("related_products") or [])
+    return [x for x in out if x]
+
+def product_cases_section(d, root):
+    """제품 상세 페이지 하단: 이 제품과 연결된 적용사례 카드"""
+    cs = [c for c in globals().get("_CASES_ALL", []) if d["slug"] in case_rel_slugs(c)]
+    if not cs: return ""
+    return (f'<style>{CASE_CSS}</style><section class="sec" id="cs"><h2>적용 사례 <span style="font-size:15px;color:var(--sub);font-weight:600">{len(cs)}건</span></h2>'
+            f'<div class="cs-grid">{"".join(case_card(c, root) for c in cs[:6])}</div>'
+            f'<p class="small" style="margin-top:10px"><a href="{root}적용사례.html" style="color:var(--blue);font-weight:700">적용사례 전체 보기 →</a></p></section>')
