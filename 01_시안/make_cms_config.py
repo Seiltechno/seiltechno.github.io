@@ -72,7 +72,7 @@ cfg = {
   {"name": "downloads", "label": "자료실", "type": "file", "path": "site/_data/downloads.yml", "format": "yaml", "list": True,
    "fields": [
     S("title", "자료 이름", required=True),
-    {"name": "kind", "label": "종류", "type": "select", "required": True, "options": {"values": [{"name": "brochures", "label": "브로셔"}, {"name": "datasheets", "label": "데이터시트"}, {"name": "manuals", "label": "사용설명서"}, {"name": "software", "label": "소프트웨어"}, {"name": "technical", "label": "기술자료"}]}},
+    {"name": "kind", "label": "종류", "type": "select", "required": True, "options": {"values": [{"name": "brochures", "label": "브로셔"}, {"name": "presentations", "label": "프리젠테이션"}, {"name": "datasheets", "label": "데이터시트"}, {"name": "manuals", "label": "사용설명서"}, {"name": "software", "label": "소프트웨어"}, {"name": "technical", "label": "기술자료"}]}},
     {"name": "file", "label": "파일 올리기 (25MB 이하)", "type": "file", "options": {"media": "downloads"}},
     S("url", "또는 링크 (큰 파일은 구글 드라이브 공유 링크)"),
     S("product", "관련 제품 파일 이름(예: mantis)"),

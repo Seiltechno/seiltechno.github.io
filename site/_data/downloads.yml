@@ -1,6 +1,6 @@
 # 자료실 목록 — 입력 화면(Pages CMS)의 '자료실'에서 추가·수정하면 됩니다.
 # file: 올린 파일 / url: 큰 파일은 구글 드라이브 등의 공유 링크(파일 대신)
-# kind: brochures(브로셔) datasheets(데이터시트) manuals(사용설명서) software(소프트웨어) technical(기술자료)
+# kind: brochures(브로셔) presentations(프리젠테이션 — url에 발표 링크) datasheets(데이터시트) manuals(사용설명서) software(소프트웨어) technical(기술자료)
 # product: 관련 제품 파일 이름(예: mantis) — 적으면 그 제품 페이지의 '브로셔 PDF' 버튼과 연결
 # ※ 보안자료·가격표는 올리지 않습니다.
 
@@ -76,3 +76,8 @@
   lang: Windows 설치 파일 · 약 74MB
   date: 2026-11-02
   
+- url: https://claude.ai/artifact/RQfvN82tzTeWzgDqXkRJGc
+  kind: presentations
+  title: 세일테크노 제품 통합 안내서 2026
+  lang: 웹 프리젠테이션 · 15장 · 현미경·디지털현미경·비접촉측정기
+  date: 2026-11-04

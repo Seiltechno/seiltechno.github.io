@@ -448,6 +448,8 @@ content:
       values:
       - name: brochures
         label: 브로셔
+      - name: presentations
+        label: 프리젠테이션
       - name: datasheets
         label: 데이터시트
       - name: manuals

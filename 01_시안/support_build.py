@@ -3,7 +3,7 @@
 import urllib.parse as _up
 FORM_ENDPOINT = "https://formspree.io/f/myeebykv"   # ← Formspree 가입 후 받은 주소로 바꾸면 문의가 메일로 옵니다
 ADDR = "서울특별시 영등포구 당산로2길 12, 에이스테크노타워 806호"
-DL_KINDS = [("brochures", "브로셔"), ("datasheets", "데이터시트"), ("manuals", "사용설명서"), ("software", "소프트웨어"), ("technical", "기술자료")]
+DL_KINDS = [("brochures", "브로셔"), ("presentations", "프리젠테이션"), ("datasheets", "데이터시트"), ("manuals", "사용설명서"), ("software", "소프트웨어"), ("technical", "기술자료")]
 DL_LABEL = dict(DL_KINDS)
 
 def load_downloads():
@@ -20,7 +20,7 @@ def load_downloads():
         full = os.path.join(base, f) if f else ""
         if f and not os.path.exists(full): continue
         seen.add(f)
-        ext = (os.path.splitext(f)[1][1:].upper() if f else "LINK") or "FILE"
+        ext = (os.path.splitext(f)[1][1:].upper() if f else ("SLIDE" if kind == "presentations" else "LINK")) or "FILE"
         ents.append({"file": f, "url": url, "kind": kind, "title": x.get("title") or os.path.splitext(os.path.basename(f))[0],
                      "product": x.get("product", "") or "", "lang": x.get("lang", "") or "", "date": str(x.get("date", "") or ""),
                      "size": os.path.getsize(full) if f else 0, "ext": ext})
@@ -87,6 +87,7 @@ form.iq-f{background:#fff;border:1px solid var(--line);border-radius:18px;paddin
 .dl-row{display:grid;grid-template-columns:54px 1fr 150px 90px 110px 120px;gap:16px;align-items:center;padding:16px 20px;border-bottom:1px solid var(--line)}
 .dl-row:last-child{border-bottom:0}.dl-row[hidden]{display:none}.dl-row:hover{background:#f9fbfd}
 .dl-ic{width:44px;height:52px;border-radius:8px;background:#fdecec;color:#c43d3d;font-size:11px;font-weight:800;display:grid;place-items:center;position:relative}
+.dl-ic.pres{background:#e8f0fe;color:#1f5fd6;font-size:9.5px;letter-spacing:.02em}
 .dl-ic:after{content:"";position:absolute;right:0;top:0;border-style:solid;border-width:0 12px 12px 0;border-color:transparent #fff transparent transparent}
 .dl-t b{display:block;font-size:15.5px;color:var(--ink)}.dl-t small{font-size:12px;color:var(--sub)}
 .dl-t small a{color:var(--blue);font-weight:700}
@@ -162,12 +163,12 @@ def build_support(items):
         p = pidx.get(d["product"])
         plink = f' · 관련 제품 <a href="{root}상세/{p["slug"]}.html">{e(p["title"])}</a>' if p else ""
         q = (d["title"] + " " + (p["title"] if p else "") + " " + d["file"]).lower()
-        rows += (f'<li class="dl-row" data-k="{d["kind"]}" data-q="{e(q)}"><span class="dl-ic">{e(d["ext"])}</span>'
+        rows += (f'<li class="dl-row" data-k="{d["kind"]}" data-q="{e(q)}"><span class="dl-ic{" pres" if d["kind"] == "presentations" else ""}">{e(d["ext"])}</span>'
                  f'<div class="dl-t"><b>{e(d["title"])}</b><small>{e(d["lang"] or "")}{plink}</small></div><span class="dl-kind">{DL_LABEL[d["kind"]]}</span>'
                  f'<span class="meta">{fsize(d["size"]) if d["size"] else "외부 링크"}</span><span class="meta">{e(d["date"].replace("-", "."))}</span>'
-                 + (f'<a class="btn btn-ghost" href="{e(d["url"])}" target="_blank" rel="noopener">열기 ↗</a></li>' if d["url"] and not d["file"] else
+                 + ((f'<a class="btn btn-primary" href="{e(d["url"])}" target="_blank" rel="noopener">발표 열기 ↗</a></li>' if d["kind"] == "presentations" else f'<a class="btn btn-ghost" href="{e(d["url"])}" target="_blank" rel="noopener">열기 ↗</a></li>') if d["url"] and not d["file"] else
                     f'<a class="btn btn-ghost" href="{img(root, "/assets/downloads/" + d["file"])}" target="_blank" rel="noopener" download>내려받기 ↓</a></li>'))
-    downloads = f"""<section class="sp-sec" id="downloads"><div class="wrap"><div class="sp-h"><div><div class="eb">03 · DOWNLOADS</div><h2>자료실</h2><p>제품 브로셔, 데이터시트, 사용설명서를 내려받으실 수 있습니다.</p></div></div>
+    downloads = f"""<section class="sp-sec" id="downloads"><div class="wrap"><div class="sp-h"><div><div class="eb">03 · DOWNLOADS</div><h2>자료실</h2><p>제품 브로셔, 데이터시트, 사용설명서를 내려받으실 수 있습니다. 프리젠테이션은 인터넷만 되면 어디서든 브라우저로 바로 발표할 수 있습니다.</p></div></div>
 <div class="dl-bar"><div class="dl-chips" id="dlF" role="group" aria-label="자료 종류">{kchips}</div><label class="dl-search"><span aria-hidden="true">🔍</span><input id="dlQ" type="search" placeholder="제품명·자료 이름 검색" aria-label="자료 검색"></label></div>
 <ul class="dl-list">{rows}</ul><div class="dl-empty" id="dlE" hidden>찾는 자료가 없습니다. 문의 주시면 보내 드립니다.</div>
 <p class="dl-note">※ 찾으시는 자료가 없으면 문의 양식이나 메일로 요청해 주세요.</p></div></section>"""
