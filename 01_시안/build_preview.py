@@ -216,9 +216,50 @@ def page(title, inner, root, active="product", cta=True):
 
 def img(root, p): return root + "../site" + p
 def pic(root, d, attrs=""):
+    if d.get("image") and not os.path.exists(os.path.join(SITE, d["image"].lstrip("/"))):
+        alt = _shot_file(d["image"]) if "_shot_file" in globals() else None
+        if alt: d["image"] = alt
+        else: return '<div class="noimg"><span>📷</span>화면 준비 중</div>'
     if not d.get("image"):
         return '<div class="noimg"><span>📷</span>사진 준비 중</div>'
     return f'<img {attrs} src="{img(root, d["image"])}" alt="{e(d["title"])}">'
+
+
+SHOT_CSS = """
+.shots{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:20px}
+.shot{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.shot a.ph{display:block;background:#0f1622;aspect-ratio:16/10;overflow:hidden}
+.shot a.ph img{width:100%;height:100%;object-fit:contain;transition:transform .4s}.shot a.ph:hover img{transform:scale(1.03)}
+.shot.wide{grid-column:1/-1}.shot.wide a.ph{aspect-ratio:auto}.shot.wide a.ph img{height:auto}
+.shot .tx{padding:14px 16px}.shot b{color:var(--navy);font-size:15px}.shot p{font-size:13.5px;color:var(--sub);margin-top:4px;line-height:1.6}
+.shot.todo .ph{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;background:repeating-linear-gradient(-45deg,#f4f7fb 0 10px,#eef2f8 10px 11px);border-bottom:1px dashed #c9d6ea;color:var(--sub);font-size:13px;text-align:center;padding:14px}
+.shot.todo .ph strong{color:var(--navy);font-size:14px}.shot.todo code{font-size:11.5px;background:#fff;border:1px solid var(--line);border-radius:5px;padding:2px 6px;word-break:break-all}
+@media(max-width:600px){.shots{grid-template-columns:1fr}}
+"""
+def _shot_file(src):
+    """화면 파일 찾기: 적힌 이름 그대로, 없으면 .png/.jpg 바꿔서"""
+    base = os.path.join(SITE, src.lstrip("/").replace("/", os.sep))
+    for cand in [base, os.path.splitext(base)[0] + ".png", os.path.splitext(base)[0] + ".jpg"]:
+        if os.path.exists(cand): return "/" + os.path.relpath(cand, SITE).replace(os.sep, "/")
+    return None
+
+def shots_section(d, root):
+    """작동 화면: shots 목록. 파일이 없으면 미리보기에서만 '화면 준비 중' 칸을 보여 줌(공개용에서는 숨김)"""
+    sh = d.get("shots")
+    if not sh: return ""
+    out = ""
+    for x in sh:
+        f = _shot_file(x["src"])
+        cls = "shot wide" if x.get("wide") else "shot"
+        if f:
+            out += (f'<figure class="{cls}"><a class="ph" href="{img(root, f)}" target="_blank" rel="noopener"><img loading="lazy" src="{img(root, f)}" alt="{e(x.get("title",""))}"></a>'
+                    f'<figcaption class="tx"><b>{e(x.get("title",""))}</b><p>{e(x.get("desc",""))}</p></figcaption></figure>')
+        elif not os.environ.get("PUBLISH"):
+            out += (f'<figure class="{cls} todo"><div class="ph"><strong>화면 준비 중</strong>이 자리에 넣을 파일 (jpg 또는 png)<code>site{e(x["src"])}</code></div>'
+                    f'<figcaption class="tx"><b>{e(x.get("title",""))}</b><p>{e(x.get("desc",""))}</p></figcaption></figure>')
+    if not out: return ""
+    return (f'<style>{SHOT_CSS}</style><section class="sec" id="sh"><h2>{e(d.get("shots_title","작동 화면"))}</h2>'
+            + (f'<p class="small" style="margin:-6px 0 16px">{e(d["shots_desc"])}</p>' if d.get("shots_desc") else "") + f'<div class="shots">{out}</div></section>')
 
 
 def samples_section(d, root):
@@ -321,7 +362,7 @@ def build_detail(d, items):
     if d.get("models"):
         models = '<section class="sec"><h2>모델 구성</h2><div class="models">' + "".join(f'<div><b>{e(m["name"])}</b><p>{e(m["text"])}</p></div>' for m in d["models"]) + "</div></section>"
     rows = "".join(f"<tr><th>{e(k)}</th><td>{e(v)}</td></tr>" for k, v in d["specs"])
-    samples_h = samples_section(d, root)
+    samples_h = shots_section(d, root) + samples_section(d, root)
     process_h = process_section(d, root)
     extra_h = (f"<style>{BOARD_CSS}</style>" if (d.get("viewer3d") or d.get("videos")) else "") + stats_section(d, root) + viewer3d_section(d, root) + videos_section(d, root)
     compare_h = compare_section(d, root)
@@ -334,7 +375,7 @@ def build_detail(d, items):
 <div class="dinfo"><div class="crumb">홈 › 제품소개 › {e(d['category'])} › {e(d['subcategory'])}</div><div style="display:flex;gap:8px;align-items:center;margin:12px 0 8px;flex-wrap:wrap"><a href="{cat_link(d['category'], root)}#{SUB_INFO[d['subcategory']]['id']}" style="background:var(--navy);color:#fff;font-size:13px;font-weight:700;padding:5px 12px;border-radius:6px">{e(d['subcategory'])}</a>{f'<span style="color:var(--blue);font-weight:700;font-size:13px">#{e(d["brand"])}</span>' if d.get("brand") else ""}</div>
 <h1>{e(d['title'])}</h1><div class="st">{e(d['subtitle'])}</div>{former}<p class="sm">{e(d['summary'])}</p>
 <div class="keyspec">{ks}</div>{partner_box(d, root)}<div class="actions"><a class="btn btn-primary" href="#">견적 문의</a><a class="btn btn-ghost" href="#">데모 신청</a><a class="btn btn-ghost" href="#">브로셔 PDF</a></div></div></div></section>
-<div class="wrap"><div class="tabs"><a class="on" href="#f">주요 특징</a>{'<a href="#p">작동 과정</a>' if d.get('process') else ''}{'<a href="#v3s">3D 모델</a>' if d.get('viewer3d') else ''}{'<a href="#st">실측 검증</a>' if d.get('stats') else ''}{f'<a href="#vid">{e(d.get("videos_tab","스캔 영상"))}</a>' if d.get('videos') else ''}{f'<a href="#g">{e(d.get("samples_tab","샘플 갤러리"))}</a>' if d.get('samples') else ''}{'<a href="#c">제품 비교</a>' if d.get('compare') else ''}<a href="#s">사양</a><a href="#a">적용 분야</a>{'<a href="#cs">적용 사례</a>' if csh else ''}</div>
+<div class="wrap"><div class="tabs"><a class="on" href="#f">주요 특징</a>{'<a href="#sh">작동 화면</a>' if d.get('shots') else ''}{'<a href="#p">작동 과정</a>' if d.get('process') else ''}{'<a href="#v3s">3D 모델</a>' if d.get('viewer3d') else ''}{'<a href="#st">실측 검증</a>' if d.get('stats') else ''}{f'<a href="#vid">{e(d.get("videos_tab","스캔 영상"))}</a>' if d.get('videos') else ''}{f'<a href="#g">{e(d.get("samples_tab","샘플 갤러리"))}</a>' if d.get('samples') else ''}{'<a href="#c">제품 비교</a>' if d.get('compare') else ''}<a href="#s">사양</a><a href="#a">적용 분야</a>{'<a href="#cs">적용 사례</a>' if csh else ''}</div>
 <section class="sec" id="f"><h2>주요 특징</h2><div class="hl">{hl}</div></section>
 {process_h}{extra_h}{samples_h}<section class="sec body"><h2>제품 소개</h2>{md(d['body'])}</section>{compare_h}{models}
 <section class="sec" id="s"><h2>주요 사양</h2><table>{rows}</table><p class="small">※ 사양은 제조사 사정에 따라 예고 없이 변경될 수 있습니다. 상세 사양은 브로셔를 참고하거나 문의해 주세요.</p></section>
@@ -666,6 +707,17 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
 .cat.soon .ph{height:110px;background:repeating-linear-gradient(-45deg,transparent 0 10px,rgba(27,43,75,.035) 10px 11px)}
 .cat.soon .ph b{font-family:var(--mono);font-size:12px;letter-spacing:.2em;color:var(--sub-l);font-weight:500}
 .cat.soon h3{color:#7B869A}
+.film{background:#fff;padding-bottom:96px}
+.film .frame{position:relative;border-radius:28px;overflow:hidden;background:#05070b;aspect-ratio:16/9;box-shadow:0 30px 60px -30px rgba(10,20,40,.45)}
+.film video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.film .cap{position:absolute;left:0;right:0;bottom:0;padding:48px 44px 36px;background:linear-gradient(transparent,rgba(3,6,12,.78));color:#fff;display:flex;align-items:flex-end;justify-content:space-between;gap:24px;pointer-events:none}
+.film .cap .k{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;color:var(--mint);text-transform:uppercase}
+.film .cap h3{font-size:clamp(20px,2.4vw,30px);font-weight:600;letter-spacing:-.02em;line-height:1.35;margin-top:8px}
+.film .cap a{pointer-events:auto;flex:none;color:#fff;font-weight:700;font-size:14px;padding:11px 18px;border-radius:999px;background:rgba(255,255,255,.14);backdrop-filter:blur(8px);box-shadow:inset 0 0 0 1px rgba(255,255,255,.25)}
+.film .cap a:hover{background:rgba(255,255,255,.24)}
+.film .pp{position:absolute;top:18px;right:18px;width:38px;height:38px;border-radius:50%;border:0;background:rgba(0,0,0,.35);color:#fff;font-size:13px;cursor:pointer;backdrop-filter:blur(6px)}
+.film .pp:focus-visible{outline:2px solid var(--mint);outline-offset:2px}
+@media(max-width:700px){.film{padding-bottom:64px}.film .frame{border-radius:18px;aspect-ratio:4/3}.film .cap{padding:28px 18px 18px;flex-direction:column;align-items:flex-start;gap:12px}.film .cap a{font-size:13px;padding:9px 14px}}
 .new{background:#fff;padding-block:96px}
 .newgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .np{display:grid;grid-template-rows:auto 1fr;border-radius:24px;overflow:hidden;box-shadow:0 0 0 1px var(--line-l);background:#fff;transition:box-shadow .3s,transform .3s var(--ease);min-width:0}
@@ -765,6 +817,7 @@ footer b{color:#fff}
  <div class="sec-head rv"><div><div class="kick">New</div><h2>새로 나온 제품</h2></div><p>제품 파일에 NEW 표시를 하면 이곳에 자동으로 나타납니다.</p></div>
  <div class="newgrid">%%NEW%%</div>
 </div></section>
+%%FILM%%
 
 <section class="since" id="since"><div class="wrap">
  <div class="mega" aria-label="1991">1991<span aria-hidden="true">1991</span></div>
@@ -811,6 +864,17 @@ footer b{color:#fff}
  addEventListener('resize',place); requestAnimationFrame(loop);
 })();
 </script>
+<script>
+(function(){var v=document.getElementById('filmv'),b=document.getElementById('filmpp');if(!v)return;
+ var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches,user=false;
+ function sync(){b.textContent=v.paused?'▶':'❚❚';b.setAttribute('aria-label',v.paused?'영상 재생':'영상 일시정지')}
+ b.addEventListener('click',function(){user=true;if(v.paused)v.play();else v.pause();sync()});
+ v.addEventListener('play',sync);v.addEventListener('pause',sync);
+ if(reduce){sync();return}
+ if('IntersectionObserver' in window){new IntersectionObserver(function(es){es.forEach(function(en){if(user)return;if(en.isIntersecting){v.play().catch(function(){})}else{v.pause()}})},{threshold:.25}).observe(v)}else{v.play().catch(function(){})}
+ sync();
+})();
+</script>
 </body></html>"""
 
 ARROW_SVG = '<svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h9M7.5 3l4 4-4 4" stroke="#04211b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>'
@@ -845,6 +909,12 @@ def build_main(items):
         else:
             cats += (f'<div class="cat soon rv" style="--dl:{i*.1:.1f}s"><div class="ph"><b>COMING SOON</b></div>'
                      f'<div class="tx"><span class="no">{i+1:02d} / 05</span><h3>{e(c)}</h3><p>{e(ds)}</p></div></div>')
+    film = (f'<section class="film" aria-label="Mantis 소개 영상"><div class="wrap"><div class="frame rv">'
+            f'<video id="filmv" muted loop playsinline preload="metadata" poster="{ip("/assets/img/home/mantis-story.jpg")}" aria-label="Mantis 현미경 소개 영상 (소리 없음)">'
+            f'<source src="{ip("/assets/img/home/mantis-story.mp4")}" type="video/mp4"></video>'
+            '<button class="pp" id="filmpp" type="button" aria-label="영상 일시정지">❚❚</button>'
+            '<div class="cap"><div><div class="k">Vision Engineering · MANTIS</div><h3>현미경이 바뀌면,<br>일하는 자세가 바뀝니다.</h3></div>'
+            '<a href="상세/mantis.html">Mantis 보기 →</a></div></div></div></section>')
     news = [d for d in items if d.get("badge") == "NEW" and d.get("image")]
     nh = ""
     for i, d in enumerate(news[:2]):
@@ -853,7 +923,7 @@ def build_main(items):
     nh += ('<a class="np halo rv" style="--dl:.2s" href="상세/evocam-aura-4k.html"><div><span class="q">LOOKING FOR</span><h3>EVO Cam HALO를<br>찾으시나요?</h3>'
            '<p>EVO Cam HALO는 EVO Cam AURA 4K로 이름과 기능이 새로워졌습니다.</p></div><span class="go">AURA 4K 보기 →</span></a>')
     html_ = (MAIN_TPL.replace("%%IMG%%", R + "/assets/img/").replace("%%ARROW%%", ARROW_SVG).replace("%%RETICLE%%", lens_svg())
-             .replace("%%CHIPS%%", chips_h).replace("%%CATS%%", cats).replace("%%NEW%%", nh).replace("%%YEARS%%", str(years)).replace("%%MARK%%", MARK).replace("%%FAV%%", FAVICON))
+             .replace("%%CHIPS%%", chips_h).replace("%%CATS%%", cats).replace("%%NEW%%", nh).replace("%%FILM%%", film).replace("%%YEARS%%", str(years)).replace("%%MARK%%", MARK).replace("%%FAV%%", FAVICON))
     open(os.path.join(HERE, "index.html"), "w", encoding="utf-8").write(html_)
 
 
