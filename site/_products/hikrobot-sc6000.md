@@ -12,6 +12,7 @@ gallery:
   - /assets/img/products/smartcam/sc6000-vm.jpg
   - /assets/img/products/smartcam/dl-count.jpg
 summary: 카메라 안에 비전 소프트웨어 VM과 딥러닝 연산 장치를 넣은 AI 스마트 카메라입니다. 별도 산업용 PC 없이, 규칙으로 잡기 어려운 문자·결함·분류 검사를 카메라 한 대로 처리합니다.
+keywords: [AI 스마트카메라, 딥러닝 비전, 하이크로봇, 딥러닝 OCR, 외관검사]
 tags: [임베디드 VM 140종+ 알고리즘, 딥러닝 내장, 최대 26 MP · C 마운트]
 highlights:
   - title: 카메라 안의 비전 PC

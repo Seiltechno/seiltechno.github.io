@@ -12,6 +12,7 @@ gallery:
   - /assets/img/products/lynx-evo-g3.jpg
   - /assets/img/products/lynx-evo-g4.jpg
 summary: 최대 120배까지 무접안으로. 10:1 줌과 모듈형 구성으로 정밀 검사·재작업 현장의 생산성을 높입니다.
+keywords: [무접안 현미경, 실체현미경, 스테레오 현미경, 고배율 실체현미경, 링스 현미경]
 tags: [무접안, 줌 10:1, 최대 120배, 영국 퀸즈 어워드]
 
 highlights:

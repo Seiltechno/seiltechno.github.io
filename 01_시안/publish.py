@@ -47,6 +47,9 @@ def main():
         try: shutil.rmtree(OUT)
         except OSError: pass          # 지울 수 없는 환경이면 덮어쓰기
     os.makedirs(OUT, exist_ok=True)
+    import sys; sys.path.insert(0, HERE)
+    from seo import SEO
+    seo = SEO(SITE, DOMAIN)
     pages = []
     for fp in glob.glob(os.path.join(HERE, "*.html")) + glob.glob(os.path.join(HERE, "상세", "*.html")) + glob.glob(os.path.join(HERE, "상세", "cases", "*.html")):
         rel = os.path.relpath(fp, HERE).replace(os.sep, "/")
@@ -54,6 +57,7 @@ def main():
         if url is None: continue
         s = rewrite(open(fp, encoding="utf-8").read(), rel)
         if 'draft' in rel or 'seil-example' in rel: continue        # 작성 예시(draft) 글은 공개하지 않음
+        s = seo.apply(s, url)
         o = outfile(url); os.makedirs(os.path.dirname(o), exist_ok=True)
         open(o, "w", encoding="utf-8").write(s); pages.append(url)
     shutil.copytree(os.path.join(SITE, "assets"), os.path.join(OUT, "assets"), dirs_exist_ok=True)
@@ -64,7 +68,7 @@ def main():
     open(os.path.join(OUT, ".nojekyll"), "w").write("")
     if os.environ.get("CNAME"): open(os.path.join(OUT, "CNAME"), "w").write(os.environ["CNAME"] + "\n")
     nf = open(outfile(""), encoding="utf-8").read()
-    open(os.path.join(OUT, "404.html"), "w", encoding="utf-8").write(re.sub(r"<title>.*?</title>", "<title>페이지를 찾을 수 없습니다 | 세일테크노</title>", nf, count=1))
+    open(os.path.join(OUT, "404.html"), "w", encoding="utf-8").write(re.sub(r'<link rel="canonical"[^>]*>\n?', "", re.sub(r"<title>.*?</title>", "<title>페이지를 찾을 수 없습니다 | 세일테크노</title>", nf, count=1)).replace("</head>", '<meta name="robots" content="noindex">\n</head>', 1))
     # 링크 점검
     bad = set()
     for f in glob.glob(os.path.join(OUT, "**", "*.html"), recursive=True):

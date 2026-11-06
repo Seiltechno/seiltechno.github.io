@@ -146,6 +146,10 @@ content:
     label: 핵심 키워드(3개)
     type: string
     list: true
+  - name: keywords
+    label: 검색 키워드(검색엔진용, 화면에는 안 보임)
+    type: string
+    list: true
   - name: highlights
     label: 주요 특징
     type: object

@@ -12,6 +12,7 @@ gallery:
   - /assets/img/products/smartcam/scmvs-run.jpg
   - /assets/img/products/smartcam/scmvs-stats.jpg
 summary: 원클릭 자동 초점과 모듈식 조명을 갖춘 범용 비전 센서입니다. 유무 판정을 넘어 위치·규격 검사, 바코드 판독, 문자 인식(OCR)까지 카메라 한 대로 처리합니다.
+keywords: [스마트카메라, 비전센서, 하이크로봇, OCR 검사, 바코드 판독]
 tags: [원클릭 자동 초점, 30종 이상 검사 툴, 바코드·OCR]
 highlights:
   - title: 원클릭 자동 초점·자동 밝기

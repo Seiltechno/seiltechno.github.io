@@ -36,6 +36,7 @@ cfg = {
     {"name": "gallery", "label": "추가 사진", "type": "image", "options": {"media": "images", "multiple": True}},
     T("summary", "요약(2~3문장)", required=True),
     S("tags", "핵심 키워드(3개)", list=True),
+    S("keywords", "검색 키워드(검색엔진용, 화면에는 안 보임)", list=True),
     {"name": "highlights", "label": "주요 특징", "type": "object", "list": True, "fields": [S("title", "제목"), T("text", "설명")]},
     {"name": "specs", "label": "사양", "type": "object", "list": True, "fields": [S("label", "항목"), S("value", "내용")]},
     S("applications", "적용 분야", list=True),

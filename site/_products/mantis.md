@@ -11,6 +11,7 @@ gallery:
   - /assets/img/products/mantis-ergo.jpg
   - /assets/img/products/mantis-iota.jpg
 summary: 크고 선명한 입체 영상, 5가지 조명, 3가지 모델. 전 세계에서 검증된 무접안 현미경의 3세대 모델입니다.
+keywords: [무접안 현미경, 접안렌즈 없는 현미경, 실체현미경, 스테레오 현미경, 검사용 현미경, 맨티스 현미경]
 tags: [무접안, 입체관찰, 카메라 옵션, UV 조명]
 
 highlights:

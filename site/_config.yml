@@ -13,3 +13,7 @@ collections:
 defaults:
   - scope: { path: "", type: products }
     values: { layout: product }
+
+# 검색엔진 소유 확인 코드 (구글 서치 콘솔 / 네이버 서치어드바이저에서 받은 content 값만 붙여넣기)
+google_site_verification: ""
+naver_site_verification: "02feec987505c4e55d17675d57ff0e5ee15cddbb"

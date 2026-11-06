@@ -11,6 +11,7 @@ gallery:
   - /assets/img/products/smartcam/sc2000-site.jpg
   - /assets/img/products/smartcam/scmvs-run.jpg
 summary: 카메라·렌즈·조명·판정·통신을 손바닥만 한 본체 하나에 담은 비전 센서입니다. 부품이 있는지, 개수가 맞는지 같은 단순하지만 빠뜨리면 안 되는 검사를 좁은 자리에서 바로 처리합니다.
+keywords: [스마트카메라, 비전센서, 하이크로봇, 유무검사, 오류방지]
 tags: [초소형 일체형, 조명·렌즈 내장, PC 없이 PLC 직결]
 highlights:
   - title: 좁은 자리에도 설치
