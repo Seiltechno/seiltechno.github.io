@@ -6,7 +6,7 @@ subcategory: Software
 brand: SEIL TECHNO
 order: 425
 posted: 2026-11-03
-published: false
+published: true
 image: /assets/img/software/evocam-halo/overview.jpg
 summary: EVO Cam HALO 디지털 현미경을 PC에서 제어하고, 촬영·측정·캘리브레이션·검사 리포트 작성까지 한 화면에서 처리하는 소프트웨어입니다. 화면에 보이는 QR·바코드·Data Matrix도 바로 읽습니다.
 tags: [자체 개발, 화면 속 코드 인식, Excel 리포트 2가지 방식, 영상 사용 가이드]
