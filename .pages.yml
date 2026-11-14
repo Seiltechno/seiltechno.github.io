@@ -37,6 +37,7 @@ content:
   - desktop-3d-scanner.md
   - seil-evocam-halo-controller.md
   - seil-mrsm-corner-r.md
+  - mantis.md
   view:
     fields:
     - title

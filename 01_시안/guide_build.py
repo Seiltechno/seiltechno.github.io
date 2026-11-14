@@ -149,3 +149,115 @@ def setups_section(d, root, en=False):
     desc = d.get("setups_desc", "")
     return (f'<style>{SETUP_CSS}</style><section class="sec" id="su"><h2>{e(d.get("setups_title", "Setup examples" if en else "구성 예"))}</h2>'
             + (f'<p style="color:var(--sub);margin:-8px 0 16px">{e(desc)}</p>' if desc else "") + f'<div class="su">{figs}</div></section>')
+
+
+# ── 사진 카드 묶음 (여러 개) ─────────────────────────────────────────────
+#   sections:
+#     - id: 영문 짧은 이름 (주소 #id, 탭 링크)
+#       title: 구역 제목      tab: 탭 이름(선택, 없으면 탭에 안 나옴)   desc: 설명(선택)
+#       cols: 한 줄 카드 수 (2~4, 기본 3)    fit: contain (사진 전체 보이기, 선택)
+#       items: [{img: 사진, title: 제목, text: 설명}, ...]
+CARDS_CSS = """
+.cds{display:grid;gap:18px}
+.cd{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff;display:flex;flex-direction:column}
+.cd a{display:block;aspect-ratio:4/3;background:#f3f5f8;overflow:hidden;cursor:zoom-in}
+.cd a img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .35s}
+.cd a:hover img{transform:scale(1.04)}
+.cds.ct .cd a img{object-fit:contain;background:#fff}
+.cd div{padding:16px 18px 18px}.cd h3{font-size:17px;color:var(--navy);margin:0 0 6px;letter-spacing:-.2px}
+.cd p{font-size:14px;line-height:1.7;color:var(--sub);margin:0}
+@media(max-width:900px){.cds{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:560px){.cds{grid-template-columns:1fr!important}}
+"""
+
+def cards_tabs(d):
+    return "".join(f'<a href="#{e(s["id"])}">{e(s["tab"])}</a>' for s in d.get("sections", []) if s.get("tab"))
+
+def cards_sections(d, root):
+    out = ""
+    for s in d.get("sections", []):
+        cards = ""
+        for x in s.get("items", []):
+            f = _gfile(x["img"]) if x.get("img") else None
+            pic_h = (f'<a href="{img(root, f)}" target="_blank" rel="noopener"><img loading="lazy" src="{img(root, f)}" alt="{e(x.get("title",""))}"></a>' if f
+                     else ("" if os.environ.get("PUBLISH") else f'<a style="display:flex;align-items:center;justify-content:center;font-size:12px;color:#889">사진 준비 중<br>site{e(x.get("img",""))}</a>'))
+            cards += f'<article class="cd">{pic_h}<div><h3>{e(x.get("title",""))}</h3>' + (f'<p>{e(x["text"])}</p>' if x.get("text") else "") + "</div></article>"
+        cols = int(s.get("cols", 3))
+        out += (f'<section class="sec" id="{e(s["id"])}"><h2>{e(s["title"])}</h2>'
+                + (f'<p style="color:var(--sub);margin:-8px 0 18px">{e(s["desc"])}</p>' if s.get("desc") else "")
+                + f'<div class="cds{" ct" if s.get("fit") == "contain" else ""}" style="grid-template-columns:repeat({cols},minmax(0,1fr))">{cards}</div></section>')
+    return (f"<style>{CARDS_CSS}</style>" + out) if out else ""
+
+
+# ── 표 (사양표 아래) ──────────────────────────────────────────────────────
+#   tables: [{title, desc(선택), head: [열 제목...], rows: [[...], ...], note(선택)}]
+TABLES_CSS = """
+.xt{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin-bottom:8px}
+.xt table{width:100%;border-collapse:collapse;min-width:520px}
+.xt th,.xt td{padding:10px 14px;border-bottom:1px solid var(--line);font-size:14px;text-align:center;white-space:nowrap}
+.xt thead th{background:var(--navy);color:#fff;font-weight:700}
+.xt tbody th{background:var(--bg);color:var(--navy);text-align:left}
+.xt tbody tr:last-child th,.xt tbody tr:last-child td{border-bottom:0}
+.xtw{margin-bottom:26px}.xtw h3{font-size:17px;color:var(--navy);margin:0 0 8px}
+"""
+
+def tables_section(d, root):
+    tb = d.get("tables")
+    if not tb: return ""
+    h = ""
+    for t in tb:
+        head = "".join(f"<th>{e(c)}</th>" for c in t.get("head", []))
+        rows = "".join("<tr>" + "".join((f"<th>{e(c)}</th>" if i == 0 else f"<td>{e(c)}</td>") for i, c in enumerate(r)) + "</tr>" for r in t.get("rows", []))
+        h += (f'<div class="xtw"><h3>{e(t["title"])}</h3>' + (f'<p style="color:var(--sub);font-size:14px;margin:0 0 10px">{e(t["desc"])}</p>' if t.get("desc") else "")
+              + f'<div class="xt"><table><thead><tr>{head}</tr></thead><tbody>{rows}</tbody></table></div>'
+              + (f'<p class="small">{e(t["note"])}</p>' if t.get("note") else "") + "</div>")
+    return f'<style>{TABLES_CSS}</style><section class="sec" id="tb"><h2>{e(d.get("tables_title","상세 사양"))}</h2>{h}</section>'
+
+
+# ── 소개 영상 (외부 Vimeo / YouTube 임베드) — '주요 특징' 바로 아래 ──────────
+#   intro_video: {vimeo: 영상 번호 | youtube: 영상 ID, title: 제목, desc: 설명(선택), credit: 출처(선택)}
+INTRO_CSS = """
+.ivw{position:relative;aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:#0f1622}
+.ivw iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.ivc{font-size:12.5px;color:var(--sub);margin-top:8px}
+.rv{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.rv figure{margin:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff}
+.rv video{display:block;width:100%;aspect-ratio:16/9;background:#0f1622}
+.rv figcaption{padding:12px 14px}.rv figcaption b{display:block;color:var(--navy);font-size:15px}.rv figcaption span{font-size:13px;color:var(--sub)}
+@media(max-width:760px){.rv{grid-template-columns:1fr}}
+"""
+
+def intro_section(d, root):
+    v = d.get("intro_video")
+    if not v: return ""
+    if v.get("vimeo"):
+        src = f'https://player.vimeo.com/video/{e(str(v["vimeo"]))}?dnt=1&title=0&byline=0&portrait=0'
+    elif v.get("youtube"):
+        src = f'https://www.youtube-nocookie.com/embed/{e(v["youtube"])}?rel=0'
+    else:
+        return ""
+    return (f'<style>{INTRO_CSS}</style><section class="sec" id="iv"><h2>{e(v.get("title","소개 영상"))}</h2>'
+            + (f'<p style="color:var(--sub);margin:-8px 0 16px">{e(v["desc"])}</p>' if v.get("desc") else "")
+            + f'<div class="ivw"><iframe src="{src}" title="{e(v.get("title","소개 영상"))}" loading="lazy" allow="fullscreen; picture-in-picture" allowfullscreen></iframe></div>'
+            + (f'<p class="ivc">{e(v["credit"])}</p>' if v.get("credit") else "") + "</section>")
+
+
+# ── 참고 영상 (직접 올린 mp4, 자동 재생 없음·소리 있음) — '적용 분야' 아래 ─────
+#   ref_videos_title / ref_videos_desc (선택)
+#   ref_videos: [{src: mp4, poster: jpg, title: 제목, desc: 설명}]
+def refvid_section(d, root):
+    rv = d.get("ref_videos")
+    if not rv: return ""
+    figs = ""
+    for x in rv:
+        if not _gfile(x["src"]):
+            if not os.environ.get("PUBLISH"):
+                figs += f'<figure><div style="padding:40px;text-align:center;color:#889">영상 준비 중<br><code>site{e(x["src"])}</code></div></figure>'
+            continue
+        poster = f' poster="{img(root, x["poster"])}"' if x.get("poster") and _gfile(x["poster"]) else ""
+        figs += (f'<figure><video src="{img(root, x["src"])}"{poster} controls playsinline preload="none" aria-label="{e(x.get("title",""))}"></video>'
+                 f'<figcaption><b>{e(x.get("title",""))}</b><span>{e(x.get("desc",""))}</span></figcaption></figure>')
+    if not figs: return ""
+    return (f'<style>{INTRO_CSS}</style><section class="sec" id="rv"><h2>{e(d.get("ref_videos_title","참고 영상"))}</h2>'
+            + (f'<p style="color:var(--sub);margin:-8px 0 16px">{e(d["ref_videos_desc"])}</p>' if d.get("ref_videos_desc") else "")
+            + f'<div class="rv">{figs}</div></section>')
