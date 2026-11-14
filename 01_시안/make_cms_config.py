@@ -8,7 +8,7 @@ exec(src[:src.index("import urllib.parse")], ns)          # CATCFG(카테고리 
 exec(open(os.path.join(HERE, "board_build.py"), encoding="utf-8").read().split("BOARD_CSS")[0], ns)
 CATCFG = ns["CATCFG"]; CATS = ns["CATS"]
 subs = [s for c in CATS if c in CATCFG for s, _, _ in CATCFG[c]["subs"]]
-EXCLUDE = ["hybrid-mi.md", "aims-aitcd.md", "aims-aitwm.md", "desktop-3d-scanner.md", "seil-evocam-halo-controller.md"]   # 특수 구성 페이지(직접/Claude로 수정)
+EXCLUDE = ["hybrid-mi.md", "aims-aitcd.md", "aims-aitwm.md", "desktop-3d-scanner.md", "seil-evocam-halo-controller.md", "seil-mrsm-corner-r.md"]   # 특수 구성 페이지(직접/Claude로 수정)
 S = lambda n, l, **k: dict(name=n, label=l, type="string", **k)
 T = lambda n, l, **k: dict(name=n, label=l, type="text", **k)
 IMG = lambda n, l, **k: dict(name=n, label=l, type="image", options={"media": "images"}, **k)
