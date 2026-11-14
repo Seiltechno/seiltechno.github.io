@@ -14,6 +14,8 @@ def target(rel):
     """시안 파일 경로(01_시안 기준) → 공개 주소(앞 / 없이, 확장자 없이)"""
     if rel in TOP: return TOP[rel]
     if rel in CAT: return CAT[rel]
+    m = re.match(r"en/(.+)\.html$", rel)
+    if m: return "en/products/" + m.group(1)
     m = re.match(r"상세/cases/(.+)\.html$", rel)
     if m: return "cases/" + m.group(1)
     m = re.match(r"상세/(.+)\.html$", rel)
@@ -51,7 +53,7 @@ def main():
     from seo import SEO
     seo = SEO(SITE, DOMAIN)
     pages = []
-    for fp in glob.glob(os.path.join(HERE, "*.html")) + glob.glob(os.path.join(HERE, "상세", "*.html")) + glob.glob(os.path.join(HERE, "상세", "cases", "*.html")):
+    for fp in glob.glob(os.path.join(HERE, "*.html")) + glob.glob(os.path.join(HERE, "상세", "*.html")) + glob.glob(os.path.join(HERE, "상세", "cases", "*.html")) + glob.glob(os.path.join(HERE, "en", "*.html")):
         rel = os.path.relpath(fp, HERE).replace(os.sep, "/")
         url = target(rel)
         if url is None: continue

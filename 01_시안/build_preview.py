@@ -362,7 +362,7 @@ def build_detail(d, items):
     if d.get("models"):
         models = '<section class="sec"><h2>모델 구성</h2><div class="models">' + "".join(f'<div><b>{e(m["name"])}</b><p>{e(m["text"])}</p></div>' for m in d["models"]) + "</div></section>"
     rows = "".join(f"<tr><th>{e(k)}</th><td>{e(v)}</td></tr>" for k, v in d["specs"])
-    samples_h = shots_section(d, root) + samples_section(d, root)
+    samples_h = shots_section(d, root) + guide_section(d, root) + samples_section(d, root)
     process_h = process_section(d, root)
     extra_h = (f"<style>{BOARD_CSS}</style>" if (d.get("viewer3d") or d.get("videos")) else "") + stats_section(d, root) + viewer3d_section(d, root) + videos_section(d, root)
     compare_h = compare_section(d, root)
@@ -375,8 +375,8 @@ def build_detail(d, items):
 <div class="dinfo"><div class="crumb">홈 › 제품소개 › {e(d['category'])} › {e(d['subcategory'])}</div><div style="display:flex;gap:8px;align-items:center;margin:12px 0 8px;flex-wrap:wrap"><a href="{cat_link(d['category'], root)}#{SUB_INFO[d['subcategory']]['id']}" style="background:var(--navy);color:#fff;font-size:13px;font-weight:700;padding:5px 12px;border-radius:6px">{e(d['subcategory'])}</a>{f'<span style="color:var(--blue);font-weight:700;font-size:13px">#{e(d["brand"])}</span>' if d.get("brand") else ""}</div>
 <h1>{e(d['title'])}</h1><div class="st">{e(d['subtitle'])}</div>{former}<p class="sm">{e(d['summary'])}</p>
 <div class="keyspec">{ks}</div>{partner_box(d, root)}<div class="actions"><a class="btn btn-primary" href="#">견적 문의</a><a class="btn btn-ghost" href="#">데모 신청</a><a class="btn btn-ghost" href="#">브로셔 PDF</a></div></div></div></section>
-<div class="wrap"><div class="tabs"><a class="on" href="#f">주요 특징</a>{'<a href="#sh">작동 화면</a>' if d.get('shots') else ''}{'<a href="#p">작동 과정</a>' if d.get('process') else ''}{'<a href="#v3s">3D 모델</a>' if d.get('viewer3d') else ''}{'<a href="#st">실측 검증</a>' if d.get('stats') else ''}{f'<a href="#vid">{e(d.get("videos_tab","스캔 영상"))}</a>' if d.get('videos') else ''}{f'<a href="#g">{e(d.get("samples_tab","샘플 갤러리"))}</a>' if d.get('samples') else ''}{'<a href="#c">제품 비교</a>' if d.get('compare') else ''}<a href="#s">사양</a><a href="#a">적용 분야</a>{'<a href="#cs">적용 사례</a>' if csh else ''}</div>
-<section class="sec" id="f"><h2>주요 특징</h2><div class="hl">{hl}</div></section>
+<div class="wrap"><div class="tabs"><a class="on" href="#f">주요 특징</a>{'<a href="#sh">작동 화면</a>' if d.get('shots') else ''}{f'<a href="#gd">{e(d.get("guide_tab","사용 가이드"))}</a>' if d.get('guide') else ''}{'<a href="#p">작동 과정</a>' if d.get('process') else ''}{'<a href="#v3s">3D 모델</a>' if d.get('viewer3d') else ''}{'<a href="#st">실측 검증</a>' if d.get('stats') else ''}{f'<a href="#vid">{e(d.get("videos_tab","스캔 영상"))}</a>' if d.get('videos') else ''}{f'<a href="#g">{e(d.get("samples_tab","샘플 갤러리"))}</a>' if d.get('samples') else ''}{'<a href="#c">제품 비교</a>' if d.get('compare') else ''}<a href="#s">사양</a><a href="#a">적용 분야</a>{'<a href="#cs">적용 사례</a>' if csh else ''}</div>
+{setups_section(d, root)}<section class="sec" id="f"><h2>주요 특징</h2><div class="hl">{hl}</div></section>
 {process_h}{extra_h}{samples_h}<section class="sec body"><h2>제품 소개</h2>{md(d['body'])}</section>{compare_h}{models}
 <section class="sec" id="s"><h2>주요 사양</h2><table>{rows}</table><p class="small">※ 사양은 제조사 사정에 따라 예고 없이 변경될 수 있습니다. 상세 사양은 브로셔를 참고하거나 문의해 주세요.</p></section>
 <section class="sec" id="a"><h2>적용 분야</h2><div class="apps">{apps}</div></section>{csh}{relh}</div>"""
@@ -1047,12 +1047,15 @@ exec(open(os.path.join(HERE, "cat_deck.py"), encoding="utf-8").read())
 exec(open(os.path.join(HERE, "board_build.py"), encoding="utf-8").read())
 exec(open(os.path.join(HERE, "support_build.py"), encoding="utf-8").read())
 exec(open(os.path.join(HERE, "cases_build.py"), encoding="utf-8").read())
+exec(open(os.path.join(HERE, "guide_build.py"), encoding="utf-8").read())
+exec(open(os.path.join(HERE, "en_build.py"), encoding="utf-8").read())
 items = load()
 _CASES_ALL = [c for c in load_cases() if not (os.environ.get("PUBLISH") and c.get("draft"))]
 build_about()
 build_main(items)
 for c in CATCFG: build_list(items, c)
 for d in items: build_detail(d, items)
+build_en(items)
 build_cases(items)
 _dls = build_support(items)
 fix_links(items, _dls)

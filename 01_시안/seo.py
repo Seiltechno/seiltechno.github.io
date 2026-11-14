@@ -46,6 +46,7 @@ class SEO:
         except Exception: pass
         self.verify = {"google-site-verification": cfg.get("google_site_verification"), "naver-site-verification": cfg.get("naver_site_verification")}
         self.prod = {os.path.splitext(os.path.basename(f))[0]: _fm(f) for f in glob.glob(os.path.join(site_dir, "_products", "*.md"))}
+        self.prod_en = {os.path.splitext(os.path.basename(f))[0]: _fm(f) for f in glob.glob(os.path.join(site_dir, "_products_en", "*.md"))}
         self.cases = {os.path.splitext(os.path.basename(f))[0]: _fm(f) for f in glob.glob(os.path.join(site_dir, "_cases", "*.md"))}
 
     def info(self, url):
@@ -69,6 +70,17 @@ class SEO:
                        "category": " > ".join(x for x in [p.get("category"), sub] if x), "image": D + img,
                        **({"brand": {"@type": "Brand", "name": p["brand"]}} if p.get("brand") else {})})
             ld.append(self._crumbs([("제품소개", None), (p.get("category"), None), (p.get("title"), url)]))
+        elif url.startswith("en/products/") and url[12:] in self.prod_en and url[12:] in self.prod:
+            p = self.prod_en[url[12:]]; kind = "product"
+            title = f'{p.get("title","")} | {p.get("subcategory") or "Products"} | SEIL TECHNO'
+            desc = _clip(f'{p.get("title","")} — {p.get("subtitle","")}. {p.get("summary","")}')
+            kw = _kw(p.get("keywords"), [p.get("title"), p.get("subcategory"), p.get("category")], p.get("tags"), (p.get("applications") or [])[:6], ["SEIL TECHNO", "Vision Engineering Korea"])
+            ko = self.prod[url[12:]]
+            if ko.get("image"): img = ko["image"]
+            ld.append({"@context": "https://schema.org", "@type": "Product", "name": p.get("title"), "description": _clip(p.get("summary"), 300),
+                       "category": " > ".join(x for x in [p.get("category"), p.get("subcategory")] if x), "image": D + img,
+                       **({"brand": {"@type": "Brand", "name": ko["brand"]}} if ko.get("brand") else {})})
+            ld.append(self._crumbs([("Products", None), (p.get("category"), None), (p.get("title"), url)]))
         elif url.startswith("cases/") and url[6:] in self.cases:
             c = self.cases[url[6:]]; kind = "article"
             title = f'{c.get("title","")} | 적용사례 | 세일테크노'
@@ -89,14 +101,22 @@ class SEO:
         i = self.info(url)
         if not i: return html
         a = lambda s: _h.escape(str(s), quote=True)
+        en = url.startswith("en/")
+        slug = url.split("/")[-1]
+        alt = []
+        if url.startswith(("products/", "en/products/")) and slug in self.prod_en and slug in self.prod:
+            alt = [f'<link rel="alternate" hreflang="ko" href="{a(self.domain + "/products/" + slug)}">',
+                   f'<link rel="alternate" hreflang="en" href="{a(self.domain + "/en/products/" + slug)}">',
+                   f'<link rel="alternate" hreflang="x-default" href="{a(self.domain + "/products/" + slug)}">']
         tags = [f'<meta name="description" content="{a(i["desc"])}">',
                 f'<meta name="keywords" content="{a(", ".join(i["kw"]))}">',
                 f'<link rel="canonical" href="{a(i["url"])}">',
-                '<meta property="og:site_name" content="세일테크노">', '<meta property="og:locale" content="ko_KR">',
+                f'<meta property="og:site_name" content="{"SEIL TECHNO" if en else "세일테크노"}">', f'<meta property="og:locale" content="{"en_US" if en else "ko_KR"}">',
                 f'<meta property="og:type" content="{"article" if i["kind"]=="article" else "website"}">',
                 f'<meta property="og:title" content="{a(i["title"])}">', f'<meta property="og:description" content="{a(i["desc"])}">',
                 f'<meta property="og:url" content="{a(i["url"])}">', f'<meta property="og:image" content="{a(i["img"])}">',
                 '<meta name="twitter:card" content="summary_large_image">']
+        tags += alt
         if url == "":
             tags += [f'<meta name="{k}" content="{a(v)}">' for k, v in self.verify.items() if v]
         tags += [f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in i["ld"]]

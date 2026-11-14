@@ -35,6 +35,7 @@ content:
   - aims-aitcd.md
   - aims-aitwm.md
   - desktop-3d-scanner.md
+  - seil-evocam-halo-controller.md
   view:
     fields:
     - title
