@@ -116,7 +116,7 @@ guide:
       - {src: /assets/img/software/evocam-halo/guide/calibration-edge_line.jpg, cap: "Edge Line (엣지 선 자동 검출)"}
       - {src: /assets/img/software/evocam-halo/guide/calibration-ruller.jpg, cap: "Ruler (눈금 자동 인식)"}
       - {src: /assets/img/software/evocam-halo/guide/calibration-manager.png, cap: "Manage Calibrations — 배율별 목록과 Jump"}
-      - {src: /assets/img/software/evocam-halo/guide/calibration-new-MF.jpg, cap: "새 캘리브레이션 준비 화면"}
+      - {src: /assets/img/software/evocam-halo/guide/calibration-new-MF.jpg, cap: "새 캘리브레이션 준비 화면 — New Calibration을 선택하면 초점 모드가 AF(자동)에서 MF(수동)로 바뀝니다"}
   - title: "저장 설정 · 백업"
     text: "Settings › Save에서 저장 폴더, 캡처할 때마다 자동 저장 여부, 파일 형식(PNG 무손실 / JPEG 용량 절약)을 정합니다. 캘리브레이션·설정·리포트 레시피는 zip 하나로 백업하고 복원할 수 있습니다."
     points:

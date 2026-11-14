@@ -89,7 +89,7 @@ guide:
       - "When you change magnification, check that a calibration exists for it"
       - "Manage lists the calibrations by magnification — Jump moves to one directly"
       - "Yellow marks on the zoom gauge show the calibration points"
-    caps: ["Calibrations menu", "Manual (two clicks)", "Edge Line (automatic edge detection)", "Ruler (automatic scale detection)", "Manage Calibrations — list by magnification and Jump", "Preparing a new calibration"]
+    caps: ["Calibrations menu", "Manual (two clicks)", "Edge Line (automatic edge detection)", "Ruler (automatic scale detection)", "Manage Calibrations — list by magnification and Jump", "Preparing a new calibration — selecting New Calibration switches the focus mode from AF (auto) to MF (manual)"]
   - title: "Save settings · backup"
     text: "In Settings › Save, choose the save folder, whether every Capture is saved automatically, and the file format (PNG lossless / JPEG smaller files). Calibrations, settings and report recipes can be backed up to one zip file and restored."
     points:
