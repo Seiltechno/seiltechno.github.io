@@ -166,6 +166,18 @@ tables:
       - [무게, "15.3 kg (포장 19.5 kg)", 무게, "26.6 kg (포장 30.8 kg)"]
     note: "※ 제조사 브로셔 기준. 사양은 제조사 사정에 따라 바뀔 수 있습니다."
 
+software_link:
+  title: 카메라 옵션 Smart CAM과 사용하는 소프트웨어 소개
+  slug: seil-vision-manager
+  image: /assets/img/software/vision-manager/main.jpg
+  text: Lynx EVO에 Smart CAM 카메라 옵션을 달면 입체 관찰은 그대로 두고 PC 화면으로 캡처·측정·리포트를 할 수 있습니다. Smart CAM은 IDS 카메라라서 IDS peak만 설치하면 VISION-MANAGER에 바로 연결됩니다. 세일테크노가 직접 만든 VISION-MANAGER로 고배율 검사 이미지를 바로 재고 기록하세요. 무료로 내려받아 쓸 수 있습니다.
+  points:
+    - "Smart CAM(IDS 카메라) 바로 연결 — 다음 실행부터 자동 연결"
+    - "점·선·원·각도·거리 측정, 배율별 교정(px/mm) 프리셋"
+    - "측정선·마크업·배율 표시가 들어간 이미지 그대로 저장"
+    - "바코드 기반 리포트 세션, Excel 내보내기·고객 양식 삽입"
+  button: VISION-MANAGER 자세히 보기 · 무료 다운로드 →
+
 applications: [전자부품·PCB 검사·재작업, 기계 가공품, 의료기기, 플라스틱 부품, 생명과학 시료, 최종 외관 검사]
 ---
 

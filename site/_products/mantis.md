@@ -189,6 +189,18 @@ ref_videos:
   - {src: /assets/img/products/mantis/video/pixo-operation.mp4, poster: /assets/img/products/mantis/video/pixo-operation.jpg, title: "Mantis PIXO 기본 조작 (2분 28초)", desc: "렌즈 장착, 동공 간격(IPD) 조절, 배율 전환, 초점 조절, 조명 설정, PC 연결"}
   - {src: /assets/img/products/mantis/video/iota-operation.mp4, poster: /assets/img/products/mantis/video/iota-operation.jpg, title: "Mantis IOTA 기본 조작 (1분 17초)", desc: "동공 간격(IPD) 조절, 렌즈 교체로 배율 전환, 초점 조절, 조명 설정"}
 
+software_link:
+  title: PIXO 모델에 사용하는 소프트웨어 소개
+  slug: seil-vision-manager
+  image: /assets/img/software/vision-manager/main.jpg
+  text: Mantis PIXO의 내장 카메라는 IDS 카메라라서, IDS peak만 설치하면 VISION-MANAGER에 바로 연결됩니다. PC에서 영상을 보며 캡처·측정·리포트까지 처리하는 세일테크노 자체 개발 소프트웨어입니다. 화면 배치가 ViCapture와 같아 따로 배우지 않아도 되고, 무료로 내려받아 바로 쓸 수 있습니다.
+  points:
+    - "PIXO 내장 IDS 카메라 바로 연결 — 다음 실행부터 자동 연결"
+    - "점·선·원·각도·거리 측정, mm 결과표와 Excel 내보내기"
+    - "포커스 에이드 · 포커스 스태킹, 측정선이 들어간 이미지 그대로 저장"
+    - "바코드 기반 리포트 세션, 고객 Excel 양식에 이미지 넣기"
+  button: VISION-MANAGER 자세히 보기 · 무료 다운로드 →
+
 applications: [PCB 납땜·재작업, 정밀 가공품 마감 검사, 의료기기(스텐트·카테터), 실험실·생명과학, 플라스틱·고무 사출품, 치과 보철, 시계·주얼리, UV 형광 코팅 검사]
 ---
 

@@ -311,3 +311,33 @@ def download_box(d, root, en=False):
             f'<p class="ds">{e(x.get("note", L["note"]))}</p>'
             f'<a class="dbtn" href="{e(x["url"])}">⬇ {e(x.get("label", L["label"]))}' + (f' <small>{e(str(x["size"]))}</small>' if x.get("size") else "") + "</a>"
             f'<div class="dsub">{sub}</div></div><dl class="dmeta">{meta}</dl>{req}</div></section>')
+
+
+# ── 함께 쓰는 소프트웨어 소개 (다른 제품 페이지로 연결) — '적용 분야' 바로 위 ──────
+#   software_link:
+#     title: 구역 제목      slug: 연결할 제품 파일 이름 (예: seil-vision-manager)
+#     name: 소프트웨어 이름 (선택, 없으면 연결 제품 제목)   text: 설명   points: [특징, ...] (선택)
+#     image: 사진 (선택, 없으면 연결 제품 대표 사진)   button: 버튼 글자 (선택)
+SWL_CSS = """
+.swl{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:28px;align-items:center;border:1px solid var(--line);border-radius:20px;background:linear-gradient(120deg,#f5f9ff,#fff 60%);padding:26px}
+.swl .si{display:block;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#2b2d31}.swl .si img{display:block;width:100%;height:auto}
+.swl .sk{display:inline-block;font-size:12px;font-weight:800;color:var(--blue);background:#eaf2ff;border-radius:6px;padding:3px 9px;margin-bottom:8px}
+.swl h3{font-size:22px;color:var(--navy);margin:0 0 8px}.swl p{font-size:15px;color:var(--sub);line-height:1.75;margin:0 0 12px}
+.swl ul{margin:0 0 16px;padding-left:18px}.swl li{font-size:14px;line-height:1.7;color:#334}
+@media(max-width:820px){.swl{grid-template-columns:1fr}}
+"""
+
+def software_link_section(d, root, items):
+    x = d.get("software_link")
+    if not x or not x.get("slug"): return ""
+    t = next((p for p in items if p["slug"] == x["slug"]), None)
+    if not t: return ""
+    if t.get("published") is False and os.environ.get("PUBLISH"): return ""
+    href = f'{root}상세/{t["slug"]}.html'
+    im = x.get("image") or t.get("image")
+    pic_h = f'<a class="si" href="{href}"><img loading="lazy" src="{img(root, im)}" alt="{e(x.get("name") or t["title"])} 화면"></a>' if im else ""
+    pts = "".join(f"<li>{e(p)}</li>" for p in x.get("points", []))
+    return (f'<style>{SWL_CSS}</style><section class="sec" id="sw"><h2>{e(x.get("title","함께 쓰는 소프트웨어"))}</h2><div class="swl">{pic_h}<div>'
+            f'<span class="sk">{e(x.get("badge","세일테크노 자체 개발 · 무료"))}</span><h3>{e(x.get("name") or t["title"])}</h3>'
+            + (f'<p>{e(x["text"])}</p>' if x.get("text") else "") + (f"<ul>{pts}</ul>" if pts else "")
+            + f'<a class="btn btn-primary" href="{href}">{e(x.get("button", (x.get("name") or t["title"]) + " 자세히 보기 →"))}</a></div></div></section>')
