@@ -70,11 +70,43 @@
   lang: 영어
   date: 2026-11-02
 
-- url: https://github.com/jihoslove-ho/VISION-MANAGER/releases/latest
+- url: https://github.com/jihoslove-ho/VISION-MANAGER/releases/download/v2.1/VISION-MANAGER-v2.1-Setup.exe
   kind: software
-  title: VISION-MANAGER 현미경용 비전 검사 소프트웨어
-  lang: Windows 설치 파일 · 약 74MB
-  date: 2026-11-02
+  title: VISION-MANAGER 설치 파일 v2.1 (세일테크노 자체 개발 · 무료)
+  product: seil-vision-manager
+  lang: Windows 10/11 64-bit · 누르면 바로 내려받기 · IDS peak 먼저 설치
+  size_text: 73.6 MB
+  date: 2026-11-15
+
+- url: https://github.com/jihoslove-ho/VISION-MANAGER/releases/download/v2.1/VISION-MANAGER_Manual_KO_v2.1.pdf
+  kind: software
+  title: VISION-MANAGER 사용 설명서 v2.1 (PDF · 한국어)
+  product: seil-vision-manager
+  lang: 한국어
+  size_text: 4.5 MB
+  date: 2026-11-15
+
+- url: https://github.com/jihoslove-ho/VISION-MANAGER/releases/download/v2.1/VISION-MANAGER_Manual_EN_v2.1.pdf
+  kind: software
+  title: VISION-MANAGER User Manual v2.1 (PDF · English)
+  product: seil-vision-manager
+  lang: 영어
+  size_text: 4.4 MB
+  date: 2026-11-15
+
+- url: https://jihoslove-ho.github.io/VISION-MANAGER/
+  kind: software
+  title: VISION-MANAGER 사용 설명서 (웹 · 한국어/영어)
+  product: seil-vision-manager
+  lang: 카메라 연결 · 프로필 · 측정 · 캘리브레이션 · 문제 해결
+  date: 2026-11-15
+
+- url: https://en.ids-imaging.com/ids-peak.html
+  kind: software
+  title: IDS peak 카메라 드라이버 (VISION-MANAGER 사용 전 설치)
+  product: seil-vision-manager
+  lang: IDS 공식 사이트로 이동 · Windows용 IDS peak 설치
+  date: 2026-11-15
   
 - url: https://claude.ai/artifact/RQfvN82tzTeWzgDqXkRJGc
   kind: presentations

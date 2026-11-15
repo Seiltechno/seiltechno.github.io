@@ -21,15 +21,17 @@ def load_downloads():
         if f and not os.path.exists(full): continue
         seen.add(f)
         ext = (os.path.splitext(f)[1][1:].upper() if f else ("SLIDE" if kind == "presentations" else "LINK")) or "FILE"
+        direct = bool(url) and not f and url.lower().split("?")[0].endswith((".exe", ".msi", ".zip", ".pdf"))   # 외부 주소지만 파일 바로 받기
+        if direct: ext = url.lower().split("?")[0].rsplit(".", 1)[1].upper()
         ents.append({"file": f, "url": url, "kind": kind, "title": x.get("title") or os.path.splitext(os.path.basename(f))[0],
                      "product": x.get("product", "") or "", "lang": x.get("lang", "") or "", "date": str(x.get("date", "") or ""),
-                     "size": os.path.getsize(full) if f else 0, "ext": ext})
+                     "size": os.path.getsize(full) if f else 0, "ext": ext, "direct": direct, "size_text": str(x.get("size_text", "") or "")})
     for kind, _ in DL_KINDS:
         for fp in sorted(glob.glob(os.path.join(base, kind, "*"))):
             rel = kind + "/" + os.path.basename(fp)
             if os.path.isdir(fp) or os.path.basename(fp).startswith(".") or rel in seen: continue
             ents.append({"file": rel, "url": "", "kind": kind, "title": os.path.splitext(os.path.basename(fp))[0].replace("_", " ").replace("-", " "),
-                         "product": "", "lang": "", "date": "", "size": os.path.getsize(fp), "ext": os.path.splitext(fp)[1][1:].upper() or "FILE"})
+                         "product": "", "lang": "", "date": "", "size": os.path.getsize(fp), "ext": os.path.splitext(fp)[1][1:].upper() or "FILE", "direct": False, "size_text": ""})
     return sorted(ents, key=lambda d: (d["date"], d["title"]), reverse=True)
 
 def fsize(n):
@@ -165,8 +167,9 @@ def build_support(items):
         q = (d["title"] + " " + (p["title"] if p else "") + " " + d["file"]).lower()
         rows += (f'<li class="dl-row" data-k="{d["kind"]}" data-q="{e(q)}"><span class="dl-ic{" pres" if d["kind"] == "presentations" else ""}">{e(d["ext"])}</span>'
                  f'<div class="dl-t"><b>{e(d["title"])}</b><small>{e(d["lang"] or "")}{plink}</small></div><span class="dl-kind">{DL_LABEL[d["kind"]]}</span>'
-                 f'<span class="meta">{fsize(d["size"]) if d["size"] else "외부 링크"}</span><span class="meta">{e(d["date"].replace("-", "."))}</span>'
-                 + ((f'<a class="btn btn-primary" href="{e(d["url"])}" target="_blank" rel="noopener">발표 열기 ↗</a></li>' if d["kind"] == "presentations" else f'<a class="btn btn-ghost" href="{e(d["url"])}" target="_blank" rel="noopener">열기 ↗</a></li>') if d["url"] and not d["file"] else
+                 f'<span class="meta">{fsize(d["size"]) if d["size"] else (e(d["size_text"]) or "외부 링크")}</span><span class="meta">{e(d["date"].replace("-", "."))}</span>'
+                 + (f'<a class="btn btn-primary" href="{e(d["url"])}">내려받기 ↓</a></li>' if d.get("direct") else
+                    (f'<a class="btn btn-primary" href="{e(d["url"])}" target="_blank" rel="noopener">발표 열기 ↗</a></li>' if d["kind"] == "presentations" else f'<a class="btn btn-ghost" href="{e(d["url"])}" target="_blank" rel="noopener">열기 ↗</a></li>') if d["url"] and not d["file"] else
                     f'<a class="btn btn-ghost" href="{img(root, "/assets/downloads/" + d["file"])}" target="_blank" rel="noopener" download>내려받기 ↓</a></li>'))
     downloads = f"""<section class="sp-sec" id="downloads"><div class="wrap"><div class="sp-h"><div><div class="eb">03 · DOWNLOADS</div><h2>자료실</h2><p>제품 브로셔, 데이터시트, 사용설명서를 내려받으실 수 있습니다. 프리젠테이션은 인터넷만 되면 어디서든 브라우저로 바로 발표할 수 있습니다.</p></div></div>
 <div class="dl-bar"><div class="dl-chips" id="dlF" role="group" aria-label="자료 종류">{kchips}</div><label class="dl-search"><span aria-hidden="true">🔍</span><input id="dlQ" type="search" placeholder="제품명·자료 이름 검색" aria-label="자료 검색"></label></div>
@@ -203,7 +206,7 @@ def fix_links(items, dls):
     """만들어진 모든 시안 HTML의 빈 버튼(href="#")을 고객지원 페이지로 연결합니다."""
     bro = {}
     for d in sorted(dls, key=lambda d: (d["kind"] != "brochures", d["kind"] != "datasheets")):
-        if d["product"] and d["product"] not in bro: bro[d["product"]] = d
+        if d["product"] and d["product"] not in bro and d["kind"] in ("brochures", "datasheets", "manuals"): bro[d["product"]] = d
     slugs = {d["slug"] for d in items}
     for fp in glob.glob(os.path.join(HERE, "*.html")) + glob.glob(os.path.join(HERE, "상세", "*.html")) + glob.glob(os.path.join(HERE, "상세", "cases", "*.html")):
         rel = os.path.relpath(fp, HERE); depth = rel.count(os.sep); root = "../" * depth

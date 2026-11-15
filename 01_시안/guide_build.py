@@ -23,7 +23,7 @@ GUIDE_CSS = """
 .gd ul{margin:0;padding-left:18px}.gd li{font-size:14px;line-height:1.7;color:#334;margin:3px 0}
 .gd-vid{position:relative;border-radius:12px;overflow:hidden;background:#0f1622}
 .gd-vid video{display:block;width:100%;height:auto;aspect-ratio:1280/675;background:#0f1622}
-.gd-one{all:unset;cursor:zoom-in;display:block;border-radius:12px;overflow:hidden;border:1px solid var(--line)}.gd-one img{display:block;width:100%;height:auto}
+.gd-one{all:unset;cursor:zoom-in;display:block;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:#2b2d31}.gd-one img{display:block;max-width:100%;width:auto;height:auto;margin:0 auto}
 .gd-vid .tm{position:absolute;top:10px;left:10px;background:rgba(15,22,34,.78);color:#fff;font-size:12px;font-weight:700;border-radius:6px;padding:3px 8px;pointer-events:none}
 .gd-imgs{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px;margin-top:20px}
 .gd-imgs button{all:unset;cursor:zoom-in;display:flex;flex-direction:column;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff}
@@ -227,19 +227,33 @@ INTRO_CSS = """
 @media(max-width:760px){.rv{grid-template-columns:1fr}}
 """
 
+def _embed_src(v):
+    if v.get("vimeo"): return f'https://player.vimeo.com/video/{e(str(v["vimeo"]))}?dnt=1&title=0&byline=0&portrait=0'
+    if v.get("youtube"): return f'https://www.youtube-nocookie.com/embed/{e(v["youtube"])}?rel=0'
+    return ""
+
 def intro_section(d, root):
+    """intro_video: 영상 1개(dict) 또는 여러 개(list). 여러 개면 2열로 나란히 (+ intro_videos_title/desc)"""
     v = d.get("intro_video")
     if not v: return ""
-    if v.get("vimeo"):
-        src = f'https://player.vimeo.com/video/{e(str(v["vimeo"]))}?dnt=1&title=0&byline=0&portrait=0'
-    elif v.get("youtube"):
-        src = f'https://www.youtube-nocookie.com/embed/{e(v["youtube"])}?rel=0'
-    else:
-        return ""
-    return (f'<style>{INTRO_CSS}</style><section class="sec" id="iv"><h2>{e(v.get("title","소개 영상"))}</h2>'
-            + (f'<p style="color:var(--sub);margin:-8px 0 16px">{e(v["desc"])}</p>' if v.get("desc") else "")
-            + f'<div class="ivw"><iframe src="{src}" title="{e(v.get("title","소개 영상"))}" loading="lazy" allow="fullscreen; picture-in-picture" allowfullscreen></iframe></div>'
-            + (f'<p class="ivc">{e(v["credit"])}</p>' if v.get("credit") else "") + "</section>")
+    vs = v if isinstance(v, list) else [v]
+    items = ""
+    for x in vs:
+        src = _embed_src(x)
+        if not src: continue
+        frame = f'<div class="ivw"><iframe src="{src}" title="{e(x.get("title","소개 영상"))}" loading="lazy" allow="fullscreen; picture-in-picture" allowfullscreen></iframe></div>'
+        if len(vs) == 1:
+            items += frame + (f'<p class="ivc">{e(x["credit"])}</p>' if x.get("credit") else "")
+        else:
+            items += (f'<figure style="margin:0">{frame}<figcaption style="padding:10px 2px"><b style="display:block;color:var(--navy);font-size:15px">{e(x.get("title",""))}</b>'
+                      f'<span style="font-size:13px;color:var(--sub)">{e(x.get("desc",""))}</span></figcaption></figure>')
+    if not items: return ""
+    one = vs[0] if len(vs) == 1 else {}
+    title = one.get("title") or d.get("intro_videos_title", "소개 영상")
+    desc = one.get("desc") or d.get("intro_videos_desc", "")
+    body = items if len(vs) == 1 else f'<div class="rv">{items}</div>' + (f'<p class="ivc">{e(d["intro_videos_credit"])}</p>' if d.get("intro_videos_credit") else "")
+    return (f'<style>{INTRO_CSS}</style><section class="sec" id="iv"><h2>{e(title)}</h2>'
+            + (f'<p style="color:var(--sub);margin:-8px 0 16px">{e(desc)}</p>' if desc else "") + body + "</section>")
 
 
 # ── 참고 영상 (직접 올린 mp4, 자동 재생 없음·소리 있음) — '적용 분야' 아래 ─────
@@ -261,3 +275,39 @@ def refvid_section(d, root):
     return (f'<style>{INTRO_CSS}</style><section class="sec" id="rv"><h2>{e(d.get("ref_videos_title","참고 영상"))}</h2>'
             + (f'<p style="color:var(--sub);margin:-8px 0 16px">{e(d["ref_videos_desc"])}</p>' if d.get("ref_videos_desc") else "")
             + f'<div class="rv">{figs}</div></section>')
+
+
+# ── 내려받기 상자 (자체 소프트웨어) — '주요 특징' 위 ─────────────────────────
+#   download:
+#     url: 설치 파일 바로 받기 주소 (GitHub Releases의 .exe 직접 주소 등)
+#     label: 버튼 글자 (선택)        file: 파일 이름   version / size / date / os (선택)
+#     manual: 사용 설명서 주소 (선택)   note: 안내 한 줄 (선택)
+#     requires: [{name, url, text}]  — 먼저 설치할 것 (선택)
+DL_CSS = """
+.dlb{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:24px;border-radius:20px;background:linear-gradient(120deg,#0f2440,#1B2B4B 60%,#163a52);color:#fff;padding:28px 30px}
+.dlb h2{color:#fff;font-size:22px;margin:0 0 6px}.dlb .ds{color:rgba(255,255,255,.75);font-size:14.5px;margin:0 0 16px;line-height:1.7}
+.dlb .dbtn{display:inline-flex;align-items:center;gap:10px;background:var(--mint);color:var(--navy);font-weight:800;font-size:17px;padding:15px 24px;border-radius:12px;text-decoration:none}
+.dlb .dbtn:hover{filter:brightness(1.06)}.dlb .dbtn small{font-weight:700;font-size:13px;opacity:.75}
+.dlb .dsub{display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:14px;font-size:13.5px}.dlb .dsub a{color:#9fd8ff}
+.dlb .dmeta{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:13.5px;align-content:start;border-left:1px solid rgba(255,255,255,.14);padding-left:22px}
+.dlb .dmeta dt{color:rgba(255,255,255,.6)}.dlb .dmeta dd{margin:0;font-weight:700}
+.dlb .dreq{grid-column:1/-1;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:12px 16px;font-size:13.5px;color:rgba(255,255,255,.85)}
+.dlb .dreq a{color:#9fd8ff;font-weight:700}
+@media(max-width:820px){.dlb{grid-template-columns:1fr}.dlb .dmeta{border-left:0;padding-left:0}}
+"""
+
+def download_box(d, root, en=False):
+    x = d.get("download")
+    if not x or not x.get("url"): return ""
+    L = (dict(ver="Version", file="File", size="Size", date="Released", os="OS", pdf="User manual (PDF) ↓", web="Online manual ↗", how="How to install ↓", req="Install first", title="Free download", label="Download installer",
+              note="Click the button and the installer downloads straight away — no sign-up or GitHub account needed.") if en else
+         dict(ver="버전", file="파일", size="크기", date="배포일", os="운영 환경", pdf="사용 설명서 PDF ↓", web="웹 설명서 보기 ↗", how="설치 방법 보기 ↓", req="먼저 설치", title="무료 다운로드", label="설치 파일 내려받기",
+              note="버튼을 누르면 설치 파일이 바로 내려받아집니다. 회원가입이나 GitHub 계정은 필요 없습니다."))
+    meta = "".join(f"<dt>{L[k]}</dt><dd>{e(str(x[f]))}</dd>" for k, f in (("ver", "version"), ("file", "file"), ("size", "size"), ("date", "date"), ("os", "os")) if x.get(f))
+    req = "".join(f'<div class="dreq">① {L["req"]}: <a href="{e(r["url"])}" target="_blank" rel="noopener">{e(r["name"])} ↗</a> — {e(r.get("text",""))}</div>' for r in x.get("requires", []))
+    sub = ((f'<a href="{e(x["manual_pdf"])}">{L["pdf"]}</a>' if x.get("manual_pdf") else "")
+           + (f'<a href="{e(x["manual"])}" target="_blank" rel="noopener">{L["web"]}</a>' if x.get("manual") else "") + f'<a href="#gd">{L["how"]}</a>')
+    return (f'<style>{DL_CSS}</style><section class="sec" id="dl"><div class="dlb"><div><h2>{e(x.get("title", L["title"]))}</h2>'
+            f'<p class="ds">{e(x.get("note", L["note"]))}</p>'
+            f'<a class="dbtn" href="{e(x["url"])}">⬇ {e(x.get("label", L["label"]))}' + (f' <small>{e(str(x["size"]))}</small>' if x.get("size") else "") + "</a>"
+            f'<div class="dsub">{sub}</div></div><dl class="dmeta">{meta}</dl>{req}</div></section>')

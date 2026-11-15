@@ -38,6 +38,8 @@ content:
   - seil-evocam-halo-controller.md
   - seil-mrsm-corner-r.md
   - mantis.md
+  - lynx-evo.md
+  - seil-vision-manager.md
   view:
     fields:
     - title

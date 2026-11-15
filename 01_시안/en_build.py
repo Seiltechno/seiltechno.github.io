@@ -34,6 +34,9 @@ def _merge_en(ko, en):
     if ko.get("shots"):
         tx = en.get("shots") or []
         d["shots"] = [dict(s, **(tx[i] if i < len(tx) else {})) for i, s in enumerate(ko["shots"])]
+    if ko.get("download"):
+        d["download"] = dict(ko["download"], **(en.get("download") or {}))
+        if en.get("download", {}).get("requires"): d["download"]["requires"] = en["download"]["requires"]
     if ko.get("setups"):
         caps = en.get("setups_caps") or []
         d["setups"] = [dict(x, cap=(caps[i] if i < len(caps) else x.get("cap", ""))) for i, x in enumerate(ko["setups"])]
@@ -45,7 +48,7 @@ def _merge_en(ko, en):
             caps = t.get("caps") or []
             g.append({"title": t.get("title", ch["title"]), "text": t.get("text", ""), "points": t.get("points") or [],
                       "video": ch.get("video"),
-                      "images": [dict(im, cap=(caps[j] if j < len(caps) else im.get("cap", ""))) for j, im in enumerate(ch.get("images") or [])]})
+                      "images": (t.get("images") if t.get("images") is not None else [dict(im, cap=(caps[j] if j < len(caps) else im.get("cap", ""))) for j, im in enumerate(ch.get("images") or [])])})
         d["guide"] = g
     return d
 
@@ -72,12 +75,20 @@ def build_en_detail(ko, en):
     rows = "".join(f"<tr><th>{e(k)}</th><td>{e(v)}</td></tr>" for k, v in d["specs"])
     apps = "".join(f"<span>{e(a)}</span>" for a in d.get("applications", []))
     tags = "".join(f'<span style="color:var(--blue);font-weight:700;font-size:13px">#{e(t)}</span>' for t in d.get("tags", [])[:4])
+    if d.get("download"):
+        dl = d["download"]
+        acts = (f'<a class="btn btn-primary" href="#dl">Free download</a>'
+                + (f'<a class="btn btn-ghost" href="{e(dl.get("manual_pdf") or dl.get("manual"))}">User manual (PDF)</a>' if (dl.get("manual_pdf") or dl.get("manual")) else "")
+                + f'<a class="btn btn-ghost" href="{contact}">Contact us</a>')
+    else:
+        acts = (f'<a class="btn btn-primary" href="{contact}">Request a quote</a><a class="btn btn-ghost" href="{root}고객지원.html?product={slug}&amp;type=demo#inquiry">Request a demo</a>'
+                f'<a class="btn btn-ghost" href="#gd">User guide</a>')
     inner = f"""<section class="dhero"><div class="wrap dgrid"><div><div class="mainimg">{pic(root, d, 'id="main"')}</div></div>
 <div class="dinfo"><div class="crumb">Home › Products › {e(d.get('category',''))} › {e(d.get('subcategory',''))}</div><div style="display:flex;gap:8px;align-items:center;margin:12px 0 8px;flex-wrap:wrap"><span style="background:var(--navy);color:#fff;font-size:13px;font-weight:700;padding:5px 12px;border-radius:6px">{e(d.get('subcategory',''))}</span>{f'<span style="color:var(--blue);font-weight:700;font-size:13px">#{e(d["brand"])}</span>' if d.get("brand") else ""}</div>
 <h1>{e(d['title'])}</h1><div class="st">{e(d.get('subtitle',''))}</div><p class="sm">{e(d.get('summary',''))}</p>
-<div class="keyspec">{ks}</div><div class="actions"><a class="btn btn-primary" href="{contact}">Request a quote</a><a class="btn btn-ghost" href="{root}고객지원.html?product={slug}&amp;type=demo#inquiry">Request a demo</a><a class="btn btn-ghost" href="#gd">User guide</a></div></div></div></section>
-<div class="wrap"><div class="tabs"><a class="on" href="#f">Key features</a>{'<a href="#sh">Screenshots</a>' if d.get('shots') else ''}{f'<a href="#gd">{e(d.get("guide_tab","User guide"))}</a>' if d.get('guide') else ''}<a href="#s">Specifications</a><a href="#a">Applications</a></div>
-{setups_section(d, root, en=True)}<section class="sec" id="f"><h2>Key features</h2><div class="hl">{hl}</div></section>
+<div class="keyspec">{ks}</div><div class="actions">{acts}</div></div></div></section>
+<div class="wrap"><div class="tabs">{'<a href="#dl">Download</a>' if d.get('download') else ''}<a class="on" href="#f">Key features</a>{'<a href="#sh">Screenshots</a>' if d.get('shots') else ''}{f'<a href="#gd">{e(d.get("guide_tab","User guide"))}</a>' if d.get('guide') else ''}<a href="#s">Specifications</a><a href="#a">Applications</a></div>
+{download_box(d, root, en=True)}{setups_section(d, root, en=True)}<section class="sec" id="f"><h2>Key features</h2><div class="hl">{hl}</div></section>
 {shots_section(d, root)}{guide_section(d, root, en=True)}<section class="sec body"><h2>Overview</h2>{md(d['body'])}</section>
 <section class="sec" id="s"><h2>Specifications</h2><table>{rows}</table><p class="small">※ Specifications are subject to change without notice. Please contact us for details.</p></section>
 <section class="sec" id="a"><h2>Applications</h2><div class="apps">{apps}</div></section></div>"""
