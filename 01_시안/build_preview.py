@@ -204,6 +204,9 @@ FONT = '<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pre
 CTA_BAND = '''<section class="cta"><div class="wrap"><div><h3>어떤 장비가 맞을지 고민되시나요?</h3><p>시료를 보내주시거나 방문하시면 직접 비교 시연해 드립니다.</p></div>
 <div class="actions"><a class="btn btn-mint" href="#">데모 신청</a><a class="btn btn-ghost" href="#">02-2632-3211</a></div></div></section>'''
 def page(title, inner, root, active="product", cta=True):
+    return nav_extras(_page(title, inner, root, active, cta), inner, root, active)
+
+def _page(title, inner, root, active="product", cta=True):
     return f"""<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{e(title)}</title>{FAVICON}{FONT}<style>{CSS}</style></head><body>
 <div class="note-bar">디자인 시안 (검토용) — 실제 홈페이지가 아닙니다</div>

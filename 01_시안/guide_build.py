@@ -341,3 +341,69 @@ def software_link_section(d, root, items):
             f'<span class="sk">{e(x.get("badge","세일테크노 자체 개발 · 무료"))}</span><h3>{e(x.get("name") or t["title"])}</h3>'
             + (f'<p>{e(x["text"])}</p>' if x.get("text") else "") + (f"<ul>{pts}</ul>" if pts else "")
             + f'<a class="btn btn-primary" href="{href}">{e(x.get("button", (x.get("name") or t["title"]) + " 자세히 보기 →"))}</a></div></div></section>')
+
+
+# ── 제품 분야 이동 (11-16) ────────────────────────────────────────────────
+#   ① 상단 '제품소개'에 마우스를 올리면 5개 분야 + 소분류 메뉴(메가 메뉴)
+#   ② 제품 목록·상세 페이지 머리글 아래 '제품 분야' 막대 (현재 분야 강조, 스크롤해도 따라옴, 모바일은 좌우 스크롤)
+#   ③ 상세 페이지의 '홈 › 제품소개 › 분야 › 소분류'를 누를 수 있는 링크로
+NAVX_CSS = """
+header nav{align-self:stretch;align-items:center}
+.nv-dd{align-self:stretch;display:flex;align-items:center}
+.nv-dd>a::after{content:"";display:inline-block;width:6px;height:6px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);margin:0 0 3px 7px;opacity:.55}
+.mega{display:none;position:absolute;left:0;right:0;top:100%;background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);box-shadow:0 18px 40px rgba(15,34,64,.12);z-index:30}
+.nv-dd:hover .mega,.nv-dd:focus-within .mega{display:block}
+.mega .wrap{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:22px;height:auto;padding-top:24px;padding-bottom:26px;align-items:start}
+.mega h4{margin:0 0 8px}.mega h4 a{font-size:15px;font-weight:800;color:var(--navy)}.mega h4 a:hover{color:var(--blue)}
+.mega h4 small{display:block;font-size:11px;font-weight:700;letter-spacing:.4px;color:var(--sub);opacity:.7;margin-top:2px}
+.mega ul{list-style:none;margin:0;padding:0}.mega li a{display:block;font-size:13.5px;font-weight:500;color:var(--sub);padding:4px 0}.mega li a:hover{color:var(--blue)}
+.mega .on h4 a{color:var(--blue)}
+.pcat{position:sticky;top:72px;z-index:9;background:rgba(255,255,255,.97);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.pcat .wrap{display:flex;align-items:center;justify-content:flex-start;gap:6px;height:46px;overflow-x:auto;scrollbar-width:none}.pcat .wrap::-webkit-scrollbar{display:none}
+.pcat b{font-size:12px;font-weight:800;color:var(--sub);letter-spacing:.3px;margin-right:6px;white-space:nowrap}
+.pcat a{white-space:nowrap;font-size:13.5px;font-weight:700;color:var(--sub);padding:6px 13px;border-radius:999px}
+.pcat a:hover{background:var(--bg);color:var(--navy)}.pcat a.on{background:var(--navy);color:#fff}
+.has-pcat .toolbar,.has-pcat .tabs,.has-pcat .cx-nav{top:118px}
+.has-pcat .group,.has-pcat .sec,.has-pcat .gd,.has-pcat .cx-sec{scroll-margin-top:190px}
+.crumb a{color:inherit;text-decoration:none}.crumb a:hover{text-decoration:underline}
+@media(max-width:860px){.pcat .wrap{height:44px}}
+"""
+
+def nav_mega(root, cur=None):
+    cols = ""
+    for c in CATS:
+        cfg = CATCFG.get(c, {})
+        en = CAT_META[c][0] if "CAT_META" in globals() and c in CAT_META else ""
+        subs = "".join(f'<li><a href="{cat_link(c, root)}{"" if cfg.get("board") else "#sub%d" % (i + 1)}">{e(s[0])}</a></li>' for i, s in enumerate(cfg.get("subs", [])))
+        cols += f'<div class="{"on" if c == cur else ""}"><h4><a href="{cat_link(c, root)}">{e(c)}<small>{e(en)}</small></a></h4><ul>{subs}</ul></div>'
+    return f'<div class="mega" role="region" aria-label="제품 분야"><div class="wrap">{cols}</div></div>'
+
+def pcat_bar(root, cur):
+    cur_attr = ' aria-current="page"'
+    links = "".join(f'<a class="{"on" if c == cur else ""}" href="{cat_link(c, root)}"{cur_attr if c == cur else ""}>{e(c)}</a>' for c in CATS)
+    return f'<div class="pcat" role="navigation" aria-label="제품 분야"><div class="wrap"><b>제품 분야</b>{links}</div></div>'
+
+def nav_extras(html, inner, root, active):
+    """page()가 만든 HTML에 메가 메뉴 · 분야 막대 · 링크 경로를 더함"""
+    cur = None
+    m = re.search(r"제품소개 › (" + "|".join(re.escape(c) for c in CATS) + r")(?= ›|<)", inner)
+    if m: cur = m.group(1)
+    html = html.replace("</style></head>", NAVX_CSS + "</style></head>", 1)
+    # ① 메가 메뉴
+    a = f'href="{root}제품목록_현미경.html">제품소개</a>'
+    i = html.find(a)
+    if i > 0:
+        j = html.rfind("<a ", 0, i)
+        html = html[:j] + '<div class="nv-dd">' + html[j:i + len(a)] + nav_mega(root, cur) + "</div>" + html[i + len(a):]
+    # ② 분야 막대 (제품 목록·상세)
+    if active == "product" and cur:
+        html = html.replace("</header>", "</header>" + pcat_bar(root, cur), 1).replace("<body>", '<body class="has-pcat">', 1)
+    # ③ 상세 경로 링크
+    def crumb(m):
+        c, s = m.group(1), m.group(2)
+        sid = SUB_INFO.get(s, {}).get("id")
+        sh = f'<a href="{cat_link(c, root)}{"" if CATCFG.get(c, {}).get("board") or not sid else "#" + sid}">{s}</a>' if s else ""
+        return (f'<div class="crumb"><a href="{root}index.html">홈</a> › <a href="{root}제품목록_현미경.html">제품소개</a> › '
+                f'<a href="{cat_link(c, root)}">{c}</a>' + (f" › {sh}" if sh else "") + "</div>")
+    html = re.sub(r'<div class="crumb">홈 › 제품소개 › (' + "|".join(re.escape(c) for c in CATS) + r')(?: › ([^<]+))?</div>', crumb, html, count=1)
+    return html
