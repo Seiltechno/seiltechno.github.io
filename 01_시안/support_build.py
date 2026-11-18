@@ -24,7 +24,7 @@ def load_downloads():
         direct = bool(url) and not f and url.lower().split("?")[0].endswith((".exe", ".msi", ".zip", ".pdf"))   # 외부 주소지만 파일 바로 받기
         if direct: ext = url.lower().split("?")[0].rsplit(".", 1)[1].upper()
         ents.append({"file": f, "url": url, "kind": kind, "title": x.get("title") or os.path.splitext(os.path.basename(f))[0],
-                     "product": x.get("product", "") or "", "lang": x.get("lang", "") or "", "date": str(x.get("date", "") or ""),
+                     "product": (_pl[0] if (_pl := ([str(v) for v in x["product"]] if isinstance(x.get("product"), list) else ([str(x["product"])] if x.get("product") else []))) else ""), "products": _pl, "lang": x.get("lang", "") or "", "date": str(x.get("date", "") or ""),
                      "size": os.path.getsize(full) if f else 0, "ext": ext, "direct": direct, "size_text": str(x.get("size_text", "") or "")})
     for kind, _ in DL_KINDS:
         for fp in sorted(glob.glob(os.path.join(base, kind, "*"))):
@@ -162,15 +162,16 @@ def build_support(items):
         f'<button data-v="{k}" aria-pressed="false">{v}<b>{sum(1 for d in dls if d["kind"]==k)}</b></button>' for k, v in DL_KINDS if any(d["kind"] == k for d in dls))
     rows = ""
     for d in dls:
-        p = pidx.get(d["product"])
-        plink = f' · 관련 제품 <a href="{root}상세/{p["slug"]}.html">{e(p["title"])}</a>' if p else ""
-        q = (d["title"] + " " + (p["title"] if p else "") + " " + d["file"]).lower()
+        ps = [pidx[k] for k in (d.get("products") or ([d["product"]] if d["product"] else [])) if k in pidx]   # 관련 제품 여러 개 지원(11-18)
+        plink = (' · 관련 제품 ' + ", ".join(f'<a href="{root}상세/{p["slug"]}.html">{e(p["title"])}</a>' for p in ps)) if ps else ""
+        q = (d["title"] + " " + " ".join(p["title"] for p in ps) + " " + d["file"]).lower()
         rows += (f'<li class="dl-row" data-k="{d["kind"]}" data-q="{e(q)}"><span class="dl-ic{" pres" if d["kind"] == "presentations" else ""}">{e(d["ext"])}</span>'
                  f'<div class="dl-t"><b>{e(d["title"])}</b><small>{e(d["lang"] or "")}{plink}</small></div><span class="dl-kind">{DL_LABEL[d["kind"]]}</span>'
                  f'<span class="meta">{fsize(d["size"]) if d["size"] else (e(d["size_text"]) or "외부 링크")}</span><span class="meta">{e(d["date"].replace("-", "."))}</span>'
                  + (f'<a class="btn btn-primary" href="{e(d["url"])}">내려받기 ↓</a></li>' if d.get("direct") else
                     (f'<a class="btn btn-primary" href="{e(d["url"])}" target="_blank" rel="noopener">발표 열기 ↗</a></li>' if d["kind"] == "presentations" else f'<a class="btn btn-ghost" href="{e(d["url"])}" target="_blank" rel="noopener">열기 ↗</a></li>') if d["url"] and not d["file"] else
-                    f'<a class="btn btn-ghost" href="{img(root, "/assets/downloads/" + d["file"])}" target="_blank" rel="noopener" download>내려받기 ↓</a></li>'))
+                    (f'<a class="btn btn-primary" href="{img(root, "/assets/downloads/" + d["file"])}" target="_blank" rel="noopener">발표 열기 ↗</a></li>' if d["kind"] == "presentations" else   # 프리젠테이션 PDF는 브라우저에서 바로 열기
+                    f'<a class="btn btn-ghost" href="{img(root, "/assets/downloads/" + d["file"])}" target="_blank" rel="noopener" download>내려받기 ↓</a></li>')))
     downloads = f"""<section class="sp-sec" id="downloads"><div class="wrap"><div class="sp-h"><div><div class="eb">03 · DOWNLOADS</div><h2>자료실</h2><p>제품 브로셔, 데이터시트, 사용설명서를 내려받으실 수 있습니다. 프리젠테이션은 인터넷만 되면 어디서든 브라우저로 바로 발표할 수 있습니다.</p></div></div>
 <div class="dl-bar"><div class="dl-chips" id="dlF" role="group" aria-label="자료 종류">{kchips}</div><label class="dl-search"><span aria-hidden="true">🔍</span><input id="dlQ" type="search" placeholder="제품명·자료 이름 검색" aria-label="자료 검색"></label></div>
 <ul class="dl-list">{rows}</ul><div class="dl-empty" id="dlE" hidden>찾는 자료가 없습니다. 문의 주시면 보내 드립니다.</div>

@@ -1,7 +1,7 @@
 # 자료실 목록 — 입력 화면(Pages CMS)의 '자료실'에서 추가·수정하면 됩니다.
 # file: 올린 파일 / url: 큰 파일은 구글 드라이브 등의 공유 링크(파일 대신)
-# kind: brochures(브로셔) presentations(프리젠테이션 — url에 발표 링크) datasheets(데이터시트) manuals(사용설명서) software(소프트웨어) technical(기술자료)
-# product: 관련 제품 파일 이름(예: mantis) — 적으면 그 제품 페이지의 '브로셔 PDF' 버튼과 연결
+# kind: brochures(브로셔) presentations(프리젠테이션 — url에 발표 링크 또는 file에 PDF → '발표 열기'로 브라우저에서 바로 열림) datasheets(데이터시트) manuals(사용설명서) software(소프트웨어) technical(기술자료)
+# product: 관련 제품 파일 이름(예: mantis, 여러 개는 [lynx-evo, evocam-aura-4k]) — 적으면 그 제품 페이지의 '브로셔 PDF' 버튼과 연결
 # ※ 보안자료·가격표는 올리지 않습니다.
 
 - file: brochures/mantis-brochure-ko.pdf
@@ -113,3 +113,10 @@
   title: 세일테크노 제품 통합 안내서 2026
   lang: 웹 프리젠테이션 · 15장 · 현미경·디지털현미경·비접촉측정기
   date: 2026-11-04
+
+- file: presentations/lynx-evo-evocam-halo-mlcc-inspection-guide.pdf
+  kind: presentations
+  title: 링스에보와 에보캠을 이용한 MLCC 등의 부품검사 활용 안내
+  product: [lynx-evo, evocam-aura-4k]
+  lang: PDF 발표 자료 · 12장 · LYNX EVO × EVOCAM HALO 선택 가이드·배율 비교·구성 옵션
+  date: 2026-11-18
